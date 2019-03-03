@@ -18,41 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2gK-hg-O77">
-                                <rect key="frame" x="87.5" y="120" width="200" height="200"/>
-                                <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES" staticText="YES"/>
-                                </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="oTc-tz-tRu"/>
-                                    <constraint firstAttribute="height" constant="200" id="pSf-WJ-Se3"/>
-                                </constraints>
-                                <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment>
-                                            <string key="content">MY 
-LUCKY 
-COFFEE </string>
-                                            <attributes>
-                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="30" name=".SFNSText"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="100"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSJ-el-6vu">
-                                <rect key="frame" x="117.5" y="370" width="140" height="140"/>
-                                <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSJ-el-6vu">
+                                <rect key="frame" x="117.5" y="395" width="140" height="140"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                 </accessibility>
@@ -63,16 +31,16 @@ COFFEE </string>
                                     <constraint firstAttribute="width" constant="140" id="O8W-hs-dXd"/>
                                     <constraint firstAttribute="height" constant="140" id="dhD-RJ-glR"/>
                                 </constraints>
-                                <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment>
-                                            <string key="content">EDIT 
-MY 
+                                            <string key="content">EDIT MY
+COFFEE 
 OPTIONS </string>
                                             <attributes>
-                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="21" name=".SFNSText"/>
+                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="21" name="Arial-BoldMT"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -88,49 +56,137 @@ OPTIONS </string>
                                     <segue destination="0eI-K8-BNX" kind="show" id="lkA-S0-PV0"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="o2S-dF-Hvi">
+                                <rect key="frame" x="37.5" y="20" width="300" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="h2U-eg-BuW"/>
+                                    <constraint firstAttribute="width" constant="300" id="rhM-LX-TLr"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="0RF-2t-uwv"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">WELCOME TO YOUR
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="30" name="TimesNewRomanPS-BoldItalicMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="COFFEE ADVISOR">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="30" name="TimesNewRomanPS-BoldItalicMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2gK-hg-O77">
+                                <rect key="frame" x="87.5" y="145" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2gK-hg-O77" secondAttribute="height" multiplier="1:1" id="4vy-mK-xCw"/>
+                                    <constraint firstAttribute="height" constant="200" id="JoH-dx-6lW"/>
+                                    <constraint firstAttribute="width" constant="200" id="uEa-dW-hCT"/>
+                                </constraints>
+                                <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment>
+                                            <string key="content">GET MY  
+COFFEE
+</string>
+                                            <attributes>
+                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="30" name="Arial-BoldMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="NOW!">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="30" name="Arial-BoldMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="leftToRight" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="o2S-dF-Hvi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1vJ-LP-FXH"/>
+                            <constraint firstItem="o2S-dF-Hvi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AwK-EP-TPq"/>
                             <constraint firstItem="DSJ-el-6vu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CFD-hf-1Ph"/>
-                            <constraint firstItem="DSJ-el-6vu" firstAttribute="top" secondItem="2gK-hg-O77" secondAttribute="bottom" constant="50" id="L3Z-JB-Dmy"/>
-                            <constraint firstItem="2gK-hg-O77" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="N7z-fM-5fi"/>
-                            <constraint firstItem="2gK-hg-O77" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rTf-rd-OBe"/>
+                            <constraint firstItem="2gK-hg-O77" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HAP-kQ-lBC"/>
+                            <constraint firstItem="DSJ-el-6vu" firstAttribute="top" secondItem="2gK-hg-O77" secondAttribute="bottom" constant="50" id="d2o-Bc-T5g"/>
+                            <constraint firstItem="2gK-hg-O77" firstAttribute="top" secondItem="o2S-dF-Hvi" secondAttribute="bottom" constant="25" id="gLv-07-WBf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="350" y="227"/>
+            <point key="canvasLocation" x="349.60000000000002" y="226.23688155922042"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller2-->
         <scene sceneID="YY6-ZY-Wr7">
             <objects>
-                <viewController id="0eI-K8-BNX" customClass="ViewController" customModule="The_Coffee_Advisor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0eI-K8-BNX" customClass="ViewController2" customModule="The_Coffee_Advisor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F3J-zg-ICe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tQc-VV-1h8">
-                                <rect key="frame" x="117.5" y="361" width="140" height="140"/>
-                                <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="6RP-VO-Tv5">
+                                <rect key="frame" x="10" y="20" width="355" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="355" id="NA3-Lf-GXn"/>
+                                    <constraint firstAttribute="width" secondItem="6RP-VO-Tv5" secondAttribute="height" multiplier="71:20" id="kOo-Z7-H91"/>
+                                    <constraint firstAttribute="height" constant="100" id="n9q-6i-C0T"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="O9S-WN-y57"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">MY COFFEE
+OPTIONS</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="30" name="TimesNewRomanPS-BoldItalicMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0kX-Qh-KwH">
+                                <rect key="frame" x="117.5" y="390" width="140" height="140"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="3m8-e5-z5W"/>
-                                    <constraint firstAttribute="width" constant="140" id="NUr-so-onI"/>
-                                    <constraint firstAttribute="width" constant="140" id="VGr-Zo-9Bh"/>
-                                    <constraint firstAttribute="height" constant="140" id="d6M-W8-KK1"/>
-                                    <constraint firstAttribute="width" secondItem="tQc-VV-1h8" secondAttribute="height" multiplier="1:1" id="oPq-V1-uKz"/>
+                                    <constraint firstAttribute="width" constant="140" id="7dA-OE-SdS"/>
+                                    <constraint firstAttribute="width" secondItem="0kX-Qh-KwH" secondAttribute="height" multiplier="1:1" id="Hql-SZ-N5O"/>
+                                    <constraint firstAttribute="height" constant="140" id="PvL-sx-hsx"/>
                                 </constraints>
-                                <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="BACK ">
+                                        <fragment content="BACK">
                                             <attributes>
-                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="21" name=".SFNSText"/>
+                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="24" name="Arial-BoldMT"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -143,31 +199,40 @@ OPTIONS </string>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="iCn-1u-f7z"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="lpk-fU-fop"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ABi-ti-aoX">
-                                <rect key="frame" x="27.5" y="95" width="320" height="216"/>
+                                <rect key="frame" x="27.5" y="120" width="320" height="270"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="6IU-CV-HjB"/>
-                                    <constraint firstAttribute="height" constant="216" id="LTK-wB-C0h"/>
-                                    <constraint firstAttribute="width" secondItem="ABi-ti-aoX" secondAttribute="height" multiplier="40:27" id="eCL-25-Yfu"/>
+                                    <constraint firstAttribute="height" constant="270" id="J1B-TL-hT8"/>
+                                    <constraint firstAttribute="width" secondItem="ABi-ti-aoX" secondAttribute="height" multiplier="32:27" id="O8G-eQ-gQb"/>
+                                    <constraint firstAttribute="width" constant="320" id="l9X-Rg-N5k"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="F3J-zg-ICe" id="cl1-Ga-KTS"/>
+                                    <outlet property="delegate" destination="F3J-zg-ICe" id="jrn-kY-Sw1"/>
+                                </connections>
                             </pickerView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ABi-ti-aoX" firstAttribute="centerX" secondItem="F3J-zg-ICe" secondAttribute="centerX" id="6IF-Ol-luw"/>
-                            <constraint firstItem="ABi-ti-aoX" firstAttribute="top" secondItem="Xlx-wc-Q6e" secondAttribute="top" constant="75" id="PKG-Of-NMR"/>
-                            <constraint firstItem="tQc-VV-1h8" firstAttribute="centerX" secondItem="F3J-zg-ICe" secondAttribute="centerX" id="hoR-9D-I9f"/>
-                            <constraint firstItem="tQc-VV-1h8" firstAttribute="top" secondItem="ABi-ti-aoX" secondAttribute="bottom" constant="50" id="uCR-yn-LHn"/>
+                            <constraint firstItem="0kX-Qh-KwH" firstAttribute="centerX" secondItem="F3J-zg-ICe" secondAttribute="centerX" id="14M-eS-GLi"/>
+                            <constraint firstItem="ABi-ti-aoX" firstAttribute="centerX" secondItem="F3J-zg-ICe" secondAttribute="centerX" id="4Jx-xY-Rrf"/>
+                            <constraint firstItem="ABi-ti-aoX" firstAttribute="top" secondItem="Xlx-wc-Q6e" secondAttribute="top" constant="100" id="9vR-pe-FAr"/>
+                            <constraint firstItem="0kX-Qh-KwH" firstAttribute="top" secondItem="ABi-ti-aoX" secondAttribute="bottom" id="Vis-MB-b2Q"/>
+                            <constraint firstItem="6RP-VO-Tv5" firstAttribute="centerX" secondItem="F3J-zg-ICe" secondAttribute="centerX" id="f0n-r8-Dvq"/>
+                            <constraint firstItem="6RP-VO-Tv5" firstAttribute="top" secondItem="Xlx-wc-Q6e" secondAttribute="top" id="nat-CB-04G"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xlx-wc-Q6e"/>
                     </view>
+                    <connections>
+                        <outlet property="optionPicker" destination="ABi-ti-aoX" id="3Dc-xM-Tki"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mxc-Bo-7a1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1062" y="226"/>
+            <point key="canvasLocation" x="1061.5999999999999" y="225.33733133433284"/>
         </scene>
     </scenes>
 </document>
