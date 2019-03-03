@@ -84,6 +84,9 @@ OPTIONS </string>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="0eI-K8-BNX" kind="show" id="lkA-S0-PV0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -98,7 +101,73 @@ OPTIONS </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="350" y="227"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YY6-ZY-Wr7">
+            <objects>
+                <viewController id="0eI-K8-BNX" customClass="ViewController" customModule="The_Coffee_Advisor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F3J-zg-ICe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tQc-VV-1h8">
+                                <rect key="frame" x="117.5" y="361" width="140" height="140"/>
+                                <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="3m8-e5-z5W"/>
+                                    <constraint firstAttribute="width" constant="140" id="NUr-so-onI"/>
+                                    <constraint firstAttribute="width" constant="140" id="VGr-Zo-9Bh"/>
+                                    <constraint firstAttribute="height" constant="140" id="d6M-W8-KK1"/>
+                                    <constraint firstAttribute="width" secondItem="tQc-VV-1h8" secondAttribute="height" multiplier="1:1" id="oPq-V1-uKz"/>
+                                </constraints>
+                                <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="BACK ">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="21" name=".SFNSText"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="70"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="iCn-1u-f7z"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ABi-ti-aoX">
+                                <rect key="frame" x="27.5" y="95" width="320" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="6IU-CV-HjB"/>
+                                    <constraint firstAttribute="height" constant="216" id="LTK-wB-C0h"/>
+                                    <constraint firstAttribute="width" secondItem="ABi-ti-aoX" secondAttribute="height" multiplier="40:27" id="eCL-25-Yfu"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ABi-ti-aoX" firstAttribute="centerX" secondItem="F3J-zg-ICe" secondAttribute="centerX" id="6IF-Ol-luw"/>
+                            <constraint firstItem="ABi-ti-aoX" firstAttribute="top" secondItem="Xlx-wc-Q6e" secondAttribute="top" constant="75" id="PKG-Of-NMR"/>
+                            <constraint firstItem="tQc-VV-1h8" firstAttribute="centerX" secondItem="F3J-zg-ICe" secondAttribute="centerX" id="hoR-9D-I9f"/>
+                            <constraint firstItem="tQc-VV-1h8" firstAttribute="top" secondItem="ABi-ti-aoX" secondAttribute="bottom" constant="50" id="uCR-yn-LHn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xlx-wc-Q6e"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mxc-Bo-7a1" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1062" y="226"/>
         </scene>
     </scenes>
 </document>
