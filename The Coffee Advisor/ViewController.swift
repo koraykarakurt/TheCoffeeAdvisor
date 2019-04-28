@@ -25,11 +25,11 @@ import UIMultiPicker
 class ViewController9: UIViewController {
     
     static let TASTES = [
-        "Milky"        ,
+        "No Milk"      ,
+        "No Sugar"     ,
         "Blonde Roast" ,
         "Medium Roast" ,
         "Dark Roast"   ,
-        "Sugar-Free"   ,
         "Kcal < 50"    ,
         "Kcal < 100"   ,
         "Kcal < 200"
@@ -45,9 +45,17 @@ class ViewController9: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tastesPicker.options = ViewController9.TASTES
-        tastesPicker.selectedIndexes = [0,2]
+       // let saved_selectedIndexes = UserDefaults.standard.integer(forKey: "UIMultiPickerIndexes")
+        let defaults = UserDefaults.standard
+        let saved_selectedIndexes = defaults.object(forKey:"UIMultiPickerIndexes") as? [Int] ?? [Int]()
+        print(saved_selectedIndexes)
         
+        
+        
+        tastesPicker.options = ViewController9.TASTES
+        tastesPicker.selectedIndexes = saved_selectedIndexes
+        //tastesPicker.selectedIndexes = [saved_selectedIndexes]
+
         tastesPicker.addTarget(self, action: #selector(ViewController9.selected(_:)), for: .valueChanged)
         
         tastesPicker.color = .gray
@@ -57,10 +65,8 @@ class ViewController9: UIViewController {
         tastesPicker.highlight(2, animated: false) // centering "Bitter"
     }
 
-    @IBAction func PRESSED(_ sender: UIButton, forEvent event: UIEvent) {
-        print("AAA")
-    }
     @objc func selected(_ sender: UIMultiPicker) {
+        UserDefaults.standard.set(sender.selectedIndexes, forKey: "UIMultiPickerIndexes")
         print(sender.selectedIndexes)
     }
 }
@@ -71,10 +77,8 @@ class ViewController9: UIViewController {
 class ViewController2: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource {
     
     
-    
     let optionArray = ["Blonde Roast", "Medium Roast", "Dark Roast", "Milky", "Sugar-Free", "Kcal < 50", "Kcal < 100", "Kcal < 200"]
     
-
     //Pre-setup IBOutlets
     @IBOutlet weak var optionPicker: UIPickerView!
 
@@ -89,19 +93,21 @@ class ViewController2: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        UserDefaults.standard.set(row, forKey: "pickerViewRow")
         return optionArray[row]
+    
     }
  
 
-    
     //////////////////////////////
     override func viewDidLoad() {
         super.viewDidLoad()
         
         optionPicker.delegate = self
         optionPicker.dataSource = self
-        optionPicker.selectRow(optionArray.count/2, inComponent: 0, animated: false)
         
+        let saved_row = UserDefaults.standard.integer(forKey: "pickerViewRow")
+        optionPicker.selectRow(saved_row, inComponent: 0, animated: false)
     }
     
     
