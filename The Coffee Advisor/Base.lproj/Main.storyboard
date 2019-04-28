@@ -1,15 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller9-->
+        <scene sceneID="56g-bN-mGz">
+            <objects>
+                <viewController id="F3M-V3-VdP" customClass="ViewController9" customModule="The_Coffee_Advisor" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lfJ-Sn-QaG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSI-7t-Xxz" customClass="UIMultiPicker" customModule="UIMultiPicker">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="478"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="6RP-VO-Tv5">
+                                        <rect key="frame" x="12" y="28" width="355" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="cMX-7n-b4u"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="safeArea" id="O9S-WN-y57"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">MY COFFEE
+OPTIONS</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="30" name="TimesNewRomanPS-BoldItalicMT"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstItem="6RP-VO-Tv5" firstAttribute="top" secondItem="QSI-7t-Xxz" secondAttribute="topMargin" id="2Ce-yM-x9T"/>
+                                    <constraint firstAttribute="width" constant="375" id="Idw-2P-VRy"/>
+                                    <constraint firstItem="6RP-VO-Tv5" firstAttribute="leading" secondItem="QSI-7t-Xxz" secondAttribute="leading" constant="12" id="Jtp-DD-CkC"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="UvR-Ua-4NU"/>
+                                    <constraint firstItem="6RP-VO-Tv5" firstAttribute="trailing" secondItem="QSI-7t-Xxz" secondAttribute="trailingMargin" id="W9h-Cy-286"/>
+                                    <constraint firstAttribute="width" secondItem="QSI-7t-Xxz" secondAttribute="height" multiplier="375:478" id="X2M-14-ax5"/>
+                                    <constraint firstAttribute="width" secondItem="QSI-7t-Xxz" secondAttribute="height" multiplier="125:176" constant="35.511363636363626" id="b7z-sS-g3U"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="478" id="hEB-Xp-CD3"/>
+                                    <constraint firstAttribute="height" constant="478" id="tAG-mI-zv1"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aIA-yB-PXV">
+                                <rect key="frame" x="117" y="368" width="140" height="140"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="698-W9-H0F"/>
+                                    <constraint firstAttribute="width" constant="140" id="lgG-TI-Yys"/>
+                                    <constraint firstAttribute="width" secondItem="aIA-yB-PXV" secondAttribute="height" multiplier="1:1" id="mcI-L2-Vjh"/>
+                                </constraints>
+                                <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="BACK">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="21" name="Arial-BoldMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="70"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="zrj-su-0Pt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aIA-yB-PXV" firstAttribute="leading" secondItem="Ajg-mf-bmd" secondAttribute="leading" constant="117" id="7gT-oO-o7x"/>
+                            <constraint firstItem="QSI-7t-Xxz" firstAttribute="trailing" secondItem="Ajg-mf-bmd" secondAttribute="trailing" id="7iE-Xi-5Ag"/>
+                            <constraint firstItem="QSI-7t-Xxz" firstAttribute="leading" secondItem="Ajg-mf-bmd" secondAttribute="leading" id="Ack-fu-j9f"/>
+                            <constraint firstAttribute="bottom" secondItem="aIA-yB-PXV" secondAttribute="bottom" constant="20" id="CNt-Ne-Kq0"/>
+                            <constraint firstItem="Ajg-mf-bmd" firstAttribute="trailing" secondItem="aIA-yB-PXV" secondAttribute="trailing" constant="118" id="Scz-LW-sxq"/>
+                            <constraint firstItem="QSI-7t-Xxz" firstAttribute="bottom" secondItem="Ajg-mf-bmd" secondAttribute="bottom" constant="-50" id="dna-T9-fEq"/>
+                            <constraint firstItem="QSI-7t-Xxz" firstAttribute="leading" secondItem="Ajg-mf-bmd" secondAttribute="leading" id="fpn-Xs-D9S"/>
+                            <constraint firstItem="QSI-7t-Xxz" firstAttribute="trailing" secondItem="Ajg-mf-bmd" secondAttribute="trailing" id="rcF-MM-JRw"/>
+                            <constraint firstItem="QSI-7t-Xxz" firstAttribute="top" secondItem="lfJ-Sn-QaG" secondAttribute="top" id="yc1-5i-v6u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ajg-mf-bmd"/>
+                    </view>
+                    <connections>
+                        <outlet property="tastesPicker" destination="QSI-7t-Xxz" id="hsj-41-ijA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oJJ-Sw-uDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1328.8" y="715.59220389805103"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -53,7 +157,7 @@ OPTIONS </string>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="0eI-K8-BNX" kind="show" id="lkA-S0-PV0"/>
+                                    <segue destination="F3M-V3-VdP" kind="show" id="NOq-04-YZU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="o2S-dF-Hvi">
@@ -135,10 +239,11 @@ COFFEE
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Cei-eI-Jwa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="349.60000000000002" y="226.23688155922042"/>
+            <point key="canvasLocation" x="2228" y="226.23688155922042"/>
         </scene>
         <!--View Controller2-->
         <scene sceneID="YY6-ZY-Wr7">
@@ -148,27 +253,6 @@ COFFEE
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="6RP-VO-Tv5">
-                                <rect key="frame" x="10" y="20" width="355" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="355" id="NA3-Lf-GXn"/>
-                                    <constraint firstAttribute="width" secondItem="6RP-VO-Tv5" secondAttribute="height" multiplier="71:20" id="kOo-Z7-H91"/>
-                                    <constraint firstAttribute="height" constant="100" id="n9q-6i-C0T"/>
-                                </constraints>
-                                <viewLayoutGuide key="safeArea" id="O9S-WN-y57"/>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">MY COFFEE
-OPTIONS</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="30" name="TimesNewRomanPS-BoldItalicMT"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0kX-Qh-KwH">
                                 <rect key="frame" x="117.5" y="390" width="140" height="140"/>
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -199,11 +283,11 @@ OPTIONS</string>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="lpk-fU-fop"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="ToZ-5y-Zdq"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ABi-ti-aoX">
-                                <rect key="frame" x="27.5" y="120" width="320" height="270"/>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ABi-ti-aoX">
+                                <rect key="frame" x="27" y="112" width="320" height="270"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="270" id="J1B-TL-hT8"/>
                                     <constraint firstAttribute="width" secondItem="ABi-ti-aoX" secondAttribute="height" multiplier="32:27" id="O8G-eQ-gQb"/>
@@ -221,8 +305,6 @@ OPTIONS</string>
                             <constraint firstItem="ABi-ti-aoX" firstAttribute="centerX" secondItem="F3J-zg-ICe" secondAttribute="centerX" id="4Jx-xY-Rrf"/>
                             <constraint firstItem="ABi-ti-aoX" firstAttribute="top" secondItem="Xlx-wc-Q6e" secondAttribute="top" constant="100" id="9vR-pe-FAr"/>
                             <constraint firstItem="0kX-Qh-KwH" firstAttribute="top" secondItem="ABi-ti-aoX" secondAttribute="bottom" id="Vis-MB-b2Q"/>
-                            <constraint firstItem="6RP-VO-Tv5" firstAttribute="centerX" secondItem="F3J-zg-ICe" secondAttribute="centerX" id="f0n-r8-Dvq"/>
-                            <constraint firstItem="6RP-VO-Tv5" firstAttribute="top" secondItem="Xlx-wc-Q6e" secondAttribute="top" id="nat-CB-04G"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xlx-wc-Q6e"/>
                     </view>
@@ -232,7 +314,10 @@ OPTIONS</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mxc-Bo-7a1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1061.5999999999999" y="225.33733133433284"/>
+            <point key="canvasLocation" x="2940" y="225.33733133433284"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ToZ-5y-Zdq"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -1,0 +1,16 @@
+PODS:
+  - UIMultiPicker (0.4.1)
+
+DEPENDENCIES:
+  - UIMultiPicker
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - UIMultiPicker
+
+SPEC CHECKSUMS:
+  UIMultiPicker: 8800223c5145665e0b02a73d0597a4bf83d67b2a
+
+PODFILE CHECKSUM: ac30a9cac48cf2507302b8f00699ef032d8b934a
+
+COCOAPODS: 1.5.3

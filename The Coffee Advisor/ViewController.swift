@@ -19,6 +19,55 @@ class ViewController: UIViewController {
     
 }
 
+import UIKit
+import UIMultiPicker
+
+class ViewController9: UIViewController {
+    
+    static let TASTES = [
+        "Milky"        ,
+        "Blonde Roast" ,
+        "Medium Roast" ,
+        "Dark Roast"   ,
+        "Sugar-Free"   ,
+        "Kcal < 50"    ,
+        "Kcal < 100"   ,
+        "Kcal < 200"
+    ];
+    
+    
+
+    @IBOutlet weak var tastesPicker: UIMultiPicker!
+    
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tastesPicker.options = ViewController9.TASTES
+        tastesPicker.selectedIndexes = [0,2]
+        
+        tastesPicker.addTarget(self, action: #selector(ViewController9.selected(_:)), for: .valueChanged)
+        
+        tastesPicker.color = .gray
+        tastesPicker.tintColor = .black
+        tastesPicker.font = .systemFont(ofSize: 24, weight: .bold)
+        
+        tastesPicker.highlight(2, animated: false) // centering "Bitter"
+    }
+
+    @IBAction func PRESSED(_ sender: UIButton, forEvent event: UIEvent) {
+        print("AAA")
+    }
+    @objc func selected(_ sender: UIMultiPicker) {
+        print(sender.selectedIndexes)
+    }
+}
+
+
+
+
 class ViewController2: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource {
     
     

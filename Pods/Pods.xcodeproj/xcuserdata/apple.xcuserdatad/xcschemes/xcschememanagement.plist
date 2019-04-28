@@ -4,19 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>The Coffee Advisor.xcscheme_^#shared#^_</key>
+		<key>Pods-The Coffee Advisor.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>0</integer>
+		</dict>
+		<key>UIMultiPicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>18B08FBD222B13700028F450</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>
