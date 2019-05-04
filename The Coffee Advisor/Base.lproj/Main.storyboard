@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSI-7t-Xxz" customClass="UIMultiPicker" customModule="UIMultiPicker">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="478"/>
+                                <rect key="frame" x="0.0" y="139" width="375" height="478"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="6RP-VO-Tv5">
-                                        <rect key="frame" x="12" y="28" width="355" height="100"/>
+                                        <rect key="frame" x="12" y="8" width="355" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="cMX-7n-b4u"/>
                                         </constraints>
@@ -59,7 +59,7 @@ OPTIONS</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aIA-yB-PXV">
-                                <rect key="frame" x="117" y="368" width="140" height="140"/>
+                                <rect key="frame" x="117" y="507" width="140" height="140"/>
                                 <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" staticText="YES"/>

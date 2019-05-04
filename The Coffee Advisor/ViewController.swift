@@ -85,16 +85,15 @@ class ViewController2: UIViewController {
 
 class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource {
     
+    var V3_saved_selectedIndexes = UserDefaults.standard.object(forKey:"UIMultiPickerIndexes") as? [Int] ?? [Int]()
     
-    
-    let optionArray = ["Blonde Roast", "Medium Roast", "Dark Roast", "Milky", "Sugar-Free", "Kcal < 50", "Kcal < 100", "Kcal < 200"]
-    
-    
-    let coffeeMenu: [[String]] =
-        [
-            
-            [
 
+    
+    //let optionArray = ["Blonde Roast", "Medium Roast", "Dark Roast", "Milky", "Sugar-Free", "Kcal < 50", "Kcal < 100", "Kcal < 200"]
+    
+    
+    var coffeeMenu: [String] =
+            [
              "Cortado"                      ,
              "Espresso"                     ,
              "Macchiato"                    ,
@@ -116,32 +115,9 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
              "Iced Mocha"                   ,
              "Iced Americano"               ,
              "Iced Caramel Macchiato"       ,
-             "Iced White Chocolate Mocha"   ],
-            
-            [" 15 kcal",
-             " 15 kcal",
-             " 15 kcal",
-             " 15 kcal",
-             " 15 kcal",
-             
-             "150 kcal",
-             "150 kcal",
-             "150 kcal",
-             "150 kcal",
-             "150 kcal",
-             
-             "350 kcal",
-             "350 kcal",
-             "350 kcal",
-             "350 kcal",
-             
-             "150 kcal",
-             "350 kcal",
-             " 15 kcal",
-             "350 kcal",
-             "350 kcal"]
-            
-    ];
+             "Iced White Chocolate Mocha"   ];
+    
+
     
     
     
@@ -159,11 +135,30 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return coffeeMenu[0].count
+        
+        if V3_saved_selectedIndexes.contains(0) {
+        coffeeMenu = [
+        "Cortado"                      ,
+        "Espresso"                     ,
+        "Macchiato"                    ,
+        "Ristretto"                    ,
+        "Americano"                    ]
+        }
+        
+        return coffeeMenu.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return coffeeMenu[0][row]
+        
+        if V3_saved_selectedIndexes.contains(0)  {
+            coffeeMenu = [
+                "Cortado"                      ,
+                "Espresso"                     ,
+                "Macchiato"                    ,
+                "Ristretto"                    ,
+                "Americano"                    ]
+        }
+        return coffeeMenu[row]
     }
     
 //    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
@@ -179,7 +174,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
 //
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let pickerLabel = UILabel()
-        let titleData = coffeeMenu[0][row]
+        let titleData = coffeeMenu[row]
         let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedString.Key.font:UIFont(name: "Georgia", size: 28.0)!,NSAttributedString.Key.foregroundColor:UIColor.black])
         pickerLabel.attributedText = myTitle
         
@@ -206,3 +201,65 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     
     
 }
+
+
+
+
+////
+
+//
+//let coffeeMenu: [[String]] =
+//    [
+//
+//        [
+//
+//            "Cortado"                      ,
+//            "Espresso"                     ,
+//            "Macchiato"                    ,
+//            "Ristretto"                    ,
+//            "Americano"                    ,
+//
+//            "Latte"                        ,
+//            "Misto"                        ,
+//            "Cappucino"                    ,
+//            "Flat White"                   ,
+//            "Ristretto Bianco"             ,
+//
+//            "Mocha"                        ,
+//            "Frappuccino"                  ,
+//            "Caramel Macchiato"            ,
+//            "White Chocolate Mocha"        ,
+//
+//            "Iced Latte"                   ,
+//            "Iced Mocha"                   ,
+//            "Iced Americano"               ,
+//            "Iced Caramel Macchiato"       ,
+//            "Iced White Chocolate Mocha"   ],
+//
+//        [" 15 kcal",
+//         " 15 kcal",
+//         " 15 kcal",
+//         " 15 kcal",
+//         " 15 kcal",
+//
+//         "150 kcal",
+//         "150 kcal",
+//         "150 kcal",
+//         "150 kcal",
+//         "150 kcal",
+//
+//         "350 kcal",
+//         "350 kcal",
+//         "350 kcal",
+//         "350 kcal",
+//
+//         "150 kcal",
+//         "350 kcal",
+//         " 15 kcal",
+//         "350 kcal",
+//         "350 kcal"]
+//
+//];
+//
+//
+//
