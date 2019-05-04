@@ -31,17 +31,17 @@ class ViewController2: UIViewController {
 
         "No Milk"               ,
         "No Sugar"              ,
-        "No Caffeine"           ,
+        //"No Caffeine"         ,
         
-        "Blonde Roast"          ,
-        "Medium Roast"          ,
-        "Dark Roast"            ,
+        //"Blonde Roast"        ,
+        //"Medium Roast"        ,
+        //"Dark Roast"          ,
 
         "Foam"                  ,
         "Cream"                 ,
         "Extra Shot"            ,
-        "Ice Coffee"            ,
-        "Cold Brew"             ,
+        "Iced Coffee"           ,
+        //"Cold Brew"           ,
         
         "Kcal < 50"             ,
         "Kcal < 100"            ,
@@ -81,45 +81,44 @@ class ViewController2: UIViewController {
 }
 
 
-
-
 class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource {
     
     var V3_saved_selectedIndexes = UserDefaults.standard.object(forKey:"UIMultiPickerIndexes") as? [Int] ?? [Int]()
     
 
     
+    
+    
     //let optionArray = ["Blonde Roast", "Medium Roast", "Dark Roast", "Milky", "Sugar-Free", "Kcal < 50", "Kcal < 100", "Kcal < 200"]
     
+   class MyCoffeeMenu {
+
+        var coffeeMenuNames  = [""]
+        var coffeeMenuKcals  = [""]
+
+//        init(coffeeMenuNames: String, coffeeMenuKcals: String) {
+//            self.coffeeMenuNames = ["a"]
+//            self.coffeeMenuKcals = ["77"]
+//
+//        }
+
+    }
+
+    var myVariableMenu = MyCoffeeMenu()
     
-    var coffeeMenu: [String] =
-            [
-             "Cortado"                      ,
-             "Espresso"                     ,
-             "Macchiato"                    ,
-             "Ristretto"                    ,
-             "Americano"                    ,
-             
-             "Latte"                        ,
-             "Misto"                        ,
-             "Cappucino"                    ,
-             "Flat White"                   ,
-             "Ristretto Bianco"             ,
-             
-             "Mocha"                        ,
-             "Frappuccino"                  ,
-             "Caramel Macchiato"            ,
-             "White Chocolate Mocha"        ,
-             
-             "Iced Latte"                   ,
-             "Iced Mocha"                   ,
-             "Iced Americano"               ,
-             "Iced Caramel Macchiato"       ,
-             "Iced White Chocolate Mocha"   ];
+    
+    
+    
+  
+
+    //coffeeMenu.coffeeMenuNames = ["Cortado"]
+
+    //var coffeeMenu = [""]
+    
+    var coffeeMenu = [""]
     
 
-    
-    
+   
     
     
     //Pre-setup IBOutlets
@@ -136,28 +135,87 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
-        if V3_saved_selectedIndexes.contains(0) {
-        coffeeMenu = [
-        "Cortado"                      ,
+    coffeeMenu =
+        [
+        "Lungo"                        ,
         "Espresso"                     ,
         "Macchiato"                    ,
         "Ristretto"                    ,
-        "Americano"                    ]
+        "Americano"                    ,
+            
+        "Latte"                        ,//milk
+        "Misto"                        ,//milk
+        "Cappucino"                    ,//milk
+        "Flat White"                   ,//milk
+        "Cortado"                      ,//milk
+
+        //"Ristretto Bianco"           ,
+        
+        "Mocha"                        ,//milk+sugar
+        "Frappuccino"                  ,//milk+sugar
+        "Caramel Macchiato"            ,//milk+sugar
+        "White Chocolate Mocha"        ,//milk+sugar
+        
+        "Iced Latte"                   ,//milk
+        "Iced Mocha"                   ,//milk+sugar
+        "Iced Americano"               ,
+        "Iced Caramel Macchiato"       ,//milk+sugar
+        "Iced White Chocolate Mocha"    //milk+sugar
+        ]
+        
+        if V3_saved_selectedIndexes.contains(0)  { //no milk and sugar case
+            coffeeMenu.removeAll(keepingCapacity: false)
+            coffeeMenu.append("Lungo")
+            coffeeMenu.append("Espresso")
+            coffeeMenu.append("Macchiato")
+            coffeeMenu.append("Ristretto")
+            coffeeMenu.append("Americano")
+            coffeeMenu.append("Iced Americano")
+        }
+        else if V3_saved_selectedIndexes.contains(1)  { //no sugar case
+            coffeeMenu.removeAll(keepingCapacity: false)
+            coffeeMenu.append("Lungo")
+            coffeeMenu.append("Espresso")
+            coffeeMenu.append("Macchiato")
+            coffeeMenu.append("Ristretto")
+            coffeeMenu.append("Americano")
+            
+            coffeeMenu.append("Latte")
+            coffeeMenu.append("Misto")
+            coffeeMenu.append("Cappucino")
+            coffeeMenu.append("Flat White")
+            coffeeMenu.append("Cortado")
+            
+            coffeeMenu.append("Iced Americano")
+            coffeeMenu.append("Iced Latte")
+            
         }
         
+        if V3_saved_selectedIndexes.contains(5) && V3_saved_selectedIndexes.contains(0)    { // iced and no milk
+            coffeeMenu.removeAll(keepingCapacity: false)
+            coffeeMenu.append("Iced Americano")
+        }
+        
+        else if V3_saved_selectedIndexes.contains(5) && V3_saved_selectedIndexes.contains(1)  { // iced and no sugar
+            coffeeMenu.removeAll(keepingCapacity: false)
+            coffeeMenu.append("Iced Latte")
+            coffeeMenu.append("Iced Americano")
+        }
+        
+        else if V3_saved_selectedIndexes.contains(5)  {
+            coffeeMenu.removeAll(keepingCapacity: false)
+            coffeeMenu.append("Iced Latte")
+            coffeeMenu.append("Iced Mocha")
+            coffeeMenu.append("Iced Americano")
+            coffeeMenu.append("Iced Caramel Macchiato")
+            coffeeMenu.append("Iced White Chocolate Mocha")
+        }
+        
+
         return coffeeMenu.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
-        if V3_saved_selectedIndexes.contains(0)  {
-            coffeeMenu = [
-                "Cortado"                      ,
-                "Espresso"                     ,
-                "Macchiato"                    ,
-                "Ristretto"                    ,
-                "Americano"                    ]
-        }
         return coffeeMenu[row]
     }
     
@@ -193,9 +251,12 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //print(mymm.coffeeMenuNames)
+        //print(mymm.coffeeMenuKcals)
+        
         optionPicker.delegate = self
         optionPicker.dataSource = self
-        optionPicker.selectRow(coffeeMenu[0].count/2, inComponent: 0, animated: false)
+        //optionPicker.selectRow((coffeeMenu.count)/2, inComponent: 0, animated: false)
         
     }
     
