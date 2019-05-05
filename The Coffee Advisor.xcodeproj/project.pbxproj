@@ -12,6 +12,7 @@
 		18B08FC7222B13700028F450 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B08FC5222B13700028F450 /* Main.storyboard */; };
 		18B08FC9222B13710028F450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B08FC8222B13710028F450 /* Assets.xcassets */; };
 		18B08FCC222B13710028F450 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B08FCA222B13710028F450 /* LaunchScreen.storyboard */; };
+		18EFC849227EEBD000DA378E /* coffee_beans_food_surface_91913_1920x1080.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18EFC848227EEBD000DA378E /* coffee_beans_food_surface_91913_1920x1080.jpg */; };
 		BCA93C2998EC7894D6F37004 /* Pods_The_Coffee_Advisor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3749688CF010B22B271AE958 /* Pods_The_Coffee_Advisor.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		18B08FC8222B13710028F450 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18B08FCB222B13710028F450 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18B08FCD222B13710028F450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18EFC848227EEBD000DA378E /* coffee_beans_food_surface_91913_1920x1080.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coffee_beans_food_surface_91913_1920x1080.jpg; sourceTree = "<group>"; };
 		3749688CF010B22B271AE958 /* Pods_The_Coffee_Advisor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Coffee_Advisor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7333CCB69C16AB1DB3F545B4 /* Pods-The Coffee Advisor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Coffee Advisor.release.xcconfig"; path = "Pods/Target Support Files/Pods-The Coffee Advisor/Pods-The Coffee Advisor.release.xcconfig"; sourceTree = "<group>"; };
 		8857E832F038A34BED979856 /* Pods-The Coffee Advisor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Coffee Advisor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-The Coffee Advisor/Pods-The Coffee Advisor.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		18B08FC0222B13700028F450 /* The Coffee Advisor */ = {
 			isa = PBXGroup;
 			children = (
+				18EFC848227EEBD000DA378E /* coffee_beans_food_surface_91913_1920x1080.jpg */,
 				18B08FC1222B13700028F450 /* AppDelegate.swift */,
 				18B08FC3222B13700028F450 /* ViewController.swift */,
 				18B08FC5222B13700028F450 /* Main.storyboard */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B08FCC222B13710028F450 /* LaunchScreen.storyboard in Resources */,
+				18EFC849227EEBD000DA378E /* coffee_beans_food_surface_91913_1920x1080.jpg in Resources */,
 				18B08FC9222B13710028F450 /* Assets.xcassets in Resources */,
 				18B08FC7222B13700028F450 /* Main.storyboard in Resources */,
 			);

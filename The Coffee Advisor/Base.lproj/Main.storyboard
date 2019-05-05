@@ -18,63 +18,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSI-7t-Xxz" customClass="UIMultiPicker" customModule="UIMultiPicker">
-                                <rect key="frame" x="0.0" y="139" width="375" height="478"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="6RP-VO-Tv5">
-                                        <rect key="frame" x="12" y="8" width="355" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="cMX-7n-b4u"/>
-                                        </constraints>
-                                        <viewLayoutGuide key="safeArea" id="O9S-WN-y57"/>
-                                        <attributedString key="attributedText">
-                                            <fragment>
-                                                <string key="content">MY COFFEE
-OPTIONS</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="30" name="TimesNewRomanPS-BoldItalicMT"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES"/>
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee_beans_food_surface_91913_1920x1080.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Svx-Yw-Ek4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <constraints>
-                                    <constraint firstItem="6RP-VO-Tv5" firstAttribute="top" secondItem="QSI-7t-Xxz" secondAttribute="topMargin" id="2Ce-yM-x9T"/>
-                                    <constraint firstAttribute="width" constant="375" id="Idw-2P-VRy"/>
-                                    <constraint firstItem="6RP-VO-Tv5" firstAttribute="leading" secondItem="QSI-7t-Xxz" secondAttribute="leading" constant="12" id="Jtp-DD-CkC"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="UvR-Ua-4NU"/>
-                                    <constraint firstItem="6RP-VO-Tv5" firstAttribute="trailing" secondItem="QSI-7t-Xxz" secondAttribute="trailingMargin" id="W9h-Cy-286"/>
-                                    <constraint firstAttribute="width" secondItem="QSI-7t-Xxz" secondAttribute="height" multiplier="375:478" id="X2M-14-ax5"/>
-                                    <constraint firstAttribute="width" secondItem="QSI-7t-Xxz" secondAttribute="height" multiplier="125:176" constant="35.511363636363626" id="b7z-sS-g3U"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="478" id="hEB-Xp-CD3"/>
-                                    <constraint firstAttribute="height" constant="478" id="tAG-mI-zv1"/>
+                                    <constraint firstAttribute="width" constant="375" id="Am1-7c-oSU"/>
+                                    <constraint firstAttribute="width" secondItem="Svx-Yw-Ek4" secondAttribute="height" multiplier="375:667" id="DSm-rw-DIu"/>
+                                    <constraint firstAttribute="height" constant="667" id="VSm-6K-2cn"/>
                                 </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aIA-yB-PXV">
-                                <rect key="frame" x="117" y="507" width="140" height="140"/>
-                                <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aIA-yB-PXV">
+                                <rect key="frame" x="117" y="477" width="140" height="140"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="698-W9-H0F"/>
-                                    <constraint firstAttribute="width" constant="140" id="lgG-TI-Yys"/>
-                                    <constraint firstAttribute="width" secondItem="aIA-yB-PXV" secondAttribute="height" multiplier="1:1" id="mcI-L2-Vjh"/>
+                                    <constraint firstAttribute="width" constant="140" id="BdO-Kf-BA1"/>
+                                    <constraint firstAttribute="height" constant="140" id="jqN-bo-oe1"/>
+                                    <constraint firstAttribute="width" secondItem="aIA-yB-PXV" secondAttribute="height" multiplier="1:1" id="yGp-Co-tLA"/>
                                 </constraints>
-                                <color key="tintColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="BACK">
                                             <attributes>
-                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="21" name="Arial-BoldMT"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
@@ -91,18 +59,62 @@ OPTIONS</string>
                                     <segue destination="BYZ-38-t0r" kind="show" id="zrj-su-0Pt"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="6RP-VO-Tv5">
+                                <rect key="frame" x="0.0" y="40" width="375" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Enw-IO-Zj2"/>
+                                    <constraint firstAttribute="width" constant="375" id="Y9X-CR-IfY"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="YPV-pe-Nwj"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="hf3-u2-zOO"/>
+                                    <constraint firstAttribute="width" secondItem="6RP-VO-Tv5" secondAttribute="height" multiplier="15:4" id="p3b-NE-Unv"/>
+                                    <constraint firstAttribute="width" secondItem="6RP-VO-Tv5" secondAttribute="height" multiplier="15:4" id="wgv-gN-R2d"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="O9S-WN-y57"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">MY COFFEE
+OPTIONS</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="36" name="TimesNewRomanPS-BoldItalicMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSI-7t-Xxz" customClass="UIMultiPicker" customModule="UIMultiPicker">
+                                <rect key="frame" x="54" y="169" width="267" height="259"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="267" id="def-Pe-HHF"/>
+                                    <constraint firstAttribute="height" constant="259" id="fvC-Ri-CqI"/>
+                                    <constraint firstAttribute="width" secondItem="QSI-7t-Xxz" secondAttribute="height" multiplier="25:22" constant="-27.31818181818187" id="uBh-eq-koP"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="aIA-yB-PXV" firstAttribute="leading" secondItem="Ajg-mf-bmd" secondAttribute="leading" constant="117" id="7gT-oO-o7x"/>
-                            <constraint firstItem="QSI-7t-Xxz" firstAttribute="trailing" secondItem="Ajg-mf-bmd" secondAttribute="trailing" id="7iE-Xi-5Ag"/>
-                            <constraint firstItem="QSI-7t-Xxz" firstAttribute="leading" secondItem="Ajg-mf-bmd" secondAttribute="leading" id="Ack-fu-j9f"/>
-                            <constraint firstAttribute="bottom" secondItem="aIA-yB-PXV" secondAttribute="bottom" constant="20" id="CNt-Ne-Kq0"/>
-                            <constraint firstItem="Ajg-mf-bmd" firstAttribute="trailing" secondItem="aIA-yB-PXV" secondAttribute="trailing" constant="118" id="Scz-LW-sxq"/>
-                            <constraint firstItem="QSI-7t-Xxz" firstAttribute="bottom" secondItem="Ajg-mf-bmd" secondAttribute="bottom" constant="-50" id="dna-T9-fEq"/>
-                            <constraint firstItem="QSI-7t-Xxz" firstAttribute="leading" secondItem="Ajg-mf-bmd" secondAttribute="leading" id="fpn-Xs-D9S"/>
-                            <constraint firstItem="QSI-7t-Xxz" firstAttribute="trailing" secondItem="Ajg-mf-bmd" secondAttribute="trailing" id="rcF-MM-JRw"/>
-                            <constraint firstItem="QSI-7t-Xxz" firstAttribute="top" secondItem="lfJ-Sn-QaG" secondAttribute="top" id="yc1-5i-v6u"/>
+                            <constraint firstItem="QSI-7t-Xxz" firstAttribute="trailing" secondItem="Ajg-mf-bmd" secondAttribute="trailing" constant="-54" id="09Z-Bx-O9c"/>
+                            <constraint firstItem="Ajg-mf-bmd" firstAttribute="trailing" secondItem="aIA-yB-PXV" secondAttribute="trailing" constant="118" id="2v3-x6-9lb"/>
+                            <constraint firstItem="aIA-yB-PXV" firstAttribute="top" secondItem="QSI-7t-Xxz" secondAttribute="bottom" constant="49" id="Btu-2m-8BY"/>
+                            <constraint firstItem="Svx-Yw-Ek4" firstAttribute="leading" secondItem="Ajg-mf-bmd" secondAttribute="leading" id="DDw-ZC-0O7"/>
+                            <constraint firstItem="6RP-VO-Tv5" firstAttribute="trailing" secondItem="Ajg-mf-bmd" secondAttribute="trailing" id="N6e-tg-bq6"/>
+                            <constraint firstItem="6RP-VO-Tv5" firstAttribute="leading" secondItem="Ajg-mf-bmd" secondAttribute="leading" id="SaQ-bK-yuX"/>
+                            <constraint firstItem="Svx-Yw-Ek4" firstAttribute="bottom" secondItem="Ajg-mf-bmd" secondAttribute="bottom" id="cOt-kq-HAt"/>
+                            <constraint firstItem="6RP-VO-Tv5" firstAttribute="trailing" secondItem="Ajg-mf-bmd" secondAttribute="trailing" id="chJ-Qt-InC"/>
+                            <constraint firstItem="Svx-Yw-Ek4" firstAttribute="top" secondItem="lfJ-Sn-QaG" secondAttribute="top" id="dSy-DF-AXr"/>
+                            <constraint firstItem="Svx-Yw-Ek4" firstAttribute="trailing" secondItem="Ajg-mf-bmd" secondAttribute="trailing" id="kW5-1w-Tu3"/>
+                            <constraint firstItem="Ajg-mf-bmd" firstAttribute="bottom" secondItem="aIA-yB-PXV" secondAttribute="bottom" constant="50" id="keb-hn-Jkw"/>
+                            <constraint firstItem="6RP-VO-Tv5" firstAttribute="top" secondItem="Ajg-mf-bmd" secondAttribute="top" constant="20" id="oE8-A2-8YJ"/>
+                            <constraint firstItem="aIA-yB-PXV" firstAttribute="leading" secondItem="Ajg-mf-bmd" secondAttribute="leading" constant="117" id="tXL-8q-Wnd"/>
+                            <constraint firstItem="6RP-VO-Tv5" firstAttribute="leading" secondItem="Ajg-mf-bmd" secondAttribute="leading" id="ui5-fU-6lH"/>
+                            <constraint firstItem="QSI-7t-Xxz" firstAttribute="leading" secondItem="Ajg-mf-bmd" secondAttribute="leading" constant="54" id="uwP-M1-xWb"/>
+                            <constraint firstItem="6RP-VO-Tv5" firstAttribute="top" secondItem="Ajg-mf-bmd" secondAttribute="top" constant="20" id="wMH-Yh-vtj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ajg-mf-bmd"/>
                     </view>
@@ -112,7 +124,7 @@ OPTIONS</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oJJ-Sw-uDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1328.8" y="715.59220389805103"/>
+            <point key="canvasLocation" x="1584.8" y="225.33733133433284"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -122,9 +134,12 @@ OPTIONS</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSJ-el-6vu">
-                                <rect key="frame" x="117.5" y="395" width="140" height="140"/>
-                                <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee_beans_food_surface_91913_1920x1080.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fxH-AQ-E3J">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSJ-el-6vu">
+                                <rect key="frame" x="117.5" y="415" width="140" height="140"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                 </accessibility>
@@ -135,7 +150,7 @@ OPTIONS</string>
                                     <constraint firstAttribute="width" constant="140" id="O8W-hs-dXd"/>
                                     <constraint firstAttribute="height" constant="140" id="dhD-RJ-glR"/>
                                 </constraints>
-                                <color key="tintColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment>
@@ -143,7 +158,7 @@ OPTIONS</string>
 COFFEE 
 OPTIONS </string>
                                             <attributes>
-                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="21" name="Arial-BoldMT"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
@@ -160,9 +175,9 @@ OPTIONS </string>
                                     <segue destination="F3M-V3-VdP" kind="show" id="NOq-04-YZU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2gK-hg-O77">
-                                <rect key="frame" x="87.5" y="145" width="200" height="200"/>
-                                <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2gK-hg-O77">
+                                <rect key="frame" x="87.5" y="165" width="200" height="200"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                 </accessibility>
@@ -171,22 +186,22 @@ OPTIONS </string>
                                     <constraint firstAttribute="height" constant="200" id="JoH-dx-6lW"/>
                                     <constraint firstAttribute="width" constant="200" id="uEa-dW-hCT"/>
                                 </constraints>
-                                <color key="tintColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment>
-                                            <string key="content">GET MY  
+                                            <string key="content">SEE MY  
 COFFEE
 </string>
                                             <attributes>
-                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="30" name="Arial-BoldMT"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
-                                        <fragment content="NOW!">
+                                        <fragment content="ADVICES">
                                             <attributes>
-                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="30" name="Arial-BoldMT"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="leftToRight" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
@@ -204,9 +219,9 @@ COFFEE
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="o2S-dF-Hvi">
-                                <rect key="frame" x="37" y="28" width="301" height="100"/>
+                                <rect key="frame" x="0.0" y="37" width="375" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="kcW-Wf-hme"/>
+                                    <constraint firstAttribute="height" constant="100" id="QQM-Tv-Ewd"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="0RF-2t-uwv"/>
                                 <attributedString key="attributedText">
@@ -214,15 +229,15 @@ COFFEE
                                         <string key="content">WELCOME TO YOUR
 </string>
                                         <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="30" name="TimesNewRomanPS-BoldItalicMT"/>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="36" name="TimesNewRomanPS-BoldItalicMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="COFFEE ADVISOR">
                                         <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="30" name="TimesNewRomanPS-BoldItalicMT"/>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="36" name="TimesNewRomanPS-BoldItalicMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -232,13 +247,17 @@ COFFEE
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="2gK-hg-O77" firstAttribute="top" secondItem="o2S-dF-Hvi" secondAttribute="bottom" constant="17" id="4tk-o9-swR"/>
-                            <constraint firstItem="o2S-dF-Hvi" firstAttribute="centerX" secondItem="2gK-hg-O77" secondAttribute="centerX" id="AB2-C1-8fo"/>
+                            <constraint firstItem="2gK-hg-O77" firstAttribute="top" secondItem="o2S-dF-Hvi" secondAttribute="bottom" constant="28" id="5v9-3D-hEm"/>
                             <constraint firstItem="DSJ-el-6vu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CFD-hf-1Ph"/>
-                            <constraint firstItem="o2S-dF-Hvi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="EUf-Xs-IQf"/>
                             <constraint firstItem="2gK-hg-O77" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HAP-kQ-lBC"/>
-                            <constraint firstItem="o2S-dF-Hvi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="TSP-xp-hv2"/>
+                            <constraint firstItem="o2S-dF-Hvi" firstAttribute="trailing" secondItem="fxH-AQ-E3J" secondAttribute="trailing" id="MGZ-K5-dCF"/>
+                            <constraint firstItem="fxH-AQ-E3J" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Tdc-YS-Tbh"/>
+                            <constraint firstItem="o2S-dF-Hvi" firstAttribute="leading" secondItem="fxH-AQ-E3J" secondAttribute="leading" id="WRr-tW-wtI"/>
                             <constraint firstItem="DSJ-el-6vu" firstAttribute="top" secondItem="2gK-hg-O77" secondAttribute="bottom" constant="50" id="d2o-Bc-T5g"/>
+                            <constraint firstItem="o2S-dF-Hvi" firstAttribute="centerX" secondItem="2gK-hg-O77" secondAttribute="centerX" id="gp8-Rb-iOA"/>
+                            <constraint firstItem="fxH-AQ-E3J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="h2C-Jp-6Ni"/>
+                            <constraint firstItem="fxH-AQ-E3J" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lNt-Yj-qxh"/>
+                            <constraint firstItem="o2S-dF-Hvi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="o3k-jW-J9j"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -256,6 +275,9 @@ COFFEE
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee_beans_food_surface_91913_1920x1080.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lOR-FJ-dJ6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="At5-Lx-Svd">
                                 <rect key="frame" x="0.0" y="128" width="375" height="371"/>
                                 <constraints>
@@ -264,28 +286,9 @@ COFFEE
                                     <constraint firstAttribute="height" constant="371" id="YHs-54-s5e"/>
                                 </constraints>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="Jht-78-vZK">
-                                <rect key="frame" x="37" y="20" width="301" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="0rO-8s-f3Z"/>
-                                    <constraint firstAttribute="width" secondItem="Jht-78-vZK" secondAttribute="height" multiplier="301:100" id="72E-sS-g6k"/>
-                                    <constraint firstAttribute="width" constant="301" id="gc8-6p-5rF"/>
-                                </constraints>
-                                <viewLayoutGuide key="safeArea" id="Ktt-2i-BXr"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="YOUR COFFEE ADVICES">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="30" name="TimesNewRomanPS-BoldItalicMT"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mq5-zW-pU6">
+                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mq5-zW-pU6">
                                 <rect key="frame" x="117" y="507" width="140" height="140"/>
-                                <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                 </accessibility>
@@ -297,12 +300,12 @@ COFFEE
                                     <constraint firstAttribute="width" secondItem="mq5-zW-pU6" secondAttribute="height" multiplier="1:1" id="tKs-Dt-eM8"/>
                                     <constraint firstAttribute="width" secondItem="mq5-zW-pU6" secondAttribute="height" multiplier="1:1" id="uHU-Ox-ldS"/>
                                 </constraints>
-                                <color key="tintColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="BACK">
                                             <attributes>
-                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="21" name="Arial-BoldMT"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
@@ -319,19 +322,43 @@ COFFEE
                                     <segue destination="BYZ-38-t0r" kind="show" id="lcK-Gp-g7x"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="Jht-78-vZK">
+                                <rect key="frame" x="0.0" y="40" width="375" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="7mH-2N-JY6"/>
+                                    <constraint firstAttribute="width" secondItem="Jht-78-vZK" secondAttribute="height" multiplier="15:4" id="aXl-0U-ALT"/>
+                                    <constraint firstAttribute="height" constant="100" id="e2c-61-gtY"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="Ktt-2i-BXr"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">MY COFFEE 
+ADVICES</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="36" name="TimesNewRomanPS-BoldItalicMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Jht-78-vZK" firstAttribute="leading" secondItem="CE0-7H-mSJ" secondAttribute="leading" constant="37" id="4hj-zk-VYt"/>
-                            <constraint firstItem="Jht-78-vZK" firstAttribute="top" secondItem="CE0-7H-mSJ" secondAttribute="top" id="BxY-K3-o9T"/>
+                            <constraint firstItem="lOR-FJ-dJ6" firstAttribute="leading" secondItem="At5-Lx-Svd" secondAttribute="leading" id="0P9-uL-eL5"/>
+                            <constraint firstItem="lOR-FJ-dJ6" firstAttribute="top" secondItem="6Qf-4b-AAT" secondAttribute="top" id="0Xj-hY-eME"/>
                             <constraint firstItem="mq5-zW-pU6" firstAttribute="leading" secondItem="CE0-7H-mSJ" secondAttribute="leading" constant="117" id="IBa-Gb-kFc"/>
-                            <constraint firstItem="At5-Lx-Svd" firstAttribute="top" secondItem="Jht-78-vZK" secondAttribute="bottom" constant="8" id="Ji3-Fd-SNg"/>
                             <constraint firstItem="CE0-7H-mSJ" firstAttribute="bottom" secondItem="mq5-zW-pU6" secondAttribute="bottom" constant="20" id="TOU-9m-VRg"/>
+                            <constraint firstItem="lOR-FJ-dJ6" firstAttribute="trailing" secondItem="At5-Lx-Svd" secondAttribute="trailing" id="XUr-7q-3qY"/>
+                            <constraint firstItem="lOR-FJ-dJ6" firstAttribute="bottom" secondItem="CE0-7H-mSJ" secondAttribute="bottom" id="a4r-YR-Ozs"/>
+                            <constraint firstItem="Jht-78-vZK" firstAttribute="trailing" secondItem="CE0-7H-mSJ" secondAttribute="trailing" id="gPo-0W-DzJ"/>
                             <constraint firstItem="At5-Lx-Svd" firstAttribute="trailing" secondItem="CE0-7H-mSJ" secondAttribute="trailing" id="hlm-ey-eTw"/>
+                            <constraint firstItem="Jht-78-vZK" firstAttribute="leading" secondItem="CE0-7H-mSJ" secondAttribute="leading" id="hwm-4a-oEH"/>
                             <constraint firstItem="CE0-7H-mSJ" firstAttribute="trailing" secondItem="mq5-zW-pU6" secondAttribute="trailing" constant="118" id="iyU-QV-3WZ"/>
-                            <constraint firstItem="CE0-7H-mSJ" firstAttribute="trailing" secondItem="Jht-78-vZK" secondAttribute="trailing" constant="37" id="k64-FS-25e"/>
                             <constraint firstItem="mq5-zW-pU6" firstAttribute="top" secondItem="At5-Lx-Svd" secondAttribute="bottom" constant="8" id="uzi-sj-lSJ"/>
                             <constraint firstItem="mq5-zW-pU6" firstAttribute="width" secondItem="mq5-zW-pU6" secondAttribute="height" multiplier="1:1" id="wQf-HS-p0q"/>
+                            <constraint firstItem="Jht-78-vZK" firstAttribute="top" secondItem="CE0-7H-mSJ" secondAttribute="top" constant="20" id="xWv-n7-8Z1"/>
                             <constraint firstItem="At5-Lx-Svd" firstAttribute="leading" secondItem="CE0-7H-mSJ" secondAttribute="leading" id="ztm-jd-1nk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CE0-7H-mSJ"/>
@@ -342,10 +369,13 @@ COFFEE
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSN-Be-VFS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3173.5999999999999" y="393.55322338830587"/>
+            <point key="canvasLocation" x="2868" y="226"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="coffee_beans_food_surface_91913_1920x1080.jpg" width="1920" height="1080"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lcK-Gp-g7x"/>
+        <segue reference="zrj-su-0Pt"/>
     </inferredMetricsTieBreakers>
 </document>

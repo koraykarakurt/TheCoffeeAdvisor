@@ -12,9 +12,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
 }
 
 
@@ -27,6 +32,11 @@ import UIMultiPicker
 
 class ViewController2: UIViewController {
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+
     static let TASTES = [
 
         "No Milk"               ,
@@ -67,11 +77,13 @@ class ViewController2: UIViewController {
 
         tastesPicker.addTarget(self, action: #selector(ViewController2.selected(_:)), for: .valueChanged)
         
-        tastesPicker.color = .gray
-        tastesPicker.tintColor = .black
-        tastesPicker.font = .systemFont(ofSize: 24, weight: .bold)
+        // Styling
         
-        tastesPicker.highlight(2, animated: false) // centering "Bitter"
+        tastesPicker.color = .darkGray
+        tastesPicker.tintColor = .black
+        tastesPicker.font = .systemFont(ofSize: 32, weight: .semibold)
+        
+        tastesPicker.highlight(2, animated: true) // centering "Bitter"
     }
 
     @objc func selected(_ sender: UIMultiPicker) {
@@ -82,6 +94,10 @@ class ViewController2: UIViewController {
 
 
 class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource {
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     var V3_saved_selectedIndexes = UserDefaults.standard.object(forKey:"UIMultiPickerIndexes") as? [Int] ?? [Int]()
     
@@ -239,7 +255,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         //color  and center the label's background
         //let hue = CGFloat(row)/CGFloat(coffeeMenu[0].count)
         //pickerLabel.backgroundColor = UIColor(hue: hue, saturation: 1.0, brightness:1.0, alpha: 1.0)
-        pickerLabel.backgroundColor = UIColor.brown
+        pickerLabel.backgroundColor = UIColor.white
         pickerLabel.textAlignment = .center
         return pickerLabel
         
