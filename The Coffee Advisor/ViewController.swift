@@ -73,7 +73,7 @@ class ViewController2: UIViewController {
         
         tastesPicker.color = .darkGray
         tastesPicker.tintColor = .black
-        tastesPicker.font = .systemFont(ofSize: 32, weight: .semibold)
+        tastesPicker.font = .systemFont(ofSize: 30, weight: .semibold)
         
         tastesPicker.highlight(2, animated: true) // centering "Bitter"
     }
@@ -133,7 +133,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     
     let latte = MyCoffee(coffeeName: "Latte", coffeeKcal: "210 Kcal", hasMilk: true, hasSugar: false, hasFoam: true, hasCream: false, KcalLessThan50: false, KcalLessThan100: false, KcalLessThan200: false, hasExtraShot: false, isIced: false)
     
-    let icedLatte = MyCoffee(coffeeName: "Latte", coffeeKcal: "210 Kcal", hasMilk: true, hasSugar: false, hasFoam: true, hasCream: false, KcalLessThan50: false, KcalLessThan100: false, KcalLessThan200: false, hasExtraShot: false, isIced: true)
+    let icedLatte = MyCoffee(coffeeName: "Iced Latte", coffeeKcal: "205 Kcal", hasMilk: true, hasSugar: false, hasFoam: true, hasCream: false, KcalLessThan50: false, KcalLessThan100: false, KcalLessThan200: false, hasExtraShot: false, isIced: true)
     
     let cappucino = MyCoffee(coffeeName: "Cappucino", coffeeKcal: "150 Kcal", hasMilk: true, hasSugar: false, hasFoam: true, hasCream: false, KcalLessThan50: false, KcalLessThan100: false, KcalLessThan200: true, hasExtraShot: false, isIced: false)
     
