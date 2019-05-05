@@ -183,7 +183,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
             coffeeMenu.removeAll(keepingCapacity: false)
             coffeeMenu.append("Lungo")
             coffeeMenu.append("Espresso")
-            coffeeMenu.append("Macchiato")
             coffeeMenu.append("Ristretto")
             coffeeMenu.append("Americano")
             coffeeMenu.append("Iced Americano")
