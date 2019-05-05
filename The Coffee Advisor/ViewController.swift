@@ -129,6 +129,8 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
 
     let espresso = MyCoffee(coffeeName: "Espresso", coffeeKcal: "7 Kcal", hasMilk: false, hasSugar: false, hasFoam: false, hasCream: false , KcalLessThan50: true , KcalLessThan100: true , KcalLessThan200: true, hasExtraShot: false, isIced: false)
     
+    let ristretto = MyCoffee(coffeeName: "Ristretto", coffeeKcal: "8 Kcal", hasMilk: false, hasSugar: false, hasFoam: false, hasCream: false , KcalLessThan50: true , KcalLessThan100: true , KcalLessThan200: true, hasExtraShot: false, isIced: false)
+    
     let macchiato = MyCoffee(coffeeName: "Macchiato", coffeeKcal: "120 Kcal", hasMilk: true, hasSugar: false, hasFoam: true, hasCream: false , KcalLessThan50: false , KcalLessThan100: true, KcalLessThan200: true, hasExtraShot: false, isIced: false)
     
     let latte = MyCoffee(coffeeName: "Latte", coffeeKcal: "210 Kcal", hasMilk: true, hasSugar: false, hasFoam: true, hasCream: false, KcalLessThan50: false, KcalLessThan100: false, KcalLessThan200: false, hasExtraShot: false, isIced: false)
@@ -137,7 +139,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     
     let cappucino = MyCoffee(coffeeName: "Cappucino", coffeeKcal: "150 Kcal", hasMilk: true, hasSugar: false, hasFoam: true, hasCream: false, KcalLessThan50: false, KcalLessThan100: false, KcalLessThan200: true, hasExtraShot: false, isIced: false)
     
-    let americano = MyCoffee(coffeeName: "Americano", coffeeKcal: "8 Kcal", hasMilk: false, hasSugar: false, hasFoam: false, hasCream: false, KcalLessThan50: true, KcalLessThan100: true, KcalLessThan200: true, hasExtraShot: false, isIced: false)
+    let americano = MyCoffee(coffeeName: "Americano", coffeeKcal: "6 Kcal", hasMilk: false, hasSugar: false, hasFoam: false, hasCream: false, KcalLessThan50: true, KcalLessThan100: true, KcalLessThan200: true, hasExtraShot: false, isIced: false)
     
     let icedAmericano = MyCoffee(coffeeName: "Iced Americano", coffeeKcal: "8 Kcal", hasMilk: false, hasSugar: false, hasFoam: false, hasCream: false, KcalLessThan50: true, KcalLessThan100: true, KcalLessThan200: true, hasExtraShot: false, isIced: true)
     
@@ -179,25 +181,22 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
 
     coffeeMenu =
         [
-        "Lungo"                        ,
         "Espresso"                     ,
         "Ristretto"                    ,
         "Americano"                    ,
-
+        
         "Latte"                        ,//milk
-        "Macchiato"                    ,//milk
         "Misto"                        ,//milk
-        "Cappucino"                    ,//milk
-        "Flat White"                   ,//milk
         "Cortado"                      ,//milk
-
-        //"Ristretto Bianco"           ,
+        "Cappucino"                    ,//milk
+        "Macchiato"                    ,//milk
+        "Flat White"                   ,//milk
 
         "Mocha"                        ,//milk+sugar
         "Frappuccino"                  ,//milk+sugar
         "Caramel Macchiato"            ,//milk+sugar
         "White Chocolate Mocha"        ,//milk+sugar
-
+        
         "Iced Latte"                   ,//milk
         "Iced Mocha"                   ,//milk+sugar
         "Iced Americano"               ,
@@ -206,11 +205,11 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         ]
         
         if V3_saved_selectedIndexes.contains(0)  { //no milk
-          
             coffeeMenu.removeAll(keepingCapacity: false)
             
-            coffeeMenu.append(americano.coffeeName+", "+americano.coffeeKcal)
             coffeeMenu.append(espresso.coffeeName+", "+espresso.coffeeKcal)
+            coffeeMenu.append(ristretto.coffeeName+", "+ristretto.coffeeKcal)
+            coffeeMenu.append(americano.coffeeName+", "+americano.coffeeKcal)
             coffeeMenu.append(icedAmericano.coffeeName+", "+icedAmericano.coffeeKcal)
 //            coffeeMenu.removeAll(keepingCapacity: false)
 //            coffeeMenu.append("Lungo")
@@ -222,14 +221,16 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         else if V3_saved_selectedIndexes.contains(1)  { //no sugar case
             coffeeMenu.removeAll(keepingCapacity: false)
 
-            coffeeMenu.append(americano.coffeeName)
             coffeeMenu.append(espresso.coffeeName)
-            coffeeMenu.append(flatWhite.coffeeName)
+            coffeeMenu.append(ristretto.coffeeName)
+            coffeeMenu.append(americano.coffeeName)
+            
             coffeeMenu.append(latte.coffeeName)
             coffeeMenu.append(misto.coffeeName)
-            
-            coffeeMenu.append(icedAmericano.coffeeName)
+            coffeeMenu.append(flatWhite.coffeeName)
+
             coffeeMenu.append(icedLatte.coffeeName)
+            coffeeMenu.append(icedAmericano.coffeeName)
             
 //            coffeeMenu.append("Lungo")
 //            coffeeMenu.append("Espresso")
@@ -380,4 +381,5 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
 //
 //
 
+//"Ristretto Bianco"           ,        //"Lungo"
 
