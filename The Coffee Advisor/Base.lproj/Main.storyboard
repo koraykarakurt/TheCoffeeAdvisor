@@ -20,22 +20,18 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee_beans_1920x1080.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Svx-Yw-Ek4">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="Am1-7c-oSU"/>
-                                    <constraint firstAttribute="width" secondItem="Svx-Yw-Ek4" secondAttribute="height" multiplier="375:667" id="DSm-rw-DIu"/>
-                                    <constraint firstAttribute="height" constant="667" id="VSm-6K-2cn"/>
-                                </constraints>
                             </imageView>
                             <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aIA-yB-PXV">
                                 <rect key="frame" x="117" y="477" width="140" height="140"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="BdO-Kf-BA1"/>
-                                    <constraint firstAttribute="height" constant="140" id="jqN-bo-oe1"/>
-                                    <constraint firstAttribute="width" secondItem="aIA-yB-PXV" secondAttribute="height" multiplier="1:1" id="yGp-Co-tLA"/>
+                                    <constraint firstAttribute="height" constant="140" id="CKO-Rv-yV0"/>
+                                    <constraint firstAttribute="width" constant="140" id="MXX-uN-QdJ"/>
+                                    <constraint firstAttribute="width" secondItem="aIA-yB-PXV" secondAttribute="height" multiplier="1:1" id="gGD-pF-NX1"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="140" id="mdz-uH-DHY"/>
                                 </constraints>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
@@ -43,7 +39,7 @@
                                         <fragment content="BACK">
                                             <attributes>
                                                 <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="21" name="Arial-BoldMT"/>
+                                                <font key="NSFont" size="24" name="Georgia"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -62,8 +58,6 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="6RP-VO-Tv5">
                                 <rect key="frame" x="0.0" y="40" width="375" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Enw-IO-Zj2"/>
-                                    <constraint firstAttribute="width" constant="375" id="Y9X-CR-IfY"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="YPV-pe-Nwj"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="hf3-u2-zOO"/>
                                     <constraint firstAttribute="width" secondItem="6RP-VO-Tv5" secondAttribute="height" multiplier="15:4" id="p3b-NE-Unv"/>
@@ -76,44 +70,53 @@
 OPTIONS</string>
                                         <attributes>
                                             <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="36" name="TimesNewRomanPS-BoldItalicMT"/>
+                                            <font key="NSFont" size="32" name="Georgia-BoldItalic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSI-7t-Xxz" customClass="UIMultiPicker" customModule="UIMultiPicker">
-                                <rect key="frame" x="54" y="169" width="267" height="259"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSI-7t-Xxz" customClass="UIMultiPicker" customModule="UIMultiPicker">
+                                <rect key="frame" x="57" y="167" width="260" height="260"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES"/>
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="267" id="def-Pe-HHF"/>
-                                    <constraint firstAttribute="height" constant="259" id="fvC-Ri-CqI"/>
-                                    <constraint firstAttribute="width" secondItem="QSI-7t-Xxz" secondAttribute="height" multiplier="25:22" constant="-27.31818181818187" id="uBh-eq-koP"/>
+                                    <constraint firstAttribute="height" constant="260" id="Hui-xS-1WE"/>
+                                    <constraint firstAttribute="width" secondItem="QSI-7t-Xxz" secondAttribute="height" multiplier="1:1" id="ar7-dH-hjp"/>
+                                    <constraint firstAttribute="width" constant="260" id="wiE-HF-GGV"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="130"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="QSI-7t-Xxz" firstAttribute="trailing" secondItem="Ajg-mf-bmd" secondAttribute="trailing" constant="-54" id="09Z-Bx-O9c"/>
-                            <constraint firstItem="Ajg-mf-bmd" firstAttribute="trailing" secondItem="aIA-yB-PXV" secondAttribute="trailing" constant="118" id="2v3-x6-9lb"/>
-                            <constraint firstItem="aIA-yB-PXV" firstAttribute="top" secondItem="QSI-7t-Xxz" secondAttribute="bottom" constant="49" id="Btu-2m-8BY"/>
-                            <constraint firstItem="Svx-Yw-Ek4" firstAttribute="leading" secondItem="Ajg-mf-bmd" secondAttribute="leading" id="DDw-ZC-0O7"/>
+                            <constraint firstItem="Svx-Yw-Ek4" firstAttribute="trailing" secondItem="6RP-VO-Tv5" secondAttribute="trailing" id="0AL-sI-YWT"/>
+                            <constraint firstItem="Ajg-mf-bmd" firstAttribute="trailing" secondItem="QSI-7t-Xxz" secondAttribute="trailing" constant="58" id="1Ya-Sp-KT1"/>
+                            <constraint firstItem="QSI-7t-Xxz" firstAttribute="leading" secondItem="Ajg-mf-bmd" secondAttribute="leading" constant="57" id="4Sm-Xp-WJ1"/>
+                            <constraint firstItem="Svx-Yw-Ek4" firstAttribute="leading" secondItem="6RP-VO-Tv5" secondAttribute="leading" id="7TX-jh-gE6"/>
+                            <constraint firstItem="aIA-yB-PXV" firstAttribute="leading" secondItem="Ajg-mf-bmd" secondAttribute="leading" constant="117" id="A1j-EI-pMX"/>
+                            <constraint firstItem="Ajg-mf-bmd" firstAttribute="trailing" secondItem="aIA-yB-PXV" secondAttribute="trailing" constant="118" id="BHy-pO-ju8"/>
+                            <constraint firstItem="aIA-yB-PXV" firstAttribute="top" secondItem="QSI-7t-Xxz" secondAttribute="bottom" constant="50" id="E3L-k2-Wbc"/>
+                            <constraint firstItem="Ajg-mf-bmd" firstAttribute="bottom" secondItem="aIA-yB-PXV" secondAttribute="bottom" constant="50" id="E3N-kK-QYp"/>
                             <constraint firstItem="6RP-VO-Tv5" firstAttribute="trailing" secondItem="Ajg-mf-bmd" secondAttribute="trailing" id="N6e-tg-bq6"/>
+                            <constraint firstAttribute="trailing" secondItem="Svx-Yw-Ek4" secondAttribute="trailing" id="SLN-Tv-4NB"/>
                             <constraint firstItem="6RP-VO-Tv5" firstAttribute="leading" secondItem="Ajg-mf-bmd" secondAttribute="leading" id="SaQ-bK-yuX"/>
-                            <constraint firstItem="Svx-Yw-Ek4" firstAttribute="bottom" secondItem="Ajg-mf-bmd" secondAttribute="bottom" id="cOt-kq-HAt"/>
+                            <constraint firstItem="Ajg-mf-bmd" firstAttribute="bottom" secondItem="aIA-yB-PXV" secondAttribute="bottom" constant="50" id="VvC-xU-050"/>
+                            <constraint firstItem="Svx-Yw-Ek4" firstAttribute="bottom" secondItem="Ajg-mf-bmd" secondAttribute="bottom" id="Zkx-lZ-oIa"/>
                             <constraint firstItem="6RP-VO-Tv5" firstAttribute="trailing" secondItem="Ajg-mf-bmd" secondAttribute="trailing" id="chJ-Qt-InC"/>
-                            <constraint firstItem="Svx-Yw-Ek4" firstAttribute="top" secondItem="lfJ-Sn-QaG" secondAttribute="top" id="dSy-DF-AXr"/>
-                            <constraint firstItem="Svx-Yw-Ek4" firstAttribute="trailing" secondItem="Ajg-mf-bmd" secondAttribute="trailing" id="kW5-1w-Tu3"/>
-                            <constraint firstItem="Ajg-mf-bmd" firstAttribute="bottom" secondItem="aIA-yB-PXV" secondAttribute="bottom" constant="50" id="keb-hn-Jkw"/>
+                            <constraint firstItem="aIA-yB-PXV" firstAttribute="leading" secondItem="Ajg-mf-bmd" secondAttribute="leading" constant="117" id="fNu-pw-mH0"/>
+                            <constraint firstItem="Svx-Yw-Ek4" firstAttribute="top" secondItem="lfJ-Sn-QaG" secondAttribute="top" id="j6W-2Z-a48"/>
                             <constraint firstItem="6RP-VO-Tv5" firstAttribute="top" secondItem="Ajg-mf-bmd" secondAttribute="top" constant="20" id="oE8-A2-8YJ"/>
-                            <constraint firstItem="aIA-yB-PXV" firstAttribute="leading" secondItem="Ajg-mf-bmd" secondAttribute="leading" constant="117" id="tXL-8q-Wnd"/>
                             <constraint firstItem="6RP-VO-Tv5" firstAttribute="leading" secondItem="Ajg-mf-bmd" secondAttribute="leading" id="ui5-fU-6lH"/>
-                            <constraint firstItem="QSI-7t-Xxz" firstAttribute="leading" secondItem="Ajg-mf-bmd" secondAttribute="leading" constant="54" id="uwP-M1-xWb"/>
                             <constraint firstItem="6RP-VO-Tv5" firstAttribute="top" secondItem="Ajg-mf-bmd" secondAttribute="top" constant="20" id="wMH-Yh-vtj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ajg-mf-bmd"/>
@@ -137,29 +140,88 @@ OPTIONS</string>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee_beans_1920x1080.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fxH-AQ-E3J">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSJ-el-6vu">
-                                <rect key="frame" x="117.5" y="415" width="140" height="140"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2gK-hg-O77">
+                                <rect key="frame" x="57" y="167" width="260" height="260"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="DSJ-el-6vu" secondAttribute="height" multiplier="1:1" id="25I-dF-QLZ"/>
-                                    <constraint firstAttribute="height" constant="140" id="5kL-ZJ-dlJ"/>
-                                    <constraint firstAttribute="width" constant="140" id="61d-nM-rtR"/>
-                                    <constraint firstAttribute="width" constant="140" id="O8W-hs-dXd"/>
-                                    <constraint firstAttribute="height" constant="140" id="dhD-RJ-glR"/>
+                                    <constraint firstAttribute="width" constant="260" id="JgG-hS-xKs"/>
+                                    <constraint firstAttribute="height" constant="260" id="Pn4-9k-WLV"/>
+                                    <constraint firstAttribute="width" secondItem="2gK-hg-O77" secondAttribute="height" multiplier="1:1" id="xkW-Rt-6tj"/>
                                 </constraints>
-                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment>
-                                            <string key="content">EDIT MY
-COFFEE 
+                                            <string key="content">SHOW UP
+MY COFFEE 
+ADVICES</string>
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="32" name="Georgia"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="130"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="eVf-6d-sgY" kind="show" id="MpD-kY-nsh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="o2S-dF-Hvi">
+                                <rect key="frame" x="0.0" y="37" width="375" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="hKZ-tB-hRs"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="0RF-2t-uwv"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">WELCOME TO YOUR
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="32" name="Georgia-BoldItalic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="COFFEE ADVISOR">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="32" name="Georgia-BoldItalic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSJ-el-6vu">
+                                <rect key="frame" x="117" y="477" width="140" height="140"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="DHm-Op-GTs"/>
+                                    <constraint firstAttribute="width" secondItem="DSJ-el-6vu" secondAttribute="height" multiplier="1:1" id="c9C-UM-XfJ"/>
+                                    <constraint firstAttribute="height" constant="140" id="dHk-lr-474"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment>
+                                            <string key="content">EDIT MY 
 OPTIONS </string>
                                             <attributes>
                                                 <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="21" name="Arial-BoldMT"/>
+                                                <font key="NSFont" size="24" name="Georgia"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -175,89 +237,22 @@ OPTIONS </string>
                                     <segue destination="F3M-V3-VdP" kind="show" id="NOq-04-YZU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2gK-hg-O77">
-                                <rect key="frame" x="87.5" y="165" width="200" height="200"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES" staticText="YES"/>
-                                </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="2gK-hg-O77" secondAttribute="height" multiplier="1:1" id="4vy-mK-xCw"/>
-                                    <constraint firstAttribute="height" constant="200" id="JoH-dx-6lW"/>
-                                    <constraint firstAttribute="width" constant="200" id="uEa-dW-hCT"/>
-                                </constraints>
-                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment>
-                                            <string key="content">SEE MY  
-COFFEE
-</string>
-                                            <attributes>
-                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="30" name="Arial-BoldMT"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content="ADVICES">
-                                            <attributes>
-                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="30" name="Arial-BoldMT"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="leftToRight" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="100"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="eVf-6d-sgY" kind="show" id="MpD-kY-nsh"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="o2S-dF-Hvi">
-                                <rect key="frame" x="0.0" y="37" width="375" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="QQM-Tv-Ewd"/>
-                                </constraints>
-                                <viewLayoutGuide key="safeArea" id="0RF-2t-uwv"/>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">WELCOME TO YOUR
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="36" name="TimesNewRomanPS-BoldItalicMT"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="COFFEE ADVISOR">
-                                        <attributes>
-                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="36" name="TimesNewRomanPS-BoldItalicMT"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="2gK-hg-O77" firstAttribute="top" secondItem="o2S-dF-Hvi" secondAttribute="bottom" constant="28" id="5v9-3D-hEm"/>
-                            <constraint firstItem="DSJ-el-6vu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CFD-hf-1Ph"/>
-                            <constraint firstItem="2gK-hg-O77" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HAP-kQ-lBC"/>
-                            <constraint firstItem="o2S-dF-Hvi" firstAttribute="trailing" secondItem="fxH-AQ-E3J" secondAttribute="trailing" id="MGZ-K5-dCF"/>
-                            <constraint firstItem="fxH-AQ-E3J" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Tdc-YS-Tbh"/>
-                            <constraint firstItem="o2S-dF-Hvi" firstAttribute="leading" secondItem="fxH-AQ-E3J" secondAttribute="leading" id="WRr-tW-wtI"/>
-                            <constraint firstItem="DSJ-el-6vu" firstAttribute="top" secondItem="2gK-hg-O77" secondAttribute="bottom" constant="50" id="d2o-Bc-T5g"/>
-                            <constraint firstItem="o2S-dF-Hvi" firstAttribute="centerX" secondItem="2gK-hg-O77" secondAttribute="centerX" id="gp8-Rb-iOA"/>
-                            <constraint firstItem="fxH-AQ-E3J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="h2C-Jp-6Ni"/>
-                            <constraint firstItem="fxH-AQ-E3J" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lNt-Yj-qxh"/>
-                            <constraint firstItem="o2S-dF-Hvi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="o3k-jW-J9j"/>
+                            <constraint firstItem="DSJ-el-6vu" firstAttribute="top" secondItem="2gK-hg-O77" secondAttribute="bottom" constant="50" id="0Ai-ng-Oi6"/>
+                            <constraint firstItem="fxH-AQ-E3J" firstAttribute="leading" secondItem="o2S-dF-Hvi" secondAttribute="leading" id="5kO-vQ-cHw"/>
+                            <constraint firstItem="fxH-AQ-E3J" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7FC-nR-JHv"/>
+                            <constraint firstItem="fxH-AQ-E3J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ATB-m2-2sd"/>
+                            <constraint firstItem="2gK-hg-O77" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="IBE-Ad-Uce"/>
+                            <constraint firstAttribute="trailing" secondItem="fxH-AQ-E3J" secondAttribute="trailing" id="Oe0-Vq-bQO"/>
+                            <constraint firstItem="fxH-AQ-E3J" firstAttribute="centerX" secondItem="o2S-dF-Hvi" secondAttribute="centerX" id="PiC-Mt-te8"/>
+                            <constraint firstItem="DSJ-el-6vu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="RD8-Qb-JeW"/>
+                            <constraint firstItem="o2S-dF-Hvi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="dxc-ok-Gwr"/>
+                            <constraint firstItem="fxH-AQ-E3J" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hE4-zy-4Cc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DSJ-el-6vu" secondAttribute="bottom" constant="50" id="jUN-z2-82P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DSJ-el-6vu" secondAttribute="trailing" constant="118" id="lwA-Do-Uva"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2gK-hg-O77" secondAttribute="trailing" constant="58" id="qZc-RD-VhV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -277,36 +272,30 @@ COFFEE
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee_beans_1920x1080.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lOR-FJ-dJ6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="At5-Lx-Svd">
-                                <rect key="frame" x="0.0" y="128" width="375" height="371"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="6Be-XY-NLp"/>
-                                    <constraint firstAttribute="width" secondItem="At5-Lx-Svd" secondAttribute="height" multiplier="375:371" id="Vop-tY-adP"/>
-                                    <constraint firstAttribute="height" constant="371" id="YHs-54-s5e"/>
+                                    <constraint firstAttribute="width" constant="375" id="4sK-7E-77D"/>
+                                    <constraint firstAttribute="width" secondItem="lOR-FJ-dJ6" secondAttribute="height" multiplier="375:667" id="oeC-4O-IRd"/>
+                                    <constraint firstAttribute="height" constant="667" id="yQV-kU-9EI"/>
                                 </constraints>
-                            </pickerView>
+                            </imageView>
                             <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mq5-zW-pU6">
-                                <rect key="frame" x="117" y="507" width="140" height="140"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="117" y="477" width="140" height="140"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="2Sj-j4-mIO"/>
-                                    <constraint firstAttribute="width" constant="140" id="Cy8-9l-G2I"/>
-                                    <constraint firstAttribute="height" constant="140" id="eiN-u1-Uqz"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="140" id="qgj-k9-tPG"/>
-                                    <constraint firstAttribute="width" secondItem="mq5-zW-pU6" secondAttribute="height" multiplier="1:1" id="tKs-Dt-eM8"/>
-                                    <constraint firstAttribute="width" secondItem="mq5-zW-pU6" secondAttribute="height" multiplier="1:1" id="uHU-Ox-ldS"/>
+                                    <constraint firstAttribute="height" constant="140" id="9DB-v0-bT4"/>
+                                    <constraint firstAttribute="width" secondItem="mq5-zW-pU6" secondAttribute="height" multiplier="1:1" id="Z5A-a0-AMM"/>
+                                    <constraint firstAttribute="width" constant="140" id="tN0-rW-vuk"/>
                                 </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="BACK">
                                             <attributes>
                                                 <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="21" name="Arial-BoldMT"/>
+                                                <font key="NSFont" size="24" name="Georgia"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -325,9 +314,9 @@ COFFEE
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="Jht-78-vZK">
                                 <rect key="frame" x="0.0" y="40" width="375" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="7mH-2N-JY6"/>
-                                    <constraint firstAttribute="width" secondItem="Jht-78-vZK" secondAttribute="height" multiplier="15:4" id="aXl-0U-ALT"/>
-                                    <constraint firstAttribute="height" constant="100" id="e2c-61-gtY"/>
+                                    <constraint firstAttribute="height" constant="100" id="DZN-JX-C3S"/>
+                                    <constraint firstAttribute="width" constant="375" id="qo4-bm-LiY"/>
+                                    <constraint firstAttribute="width" secondItem="Jht-78-vZK" secondAttribute="height" multiplier="15:4" id="two-mR-vjA"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="Ktt-2i-BXr"/>
                                 <attributedString key="attributedText">
@@ -336,30 +325,37 @@ COFFEE
 ADVICES</string>
                                         <attributes>
                                             <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="36" name="TimesNewRomanPS-BoldItalicMT"/>
+                                            <font key="NSFont" size="32" name="Georgia-BoldItalic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="At5-Lx-Svd">
+                                <rect key="frame" x="0.0" y="127" width="375" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="Bz1-AE-kaC"/>
+                                    <constraint firstAttribute="width" constant="375" id="TeK-XY-qRG"/>
+                                    <constraint firstAttribute="width" secondItem="At5-Lx-Svd" secondAttribute="height" multiplier="15:14" id="pAN-gW-2zU"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="lOR-FJ-dJ6" firstAttribute="leading" secondItem="At5-Lx-Svd" secondAttribute="leading" id="0P9-uL-eL5"/>
-                            <constraint firstItem="lOR-FJ-dJ6" firstAttribute="top" secondItem="6Qf-4b-AAT" secondAttribute="top" id="0Xj-hY-eME"/>
-                            <constraint firstItem="mq5-zW-pU6" firstAttribute="leading" secondItem="CE0-7H-mSJ" secondAttribute="leading" constant="117" id="IBa-Gb-kFc"/>
-                            <constraint firstItem="CE0-7H-mSJ" firstAttribute="bottom" secondItem="mq5-zW-pU6" secondAttribute="bottom" constant="20" id="TOU-9m-VRg"/>
-                            <constraint firstItem="lOR-FJ-dJ6" firstAttribute="trailing" secondItem="At5-Lx-Svd" secondAttribute="trailing" id="XUr-7q-3qY"/>
-                            <constraint firstItem="lOR-FJ-dJ6" firstAttribute="bottom" secondItem="CE0-7H-mSJ" secondAttribute="bottom" id="a4r-YR-Ozs"/>
-                            <constraint firstItem="Jht-78-vZK" firstAttribute="trailing" secondItem="CE0-7H-mSJ" secondAttribute="trailing" id="gPo-0W-DzJ"/>
-                            <constraint firstItem="At5-Lx-Svd" firstAttribute="trailing" secondItem="CE0-7H-mSJ" secondAttribute="trailing" id="hlm-ey-eTw"/>
-                            <constraint firstItem="Jht-78-vZK" firstAttribute="leading" secondItem="CE0-7H-mSJ" secondAttribute="leading" id="hwm-4a-oEH"/>
-                            <constraint firstItem="CE0-7H-mSJ" firstAttribute="trailing" secondItem="mq5-zW-pU6" secondAttribute="trailing" constant="118" id="iyU-QV-3WZ"/>
-                            <constraint firstItem="mq5-zW-pU6" firstAttribute="top" secondItem="At5-Lx-Svd" secondAttribute="bottom" constant="8" id="uzi-sj-lSJ"/>
-                            <constraint firstItem="mq5-zW-pU6" firstAttribute="width" secondItem="mq5-zW-pU6" secondAttribute="height" multiplier="1:1" id="wQf-HS-p0q"/>
-                            <constraint firstItem="Jht-78-vZK" firstAttribute="top" secondItem="CE0-7H-mSJ" secondAttribute="top" constant="20" id="xWv-n7-8Z1"/>
-                            <constraint firstItem="At5-Lx-Svd" firstAttribute="leading" secondItem="CE0-7H-mSJ" secondAttribute="leading" id="ztm-jd-1nk"/>
+                            <constraint firstItem="Jht-78-vZK" firstAttribute="top" secondItem="CE0-7H-mSJ" secondAttribute="top" constant="20" id="5Dr-mK-Du8"/>
+                            <constraint firstItem="lOR-FJ-dJ6" firstAttribute="trailing" secondItem="CE0-7H-mSJ" secondAttribute="trailing" id="7Pw-Zg-olL"/>
+                            <constraint firstItem="mq5-zW-pU6" firstAttribute="top" secondItem="At5-Lx-Svd" secondAttribute="bottom" id="9z1-Aq-Rhg"/>
+                            <constraint firstItem="Jht-78-vZK" firstAttribute="leading" secondItem="CE0-7H-mSJ" secondAttribute="leading" id="GxH-tb-7Nz"/>
+                            <constraint firstItem="At5-Lx-Svd" firstAttribute="trailing" secondItem="CE0-7H-mSJ" secondAttribute="trailing" id="JNo-Uf-Tu0"/>
+                            <constraint firstItem="lOR-FJ-dJ6" firstAttribute="top" secondItem="6Qf-4b-AAT" secondAttribute="top" id="OB4-Ge-3Hn"/>
+                            <constraint firstItem="mq5-zW-pU6" firstAttribute="leading" secondItem="CE0-7H-mSJ" secondAttribute="leading" constant="117" id="RWF-Kt-42h"/>
+                            <constraint firstItem="CE0-7H-mSJ" firstAttribute="bottom" secondItem="mq5-zW-pU6" secondAttribute="bottom" constant="50" id="awt-A5-1gJ"/>
+                            <constraint firstAttribute="bottom" secondItem="lOR-FJ-dJ6" secondAttribute="bottom" id="c21-TL-09T"/>
+                            <constraint firstItem="Jht-78-vZK" firstAttribute="trailing" secondItem="CE0-7H-mSJ" secondAttribute="trailing" id="f8C-ZK-ha5"/>
+                            <constraint firstItem="At5-Lx-Svd" firstAttribute="leading" secondItem="CE0-7H-mSJ" secondAttribute="leading" id="fro-eY-RA4"/>
+                            <constraint firstItem="CE0-7H-mSJ" firstAttribute="trailing" secondItem="mq5-zW-pU6" secondAttribute="trailing" constant="118" id="sBB-ZR-4U3"/>
+                            <constraint firstItem="lOR-FJ-dJ6" firstAttribute="leading" secondItem="CE0-7H-mSJ" secondAttribute="leading" id="tz6-bC-meK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CE0-7H-mSJ"/>
                     </view>
@@ -369,13 +365,84 @@ ADVICES</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSN-Be-VFS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2868" y="226"/>
+            <point key="canvasLocation" x="2868" y="225.33733133433284"/>
+        </scene>
+        <!--View Controller4-->
+        <scene sceneID="0e6-W2-C2T">
+            <objects>
+                <viewController id="Xsp-ZK-l3p" customClass="ViewController4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XPD-1H-TZr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee_beans_1920x1080.jpg" highlightedImage="coffee_beans_1920x1080.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ybE-pa-8nz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CfO-8c-h3B">
+                                <rect key="frame" x="117" y="477" width="140" height="140"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="BdE-TT-4WP"/>
+                                    <constraint firstAttribute="height" constant="140" id="e3d-Zu-XOP"/>
+                                    <constraint firstAttribute="width" secondItem="CfO-8c-h3B" secondAttribute="height" multiplier="1:1" id="oQ9-9G-r4j"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="BACK">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="24" name="Georgia"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="70"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="eVf-6d-sgY" kind="show" id="VB5-xJ-MgB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ybE-pa-8nz" secondAttribute="trailing" id="OKV-wb-zmB"/>
+                            <constraint firstItem="ybE-pa-8nz" firstAttribute="bottom" secondItem="pFu-p0-by0" secondAttribute="bottom" id="UzX-2i-YVJ"/>
+                            <constraint firstItem="CfO-8c-h3B" firstAttribute="leading" secondItem="pFu-p0-by0" secondAttribute="leading" constant="117" id="YuP-Jv-uii"/>
+                            <constraint firstItem="ybE-pa-8nz" firstAttribute="leading" secondItem="XPD-1H-TZr" secondAttribute="leading" id="dvb-8D-gOd"/>
+                            <constraint firstItem="pFu-p0-by0" firstAttribute="bottom" secondItem="CfO-8c-h3B" secondAttribute="bottom" constant="50" id="jH9-GK-1de"/>
+                            <constraint firstItem="ybE-pa-8nz" firstAttribute="top" secondItem="XPD-1H-TZr" secondAttribute="top" id="qsK-bj-yUG"/>
+                            <constraint firstItem="pFu-p0-by0" firstAttribute="trailing" secondItem="CfO-8c-h3B" secondAttribute="trailing" constant="118" id="xvu-As-e1b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pFu-p0-by0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PkF-f0-U4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3564" y="224.4377811094453"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="kdV-wx-o6I">
+            <objects>
+                <viewControllerPlaceholder id="XZo-gI-fva" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IH9-Yd-UsS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3396" y="520"/>
         </scene>
     </scenes>
     <resources>
         <image name="coffee_beans_1920x1080.jpg" width="1920" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="VB5-xJ-MgB"/>
         <segue reference="lcK-Gp-g7x"/>
     </inferredMetricsTieBreakers>
 </document>

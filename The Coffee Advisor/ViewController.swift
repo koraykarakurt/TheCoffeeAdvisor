@@ -65,7 +65,6 @@ class ViewController2: UIViewController {
         
         tastesPicker.options = ViewController2.TASTES
         tastesPicker.selectedIndexes = saved_selectedIndexes
-        //tastesPicker.selectedIndexes = [saved_selectedIndexes]
 
         tastesPicker.addTarget(self, action: #selector(ViewController2.selected(_:)), for: .valueChanged)
         
@@ -73,8 +72,7 @@ class ViewController2: UIViewController {
         
         tastesPicker.color = .darkGray
         tastesPicker.tintColor = .black
-        tastesPicker.font = .systemFont(ofSize: 30, weight: .semibold)
-        
+        tastesPicker.font  = UIFont(name: "Georgia", size: 30)!
         tastesPicker.highlight(2, animated: true) // centering "Bitter"
     }
 
@@ -206,11 +204,15 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         
         if V3_saved_selectedIndexes.contains(0)  { //no milk
             coffeeMenu.removeAll(keepingCapacity: false)
+            coffeeMenu.append(espresso.coffeeName)
+            coffeeMenu.append(ristretto.coffeeName)
+            coffeeMenu.append(americano.coffeeName)
+            coffeeMenu.append(icedAmericano.coffeeName)
             
-            coffeeMenu.append(espresso.coffeeName+", "+espresso.coffeeKcal)
-            coffeeMenu.append(ristretto.coffeeName+", "+ristretto.coffeeKcal)
-            coffeeMenu.append(americano.coffeeName+", "+americano.coffeeKcal)
-            coffeeMenu.append(icedAmericano.coffeeName+", "+icedAmericano.coffeeKcal)
+//            coffeeMenu.append(espresso.coffeeName+", "+espresso.coffeeKcal)
+//            coffeeMenu.append(ristretto.coffeeName+", "+ristretto.coffeeKcal)
+//            coffeeMenu.append(americano.coffeeName+", "+americano.coffeeKcal)
+//            coffeeMenu.append(icedAmericano.coffeeName+", "+icedAmericano.coffeeKcal)
 //            coffeeMenu.removeAll(keepingCapacity: false)
 //            coffeeMenu.append("Lungo")
 //            coffeeMenu.append("Espresso")
@@ -383,3 +385,8 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
 
 //"Ristretto Bianco"           ,        //"Lungo"
 
+//tastesPicker.font = UIFont(descriptor: normalFont.fontDescriptor.withSymbolicTraits(.traitBold)!, size: normalFont.pointSize)
+
+//tastesPicker.font = .systemFont(ofSize: 30, weight: .semibold)
+
+//tastesPicker.selectedIndexes = [saved_selectedIndexes]

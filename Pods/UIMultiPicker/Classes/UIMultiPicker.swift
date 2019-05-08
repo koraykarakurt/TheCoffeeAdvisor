@@ -18,7 +18,7 @@ open class UIMultiPicker: UIControl {
     }
 
     @objc
-    public var font: UIFont = UIFont.systemFont(ofSize: 21) {
+    public var font: UIFont = UIFont(name: "Georgia", size: 21)! {
         didSet {
             picker.setNeedsLayout()
         }
