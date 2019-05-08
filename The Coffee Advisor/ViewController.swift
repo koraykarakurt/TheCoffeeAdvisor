@@ -299,7 +299,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         //color  and center the label's background
         //let hue = CGFloat(row)/CGFloat(coffeeMenu[0].count)
         //pickerLabel.backgroundColor = UIColor(hue: hue, saturation: 1.0, brightness:1.0, alpha: 1.0)
-        pickerLabel.backgroundColor = UIColor.white
+        pickerLabel.backgroundColor = UIColor.init(red: 250.0/255.0, green: 235.0/255.0, blue: 215.0/255.0, alpha: 1)
         pickerLabel.textAlignment = .center
         return pickerLabel
       
