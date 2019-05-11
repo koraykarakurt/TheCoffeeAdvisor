@@ -130,13 +130,15 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     
     let ristretto = MyCoffee(coffeeName: "Ristretto", coffeeKcal: "9 Kcal", hasMilk: false, hasSugar: false, hasFoam: false, hasCream: false, hasKcalLessThan50: true , hasKcalLessThan100: true , hasKcalLessThan200: true, hasExtraShot: true, hasIce: false)
     
-    let macchiato = MyCoffee(coffeeName: "Macchiato", coffeeKcal: "127 Kcal", hasMilk: true, hasSugar: false, hasFoam: true, hasCream: false, hasKcalLessThan50: true , hasKcalLessThan100: true , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
+    let macchiato = MyCoffee(coffeeName: "Macchiato", coffeeKcal: "49 Kcal", hasMilk: true, hasSugar: false, hasFoam: true, hasCream: false, hasKcalLessThan50: true , hasKcalLessThan100: true , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
     
     let latte = MyCoffee(coffeeName: "Latte", coffeeKcal: "224 Kcal", hasMilk: true, hasSugar: false, hasFoam: true, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
     
     let icedLatte = MyCoffee(coffeeName: "Iced Latte", coffeeKcal: "221 Kcal", hasMilk: true, hasSugar: false, hasFoam: true, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: true)
     
     let cappucino = MyCoffee(coffeeName: "Cappucino", coffeeKcal: "203 Kcal", hasMilk: true, hasSugar: false, hasFoam: true, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
+    
+    let cortado = MyCoffee(coffeeName: "Cortado", coffeeKcal: "72 Kcal", hasMilk: true, hasSugar: false, hasFoam: true, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: true , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
     
     let americano = MyCoffee(coffeeName: "Americano", coffeeKcal: "7 Kcal", hasMilk: false, hasSugar: false, hasFoam: false, hasCream: false, hasKcalLessThan50: true , hasKcalLessThan100: true , hasKcalLessThan200: true, hasExtraShot: false, hasIce: false)
     
@@ -147,6 +149,22 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     let flatWhite = MyCoffee(coffeeName: "Flat White", coffeeKcal: "217 Kcal", hasMilk: true, hasSugar: false, hasFoam: false, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
     
     let mocha = MyCoffee(coffeeName: "Mocha", coffeeKcal: "227 Kcal", hasMilk: true, hasSugar: true, hasFoam: false, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
+    
+    let icedMocha = MyCoffee(coffeeName: "Iced Mocha", coffeeKcal: "227 Kcal", hasMilk: true, hasSugar: true, hasFoam: false, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: true)
+    
+    let whiteChocolateMocha = MyCoffee(coffeeName: "White Chocolate Mocha", coffeeKcal: "430 Kcal", hasMilk: true, hasSugar: true, hasFoam: false, hasCream: true, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
+    
+    let icedWhiteChocolateMocha = MyCoffee(coffeeName: "Iced White Chocolate Mocha", coffeeKcal: "427 Kcal", hasMilk: true, hasSugar: true, hasFoam: false, hasCream: true, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: true)
+   
+    let caramelMacchiato = MyCoffee(coffeeName: "Caramel Macchiato", coffeeKcal: "338 Kcal", hasMilk: true, hasSugar: true, hasFoam: true, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
+    
+    let icedCaramelMacchiato = MyCoffee(coffeeName: "Iced Caramel Macchiato", coffeeKcal: "333 Kcal", hasMilk: true, hasSugar: true, hasFoam: true, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: true)
+    
+    let frappuccino = MyCoffee(coffeeName: "Frappuccino", coffeeKcal: "420 Kcal", hasMilk: true, hasSugar: true, hasFoam: false, hasCream: true, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: true)
+
+    
+    
+    
 
     var coffeeMenuAll: [MyCoffee] = []
 
@@ -163,23 +181,34 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
         coffeeMenuAll.removeAll(keepingCapacity: false)
+        
         coffeeMenuAll.append(espresso)
         coffeeMenuAll.append(ristretto)
-        coffeeMenuAll.append(macchiato)
         coffeeMenuAll.append(americano)
+        
         coffeeMenuAll.append(latte)
         coffeeMenuAll.append(misto)
-        coffeeMenuAll.append(mocha)
+        coffeeMenuAll.append(cortado)
+        coffeeMenuAll.append(macchiato)
         coffeeMenuAll.append(cappucino)
         coffeeMenuAll.append(flatWhite)
-        coffeeMenuAll.append(icedLatte)
-        coffeeMenuAll.append(icedAmericano)
-
-
         
+        coffeeMenuAll.append(mocha)
+        coffeeMenuAll.append(caramelMacchiato)
+        coffeeMenuAll.append(whiteChocolateMocha)
+        
+        coffeeMenuAll.append(icedLatte)
+        coffeeMenuAll.append(icedMocha)
+        coffeeMenuAll.append(frappuccino)
+        coffeeMenuAll.append(icedAmericano)
+        coffeeMenuAll.append(icedCaramelMacchiato)
+        coffeeMenuAll.append(icedWhiteChocolateMocha)
 
+        coffeeMenu = [""]
+        for i in 0 ..< coffeeMenuAll.count {
+            coffeeMenu.append(coffeeMenuAll[i].coffeeName)
+        }
     
         if V3_saved_selectedIndexes.contains(0)  { //"Milk-free"
             coffeeMenuAll = coffeeMenuAll.filter( {$0.hasMilk == false })
@@ -264,17 +293,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         return coffeeMenu[row]
     }
     
-//    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-//        let titleData = coffeeMenu[0][row]
-//        let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedString.Key.font:UIFont(name: "Georgia", size: 24.0)!,NSAttributedString.Key.foregroundColor:UIColor.black])
-//        return myTitle
-//    }
-//
-//    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        myLabel.text = coffeeMenu[0][row]
-//    }
-    
-//
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let pickerLabel = UILabel()
         let titleData = coffeeMenu[row]
@@ -290,128 +308,36 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
       
     }
 
-    //////////////////////////////
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //print(mymm.coffeeMenuNames)
         //print(mymm.coffeeMenuKcals)
-        
         optionPicker.delegate = self
         optionPicker.dataSource = self
         //optionPicker.selectRow((coffeeMenu.count)/2, inComponent: 0, animated: false)
         
     }
     
-    
 }
 
+//            "Espresso"
+//            "Ristretto"
+//            "Americano"
 
+//            "Macchiato"
+//            "Cortado"
+//            "Latte"
+//            "Misto"
+//            "Cappucino"
+//            "Flat White"
 
+//            "Mocha"
+//            "Frappuccino"
+//            "Caramel Macchiato"
+//            "White Chocolate Mocha"
 
-////
-
-//
-//let coffeeMenu: [[String]] =
-//    [
-//
-//        [
-//
-//            "Cortado"                      ,
-//            "Espresso"                     ,
-//            "Macchiato"                    ,
-//            "Ristretto"                    ,
-//            "Americano"                    ,
-//
-//            "Latte"                        ,
-//            "Misto"                        ,
-//            "Cappucino"                    ,
-//            "Flat White"                   ,
-//            "Ristretto Bianco"             ,
-//
-//            "Mocha"                        ,
-//            "Frappuccino"                  ,
-//            "Caramel Macchiato"            ,
-//            "White Chocolate Mocha"        ,
-//
-//            "Iced Latte"                   ,
-//            "Iced Mocha"                   ,
-//            "Iced Americano"               ,
-//            "Iced Caramel Macchiato"       ,
-//            "Iced White Chocolate Mocha"   ],
-//
-//        [" 15 kcal",
-//         " 15 kcal",
-//         " 15 kcal",
-//         " 15 kcal",
-//         " 15 kcal",
-//
-//         "150 kcal",
-//         "150 kcal",
-//         "150 kcal",
-//         "150 kcal",
-//         "150 kcal",
-//
-//         "350 kcal",
-//         "350 kcal",
-//         "350 kcal",
-//         "350 kcal",
-//
-//         "150 kcal",
-//         "350 kcal",
-//         " 15 kcal",
-//         "350 kcal",
-//         "350 kcal"]
-//
-//];
-//
-//
-//
-
-//"Ristretto Bianco"           ,        //"Lungo"
-
-//tastesPicker.font = UIFont(descriptor: normalFont.fontDescriptor.withSymbolicTraits(.traitBold)!, size: normalFont.pointSize)
-
-//tastesPicker.font = .systemFont(ofSize: 30, weight: .semibold)
-
-//tastesPicker.selectedIndexes = [saved_selectedIndexes]
-
-//    coffeeMenu =
-//        [
-//        "Espresso"                     ,
-//        "Ristretto"                    ,
-//        "Americano"                    ,
-//
-//        "Latte"                        ,//milk
-//        "Misto"                        ,//milk
-//        "Cortado"                      ,//milk
-//        "Cappucino"                    ,//milk
-//        "Macchiato"                    ,//milk
-//        "Flat White"                   ,//milk
-//
-//        "Mocha"                        ,//milk+sugar
-//        "Frappuccino"                  ,//milk+sugar
-//        "Caramel Macchiato"            ,//milk+sugar
-//        "White Chocolate Mocha"        ,//milk+sugar
-//
-//        "Iced Latte"                   ,//milk
-//        "Iced Mocha"                   ,//milk+sugar
-//        "Iced Americano"               ,
-//        "Iced Caramel Macchiato"       ,//milk+sugar
-//        "Iced White Chocolate Mocha"    //milk+sugar
-//        ]
-
-//            coffeeMenu.append("Lungo")
-//            coffeeMenu.append("Espresso")
-//            coffeeMenu.append("Macchiato")
-//            coffeeMenu.append("Ristretto")
-//            coffeeMenu.append("Americano")
-//
-//            coffeeMenu.append("Latte")
-//            coffeeMenu.append("Misto")
-//            coffeeMenu.append("Cappucino")
-//            coffeeMenu.append("Flat White")
-//            coffeeMenu.append("Cortado")
-//
-//            coffeeMenu.append("Iced Americano")
-//            coffeeMenu.append("Iced Latte")
+//            "Iced Latte"
+//            "Iced Mocha"
+//            "Iced Americano"
+//            "Iced Caramel Macchiato"
+//            "Iced White Chocolate Mocha"
