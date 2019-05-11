@@ -177,50 +177,83 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         coffeeMenuAll.append(icedLatte)
         coffeeMenuAll.append(icedAmericano)
 
-        coffeeMenu = [""]
+
         
-        for i in 0 ..< coffeeMenuAll.count {
-            coffeeMenu.append(coffeeMenuAll[i].coffeeName)
-        }
+
     
         if V3_saved_selectedIndexes.contains(0)  { //"Milk-free"
-            coffeeMenu = coffeeMenuAll.filter( {$0.hasMilk == false }).map({ return $0.coffeeName })
+            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasMilk == false })
+            coffeeMenu = [""]
+            for i in 0 ..< coffeeMenuAll.count {
+                coffeeMenu.append(coffeeMenuAll[i].coffeeName)
+            }
         }
         
         if V3_saved_selectedIndexes.contains(1)  { //"Glucose-free"
-            coffeeMenu = coffeeMenuAll.filter( {$0.hasSugar == false }).map({ return $0.coffeeName })
+            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasSugar == false })
+            coffeeMenu = [""]
+            for i in 0 ..< coffeeMenuAll.count {
+                coffeeMenu.append(coffeeMenuAll[i].coffeeName)
+            }
         }
 
         if V3_saved_selectedIndexes.contains(2)  { //"Foam"
-            coffeeMenu = coffeeMenuAll.filter( {$0.hasFoam == true }).map({ return $0.coffeeName })
+            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasFoam == true })
+            coffeeMenu = [""]
+            for i in 0 ..< coffeeMenuAll.count {
+                coffeeMenu.append(coffeeMenuAll[i].coffeeName)
+            }
         }
 
         if V3_saved_selectedIndexes.contains(3)  { //"Cream"
-            coffeeMenu = coffeeMenuAll.filter( {$0.hasCream == true }).map({ return $0.coffeeName })
+            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasCream == true })
+            coffeeMenu = [""]
+            for i in 0 ..< coffeeMenuAll.count {
+                coffeeMenu.append(coffeeMenuAll[i].coffeeName)
+            }
         }
 
         if V3_saved_selectedIndexes.contains(4)  { //"Extra Shot"
-            coffeeMenu = coffeeMenuAll.filter( {$0.hasExtraShot == true }).map({ return $0.coffeeName })
-
+            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasExtraShot == true })
+            coffeeMenu = [""]
+            for i in 0 ..< coffeeMenuAll.count {
+                coffeeMenu.append(coffeeMenuAll[i].coffeeName)
+            }
         }
 
         if V3_saved_selectedIndexes.contains(5)  { //"Iced Coffee"
-            coffeeMenu = coffeeMenuAll.filter( {$0.hasIce == true }).map({ return $0.coffeeName })
+            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasIce == true })
+            coffeeMenu = [""]
+            for i in 0 ..< coffeeMenuAll.count {
+                coffeeMenu.append(coffeeMenuAll[i].coffeeName)
+            }
         }
 
         if V3_saved_selectedIndexes.contains(6)  { //"Kcal < 50"
-            coffeeMenu = coffeeMenuAll.filter( {$0.hasKcalLessThan50 == true }).map({ return $0.coffeeName })
+            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasKcalLessThan50 == true })
+            coffeeMenu = [""]
+            for i in 0 ..< coffeeMenuAll.count {
+                coffeeMenu.append(coffeeMenuAll[i].coffeeName)
+            }
         }
         
         if V3_saved_selectedIndexes.contains(7)  { //"Kcal < 100"
-            coffeeMenu = coffeeMenuAll.filter( {$0.hasKcalLessThan100 == true }).map({ return $0.coffeeName })
+            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasKcalLessThan100 == true })
+            coffeeMenu = [""]
+            for i in 0 ..< coffeeMenuAll.count {
+                coffeeMenu.append(coffeeMenuAll[i].coffeeName)
+            }
         }
 
         if V3_saved_selectedIndexes.contains(8)  { //"Kcal < 200"
-            coffeeMenu = coffeeMenuAll.filter( {$0.hasKcalLessThan200 == true }).map({ return $0.coffeeName })
+            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasKcalLessThan200 == true })
+            coffeeMenu = [""]
+            for i in 0 ..< coffeeMenuAll.count {
+                coffeeMenu.append(coffeeMenuAll[i].coffeeName)
+            }
         }
         
-        if coffeeMenu.count > 1 {
+        if coffeeMenu.count > 0 {
         coffeeMenu.remove(at: 0)
         }
         
