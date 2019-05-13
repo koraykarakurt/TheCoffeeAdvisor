@@ -130,27 +130,27 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     
     let ristretto = MyCoffee(coffeeName: "Ristretto", coffeeKcal: "9 Kcal", hasMilk: false, hasSugar: false, hasFoam: false, hasCream: false, hasKcalLessThan50: true , hasKcalLessThan100: true , hasKcalLessThan200: true, hasExtraShot: true, hasIce: false)
     
-    let macchiato = MyCoffee(coffeeName: "Macchiato", coffeeKcal: "49 Kcal", hasMilk: true, hasSugar: false, hasFoam: true, hasCream: false, hasKcalLessThan50: true , hasKcalLessThan100: true , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
+    let macchiato = MyCoffee(coffeeName: "Macchiato", coffeeKcal: "49 Kcal", hasMilk: true, hasSugar: false, hasFoam: true, hasCream: false, hasKcalLessThan50: true , hasKcalLessThan100: true , hasKcalLessThan200: true, hasExtraShot: false, hasIce: false)
     
     let latte = MyCoffee(coffeeName: "Latte", coffeeKcal: "224 Kcal", hasMilk: true, hasSugar: false, hasFoam: true, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
     
     let icedLatte = MyCoffee(coffeeName: "Iced Latte", coffeeKcal: "221 Kcal", hasMilk: true, hasSugar: false, hasFoam: true, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: true)
     
-    let cappucino = MyCoffee(coffeeName: "Cappucino", coffeeKcal: "203 Kcal", hasMilk: true, hasSugar: false, hasFoam: true, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
+    let cappucino = MyCoffee(coffeeName: "Cappucino", coffeeKcal: "211 Kcal", hasMilk: true, hasSugar: false, hasFoam: true, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
     
-    let cortado = MyCoffee(coffeeName: "Cortado", coffeeKcal: "72 Kcal", hasMilk: true, hasSugar: false, hasFoam: true, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: true , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
+    let cortado = MyCoffee(coffeeName: "Cortado", coffeeKcal: "72 Kcal", hasMilk: true, hasSugar: false, hasFoam: true, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: true , hasKcalLessThan200: true, hasExtraShot: false, hasIce: false)
     
     let americano = MyCoffee(coffeeName: "Americano", coffeeKcal: "7 Kcal", hasMilk: false, hasSugar: false, hasFoam: false, hasCream: false, hasKcalLessThan50: true , hasKcalLessThan100: true , hasKcalLessThan200: true, hasExtraShot: false, hasIce: false)
     
-    let icedAmericano = MyCoffee(coffeeName: "Iced Americano", coffeeKcal: "7 Kcal", hasMilk: false, hasSugar: false, hasFoam: false, hasCream: false, hasKcalLessThan50: true , hasKcalLessThan100: true , hasKcalLessThan200: true, hasExtraShot: false, hasIce: true)
+    let icedAmericano = MyCoffee(coffeeName: "Iced Americano", coffeeKcal: "6 Kcal", hasMilk: false, hasSugar: false, hasFoam: false, hasCream: false, hasKcalLessThan50: true , hasKcalLessThan100: true , hasKcalLessThan200: true, hasExtraShot: false, hasIce: true)
     
-    let misto = MyCoffee(coffeeName: "Misto", coffeeKcal: "77 Kcal", hasMilk: true, hasSugar: false, hasFoam: false, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: true , hasKcalLessThan200: true, hasExtraShot: false, hasIce: false)
+    let misto = MyCoffee(coffeeName: "Misto", coffeeKcal: "47 Kcal", hasMilk: true, hasSugar: false, hasFoam: false, hasCream: false, hasKcalLessThan50: true , hasKcalLessThan100: true , hasKcalLessThan200: true, hasExtraShot: false, hasIce: false)
     
-    let flatWhite = MyCoffee(coffeeName: "Flat White", coffeeKcal: "217 Kcal", hasMilk: true, hasSugar: false, hasFoam: false, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
+    let flatWhite = MyCoffee(coffeeName: "Flat White", coffeeKcal: "205 Kcal", hasMilk: true, hasSugar: false, hasFoam: false, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
     
-    let mocha = MyCoffee(coffeeName: "Mocha", coffeeKcal: "227 Kcal", hasMilk: true, hasSugar: true, hasFoam: false, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
+    let mocha = MyCoffee(coffeeName: "Mocha", coffeeKcal: "287 Kcal", hasMilk: true, hasSugar: true, hasFoam: false, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
     
-    let icedMocha = MyCoffee(coffeeName: "Iced Mocha", coffeeKcal: "227 Kcal", hasMilk: true, hasSugar: true, hasFoam: false, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: true)
+    let icedMocha = MyCoffee(coffeeName: "Iced Mocha", coffeeKcal: "275 Kcal", hasMilk: true, hasSugar: true, hasFoam: false, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: true)
     
     let whiteChocolateMocha = MyCoffee(coffeeName: "White Chocolate Mocha", coffeeKcal: "430 Kcal", hasMilk: true, hasSugar: true, hasFoam: false, hasCream: true, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
     
@@ -161,10 +161,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     let icedCaramelMacchiato = MyCoffee(coffeeName: "Iced Caramel Macchiato", coffeeKcal: "333 Kcal", hasMilk: true, hasSugar: true, hasFoam: true, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: true)
     
     let frappuccino = MyCoffee(coffeeName: "Frappuccino", coffeeKcal: "420 Kcal", hasMilk: true, hasSugar: true, hasFoam: false, hasCream: true, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: true)
-
-    
-    
-    
 
     var coffeeMenuAll: [MyCoffee] = []
 
@@ -258,8 +254,8 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
             }
         }
 
-        if V3_saved_selectedIndexes.contains(6)  { //"Kcal < 50"
-            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasKcalLessThan50 == true })
+        if V3_saved_selectedIndexes.contains(8)  { //"Kcal < 200"
+            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasKcalLessThan200 == true })
             coffeeMenu = [""]
             for i in 0 ..< coffeeMenuAll.count {
                 coffeeMenu.append(coffeeMenuAll[i].coffeeName)
@@ -273,9 +269,9 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                 coffeeMenu.append(coffeeMenuAll[i].coffeeName)
             }
         }
-
-        if V3_saved_selectedIndexes.contains(8)  { //"Kcal < 200"
-            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasKcalLessThan200 == true })
+        
+        if V3_saved_selectedIndexes.contains(6)  { //"Kcal < 50"
+            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasKcalLessThan50 == true })
             coffeeMenu = [""]
             for i in 0 ..< coffeeMenuAll.count {
                 coffeeMenu.append(coffeeMenuAll[i].coffeeName)
