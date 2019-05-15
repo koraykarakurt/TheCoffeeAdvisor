@@ -409,8 +409,13 @@ ADVICES</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee_beans_1920x1080.jpg" highlightedImage="coffee_beans_1920x1080.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ybE-pa-8nz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee_beans_1920x1080.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aCm-Kk-NdS">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aCm-Kk-NdS" secondAttribute="height" multiplier="375:667" id="CTj-F6-czP"/>
+                                    <constraint firstAttribute="width" constant="375" id="GR5-tV-xPb"/>
+                                    <constraint firstAttribute="height" constant="667" id="GyF-Lv-dEO"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CfO-8c-h3B">
                                 <rect key="frame" x="117" y="477" width="140" height="140"/>
@@ -445,54 +450,16 @@ ADVICES</string>
                                     <segue destination="eVf-6d-sgY" kind="show" id="VB5-xJ-MgB"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee_glass.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Aw-iI-zYz">
-                                <rect key="frame" x="0.0" y="20" width="375" height="449"/>
-                                <color key="backgroundColor" red="0.98039215690000003" green="0.92156862750000001" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="Mwe-cs-CUm"/>
-                                    <constraint firstAttribute="width" secondItem="9Aw-iI-zYz" secondAttribute="height" multiplier="375:469" constant="15.991471215351851" id="n8y-GE-htT"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="Jht-78-vZK">
-                                <rect key="frame" x="0.0" y="30" width="375" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="DZN-JX-C3S"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="O2M-jd-ec7"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="Odb-Qd-2L5"/>
-                                    <constraint firstAttribute="width" secondItem="Jht-78-vZK" secondAttribute="height" multiplier="15:4" id="a3I-XG-KYu"/>
-                                    <constraint firstAttribute="width" constant="375" id="qo4-bm-LiY"/>
-                                    <constraint firstAttribute="width" secondItem="Jht-78-vZK" secondAttribute="height" multiplier="15:4" id="two-mR-vjA"/>
-                                </constraints>
-                                <viewLayoutGuide key="safeArea" id="Ktt-2i-BXr"/>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">MY COFFEE 
-DETAILS</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="32" name="Georgia-Italic"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="9Aw-iI-zYz" firstAttribute="top" secondItem="XPD-1H-TZr" secondAttribute="topMargin" id="7Ac-2J-3xn"/>
-                            <constraint firstAttribute="trailing" secondItem="ybE-pa-8nz" secondAttribute="trailing" id="OKV-wb-zmB"/>
-                            <constraint firstItem="ybE-pa-8nz" firstAttribute="bottom" secondItem="pFu-p0-by0" secondAttribute="bottom" id="UzX-2i-YVJ"/>
+                            <constraint firstItem="aCm-Kk-NdS" firstAttribute="trailing" secondItem="pFu-p0-by0" secondAttribute="trailing" id="1QP-zE-lTW"/>
+                            <constraint firstItem="aCm-Kk-NdS" firstAttribute="leading" secondItem="pFu-p0-by0" secondAttribute="leading" id="Xf9-Ce-6RO"/>
                             <constraint firstItem="CfO-8c-h3B" firstAttribute="leading" secondItem="pFu-p0-by0" secondAttribute="leading" constant="117" id="YuP-Jv-uii"/>
-                            <constraint firstItem="9Aw-iI-zYz" firstAttribute="trailing" secondItem="pFu-p0-by0" secondAttribute="trailing" id="daP-UL-aca"/>
-                            <constraint firstItem="ybE-pa-8nz" firstAttribute="leading" secondItem="XPD-1H-TZr" secondAttribute="leading" id="dvb-8D-gOd"/>
-                            <constraint firstItem="Jht-78-vZK" firstAttribute="leading" secondItem="pFu-p0-by0" secondAttribute="leading" id="hRK-sV-uwg"/>
+                            <constraint firstItem="aCm-Kk-NdS" firstAttribute="bottom" secondItem="pFu-p0-by0" secondAttribute="bottom" id="ihM-sr-RB8"/>
                             <constraint firstItem="pFu-p0-by0" firstAttribute="bottom" secondItem="CfO-8c-h3B" secondAttribute="bottom" constant="50" id="jH9-GK-1de"/>
-                            <constraint firstItem="9Aw-iI-zYz" firstAttribute="leading" secondItem="pFu-p0-by0" secondAttribute="leading" id="ngh-rq-y1q"/>
-                            <constraint firstItem="ybE-pa-8nz" firstAttribute="top" secondItem="XPD-1H-TZr" secondAttribute="top" id="qsK-bj-yUG"/>
-                            <constraint firstItem="Jht-78-vZK" firstAttribute="top" secondItem="pFu-p0-by0" secondAttribute="top" constant="10" id="umk-uJ-mKS"/>
+                            <constraint firstItem="aCm-Kk-NdS" firstAttribute="top" secondItem="XPD-1H-TZr" secondAttribute="top" id="wKE-nW-ZK9"/>
                             <constraint firstItem="pFu-p0-by0" firstAttribute="trailing" secondItem="CfO-8c-h3B" secondAttribute="trailing" constant="118" id="xvu-As-e1b"/>
-                            <constraint firstItem="Jht-78-vZK" firstAttribute="trailing" secondItem="pFu-p0-by0" secondAttribute="trailing" id="zfd-TV-9er"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pFu-p0-by0"/>
                     </view>
@@ -512,7 +479,6 @@ DETAILS</string>
     </scenes>
     <resources>
         <image name="coffee_beans_1920x1080.jpg" width="1920" height="1080"/>
-        <image name="coffee_glass.png" width="1418" height="2521"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VB5-xJ-MgB"/>

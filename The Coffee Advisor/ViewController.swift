@@ -31,12 +31,32 @@ class ViewController4: UIViewController {
     }
     
     override func viewDidLoad() {
+    
+        super.viewDidLoad()
         
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: "coffee_glass")?.draw(in: self.view.bounds)
-        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        self.view.backgroundColor = UIColor(patternImage: image)
+         let screenSize: CGRect = UIScreen.main.bounds
+//        let myView = UIView(frame: CGRect(x: 0, y: 0, width: screenSize.width - 50, height: screenSize.width - 50))
+//        self.view.addSubview(myView)
+        
+        let myNewView=UIImageView(frame: CGRect(x: 50, y: 100, width: screenSize.width - 100, height: screenSize.height - 300))
+        
+        myNewView.contentMode = UIView.ContentMode.scaleAspectFit
+        
+        myNewView.backgroundColor=UIColor.lightText
+        
+        let background = UIImage(named: "coffee_glass")
+        
+        myNewView.image = background
+        
+        myNewView.layer.cornerRadius=25
+        
+        myNewView.layer.borderWidth=0
+        
+        // Change UIView Border Color to Red
+        myNewView.layer.borderColor = UIColor.red.cgColor
+        
+        // Add UIView as a Subview
+        self.view.addSubview(myNewView)
         
     }
 
