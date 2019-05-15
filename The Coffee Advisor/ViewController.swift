@@ -24,6 +24,25 @@ class ViewController: UIViewController {
 }
 
 
+class ViewController4: UIViewController {
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    override func viewDidLoad() {
+        
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "coffee_glass")?.draw(in: self.view.bounds)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        self.view.backgroundColor = UIColor(patternImage: image)
+        
+    }
+
+    
+}
+
 class ViewController2: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
