@@ -518,7 +518,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasFoam           : false,
                                                coffeeFoam        : "N/I",
                                                hasCream          : true,
-                                               coffeeCream       : "N/I",
+                                               coffeeCream       : "30 ml",
                                                hasKcalLessThan50 : false,
                                                hasKcalLessThan100: false,
                                                hasKcalLessThan200: false,
