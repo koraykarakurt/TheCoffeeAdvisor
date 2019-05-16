@@ -418,25 +418,13 @@ ADVICES</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xl6-oI-gsC">
-                                <rect key="frame" x="57" y="249" width="260" height="52"/>
-                                <color key="backgroundColor" red="0.98039215686274506" green="0.92156862745098034" blue="0.84313725490196079" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="260" id="5Ha-2r-AFh"/>
-                                    <constraint firstAttribute="width" secondItem="xl6-oI-gsC" secondAttribute="height" multiplier="5:1" id="fCa-pu-b0G"/>
-                                    <constraint firstAttribute="height" constant="52" id="hgg-Ga-JKk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27V-WP-Ft0">
                                 <rect key="frame" x="57" y="301" width="260" height="52"/>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.92156862745098034" blue="0.84313725490196079" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="27V-WP-Ft0" secondAttribute="height" multiplier="5:1" id="XRS-QU-10S"/>
-                                    <constraint firstAttribute="height" constant="52" id="nOX-Pr-lPY"/>
-                                    <constraint firstAttribute="width" constant="260" id="obr-q1-lHb"/>
+                                    <constraint firstAttribute="width" constant="260" id="4ll-4w-zIW"/>
+                                    <constraint firstAttribute="height" constant="52" id="ITz-jz-wVk"/>
+                                    <constraint firstAttribute="width" secondItem="27V-WP-Ft0" secondAttribute="height" multiplier="5:1" id="U5P-4W-SbR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -508,9 +496,9 @@ DETAILS</string>
                                 <rect key="frame" x="57" y="353" width="260" height="52"/>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.92156862745098034" blue="0.84313725490196079" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="260" id="KR7-li-2fZ"/>
-                                    <constraint firstAttribute="height" constant="52" id="TTp-Kt-NBu"/>
-                                    <constraint firstAttribute="width" secondItem="WpD-u1-VEl" secondAttribute="height" multiplier="5:1" id="abE-Cp-dqt"/>
+                                    <constraint firstAttribute="height" constant="52" id="EhC-wF-PrG"/>
+                                    <constraint firstAttribute="width" constant="260" id="HDd-0W-jcC"/>
+                                    <constraint firstAttribute="width" secondItem="WpD-u1-VEl" secondAttribute="height" multiplier="5:1" id="hrk-dq-6Ap"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -520,9 +508,21 @@ DETAILS</string>
                                 <rect key="frame" x="57" y="405" width="260" height="52"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.92156862750000001" blue="0.84313725490000002" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="CoE-zI-IDp"/>
-                                    <constraint firstAttribute="width" constant="260" id="bVL-8P-Fqq"/>
-                                    <constraint firstAttribute="width" secondItem="gXc-MR-YcF" secondAttribute="height" multiplier="5:1" id="qAV-1v-T5k"/>
+                                    <constraint firstAttribute="height" constant="52" id="Kk5-6V-gza"/>
+                                    <constraint firstAttribute="width" secondItem="gXc-MR-YcF" secondAttribute="height" multiplier="5:1" id="NGC-cg-dy9"/>
+                                    <constraint firstAttribute="width" constant="260" id="yPK-AZ-OWM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCv-WI-Ng5">
+                                <rect key="frame" x="57" y="249" width="260" height="52"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.92156862750000001" blue="0.84313725490000002" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="6P0-aG-J9d"/>
+                                    <constraint firstAttribute="width" constant="260" id="jgR-fN-15I"/>
+                                    <constraint firstAttribute="width" secondItem="PCv-WI-Ng5" secondAttribute="height" multiplier="5:1" id="vQL-dG-cdL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -531,33 +531,33 @@ DETAILS</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="WpD-u1-VEl" firstAttribute="leading" secondItem="pFu-p0-by0" secondAttribute="leading" constant="57" id="0lj-1d-y65"/>
+                            <constraint firstItem="gXc-MR-YcF" firstAttribute="leading" secondItem="pFu-p0-by0" secondAttribute="leading" constant="57" id="1Ri-HU-bGv"/>
+                            <constraint firstItem="pFu-p0-by0" firstAttribute="trailing" secondItem="27V-WP-Ft0" secondAttribute="trailing" constant="58" id="417-ML-GIc"/>
                             <constraint firstItem="43I-sY-5tX" firstAttribute="top" secondItem="VFZ-Cz-lOH" secondAttribute="bottom" constant="15" id="58l-yC-EaF"/>
-                            <constraint firstItem="27V-WP-Ft0" firstAttribute="top" secondItem="xl6-oI-gsC" secondAttribute="bottom" id="8v4-3u-ppn"/>
                             <constraint firstItem="pFu-p0-by0" firstAttribute="trailing" secondItem="43I-sY-5tX" secondAttribute="trailing" constant="58" id="AHg-6C-zYC"/>
                             <constraint firstItem="VFZ-Cz-lOH" firstAttribute="leading" secondItem="pFu-p0-by0" secondAttribute="leading" id="AIE-MZ-0UV"/>
-                            <constraint firstItem="xl6-oI-gsC" firstAttribute="leading" secondItem="pFu-p0-by0" secondAttribute="leading" constant="57" id="FVO-59-ogl"/>
+                            <constraint firstItem="27V-WP-Ft0" firstAttribute="top" secondItem="PCv-WI-Ng5" secondAttribute="bottom" id="ESj-XF-Dhb"/>
+                            <constraint firstItem="pFu-p0-by0" firstAttribute="trailing" secondItem="WpD-u1-VEl" secondAttribute="trailing" constant="58" id="KG1-HR-ebv"/>
                             <constraint firstItem="43I-sY-5tX" firstAttribute="leading" secondItem="pFu-p0-by0" secondAttribute="leading" constant="57" id="KyN-iA-gbX"/>
-                            <constraint firstItem="27V-WP-Ft0" firstAttribute="leading" secondItem="pFu-p0-by0" secondAttribute="leading" constant="57" id="OJI-9H-haJ"/>
                             <constraint firstItem="VFZ-Cz-lOH" firstAttribute="top" secondItem="pFu-p0-by0" secondAttribute="top" constant="10" id="R3N-tA-LU1"/>
                             <constraint firstItem="VFZ-Cz-lOH" firstAttribute="trailing" secondItem="pFu-p0-by0" secondAttribute="trailing" id="TNa-Wh-zBf"/>
-                            <constraint firstItem="pFu-p0-by0" firstAttribute="trailing" secondItem="27V-WP-Ft0" secondAttribute="trailing" constant="58" id="Tny-9f-QIH"/>
-                            <constraint firstItem="pFu-p0-by0" firstAttribute="trailing" secondItem="gXc-MR-YcF" secondAttribute="trailing" constant="58" id="WVr-Wu-r42"/>
+                            <constraint firstItem="27V-WP-Ft0" firstAttribute="leading" secondItem="pFu-p0-by0" secondAttribute="leading" constant="57" id="VRe-sF-9Vg"/>
+                            <constraint firstItem="pFu-p0-by0" firstAttribute="trailing" secondItem="gXc-MR-YcF" secondAttribute="trailing" constant="58" id="YIV-nu-RcI"/>
                             <constraint firstItem="pFu-p0-by0" firstAttribute="trailing" secondItem="6q2-1T-eqW" secondAttribute="trailing" constant="58" id="ZhS-Fi-ttS"/>
-                            <constraint firstItem="WpD-u1-VEl" firstAttribute="top" secondItem="27V-WP-Ft0" secondAttribute="bottom" id="aaM-hx-bok"/>
-                            <constraint firstItem="pFu-p0-by0" firstAttribute="trailing" secondItem="WpD-u1-VEl" secondAttribute="trailing" constant="58" id="bIq-TD-P0l"/>
-                            <constraint firstItem="gXc-MR-YcF" firstAttribute="leading" secondItem="pFu-p0-by0" secondAttribute="leading" constant="57" id="cAf-ER-xw7"/>
-                            <constraint firstItem="pFu-p0-by0" firstAttribute="trailing" secondItem="xl6-oI-gsC" secondAttribute="trailing" constant="58" id="dmK-Qb-RrN"/>
+                            <constraint firstItem="pFu-p0-by0" firstAttribute="trailing" secondItem="PCv-WI-Ng5" secondAttribute="trailing" constant="58" id="cE7-M5-0AK"/>
                             <constraint firstItem="6q2-1T-eqW" firstAttribute="top" secondItem="43I-sY-5tX" secondAttribute="bottom" id="jpc-RW-hbC"/>
-                            <constraint firstItem="gXc-MR-YcF" firstAttribute="top" secondItem="WpD-u1-VEl" secondAttribute="bottom" id="lgI-Nn-KGy"/>
-                            <constraint firstItem="xl6-oI-gsC" firstAttribute="top" secondItem="6q2-1T-eqW" secondAttribute="bottom" id="oZa-8y-hXy"/>
+                            <constraint firstItem="PCv-WI-Ng5" firstAttribute="leading" secondItem="pFu-p0-by0" secondAttribute="leading" constant="57" id="n5c-6J-r5P"/>
                             <constraint firstItem="6q2-1T-eqW" firstAttribute="leading" secondItem="pFu-p0-by0" secondAttribute="leading" constant="57" id="qb4-BS-qzz"/>
+                            <constraint firstItem="WpD-u1-VEl" firstAttribute="leading" secondItem="pFu-p0-by0" secondAttribute="leading" constant="57" id="rK4-jH-K0N"/>
+                            <constraint firstItem="WpD-u1-VEl" firstAttribute="top" secondItem="27V-WP-Ft0" secondAttribute="bottom" id="rYr-CC-fpp"/>
+                            <constraint firstItem="gXc-MR-YcF" firstAttribute="top" secondItem="WpD-u1-VEl" secondAttribute="bottom" id="sjK-uH-Kbp"/>
+                            <constraint firstItem="PCv-WI-Ng5" firstAttribute="top" secondItem="6q2-1T-eqW" secondAttribute="bottom" id="xoh-Bo-Jgr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pFu-p0-by0"/>
                     </view>
                     <connections>
+                        <outlet property="labelCoffeeCaffeine" destination="PCv-WI-Ng5" id="2Jh-ep-9zF"/>
                         <outlet property="labelCoffeeCream" destination="gXc-MR-YcF" id="fZP-jY-sQh"/>
-                        <outlet property="labelCoffeeEspresso" destination="xl6-oI-gsC" id="Xgy-pd-xXA"/>
                         <outlet property="labelCoffeeFoam" destination="WpD-u1-VEl" id="2iM-gp-r9w"/>
                         <outlet property="labelCoffeeKcal" destination="6q2-1T-eqW" id="GXw-90-7eb"/>
                         <outlet property="labelCoffeeMilk" destination="27V-WP-Ft0" id="3yf-VG-VdG"/>
@@ -568,20 +568,12 @@ DETAILS</string>
             </objects>
             <point key="canvasLocation" x="3564" y="224.4377811094453"/>
         </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="kdV-wx-o6I">
-            <objects>
-                <viewControllerPlaceholder id="XZo-gI-fva" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IH9-Yd-UsS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3230" y="549"/>
-        </scene>
     </scenes>
     <resources>
         <image name="coffee_beans_1920x1080.jpg" width="1920" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="MpD-kY-nsh"/>
-        <segue reference="zrj-su-0Pt"/>
+        <segue reference="lcK-Gp-g7x"/>
     </inferredMetricsTieBreakers>
 </document>

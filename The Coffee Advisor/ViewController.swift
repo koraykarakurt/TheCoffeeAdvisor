@@ -1,11 +1,10 @@
-//
+
 //  ViewController.swift
 //  The Coffee Advisor
 //
 //  Created by Koray Karakurt on 2.03.2019.
 //  Copyright © 2019 Koray Karakurt. All rights reserved.
 //
-
 
 import UIKit
 import UIMultiPicker
@@ -26,11 +25,15 @@ class ViewController: UIViewController {
 
 class ViewController4: UIViewController {
     
-
+    
     
     @IBOutlet weak var labelCoffeeName: UILabel!
     @IBOutlet weak var labelCoffeeKcal: UILabel!
-    @IBOutlet weak var labelCoffeeEspresso: UILabel!
+
+    
+    @IBOutlet weak var labelCoffeeCaffeine: UILabel!
+    
+    
     @IBOutlet weak var labelCoffeeMilk: UILabel!
     @IBOutlet weak var labelCoffeeFoam: UILabel!
     @IBOutlet weak var labelCoffeeCream: UILabel!
@@ -38,15 +41,15 @@ class ViewController4: UIViewController {
         return .lightContent
     }
     
-    var V4_saved_selectedCoffeeName     = UserDefaults.standard.object(forKey:"UIPickerName") as? String ?? String()
-    var V4_saved_selectedCoffeeKcal     = UserDefaults.standard.object(forKey:"UIPickerKcal") as? String ?? String()
-    var V4_saved_selectedCoffeeEspresso = UserDefaults.standard.object(forKey:"UIPickerMilk") as? String ?? String()
-    var V4_saved_selectedCoffeeMilk     = UserDefaults.standard.object(forKey:"UIPickerMilk") as? String ?? String()
-    var V4_saved_selectedCoffeeFoam     = UserDefaults.standard.object(forKey:"UIPickerMilk") as? String ?? String()
-    var V4_saved_selectedCoffeeCream    = UserDefaults.standard.object(forKey:"UIPickerMilk") as? String ?? String()
+    var V4_saved_selectedCoffeeName     = UserDefaults.standard.object(forKey:"UIPickerName")     as? String ?? String()
+    var V4_saved_selectedCoffeeKcal     = UserDefaults.standard.object(forKey:"UIPickerKcal")     as? String ?? String()
+    var V4_saved_selectedCoffeeCaffeine = UserDefaults.standard.object(forKey:"UIPickerCaffeine") as? String ?? String()
+    var V4_saved_selectedCoffeeMilk     = UserDefaults.standard.object(forKey:"UIPickerMilk")     as? String ?? String()
+    var V4_saved_selectedCoffeeFoam     = UserDefaults.standard.object(forKey:"UIPickerFoam")     as? String ?? String()
+    var V4_saved_selectedCoffeeCream    = UserDefaults.standard.object(forKey:"UIPickerCream")    as? String ?? String()
     
     override func viewDidLoad() {
-    
+        
         super.viewDidLoad()
         
         labelCoffeeName.font = UIFont(name: "Georgia", size: 24)!
@@ -57,49 +60,49 @@ class ViewController4: UIViewController {
         labelCoffeeKcal.textAlignment = .center
         labelCoffeeKcal.text = "Total Calorie: \(V4_saved_selectedCoffeeKcal)"
         
-        labelCoffeeEspresso.font = UIFont(name: "Georgia", size: 24)!
-        labelCoffeeEspresso.textAlignment = .center
-        labelCoffeeEspresso.text = "Caffeine: \(V4_saved_selectedCoffeeEspresso)"
-  
+        labelCoffeeCaffeine.font = UIFont(name: "Georgia", size: 24)!
+        labelCoffeeCaffeine.textAlignment = .center
+        labelCoffeeCaffeine.text = "Caffeine: \(V4_saved_selectedCoffeeCaffeine)"
+        
         labelCoffeeMilk.font = UIFont(name: "Georgia", size: 24)!
         labelCoffeeMilk.textAlignment = .center
-        labelCoffeeMilk.text = "Milk: \(V4_saved_selectedCoffeeMilk)"
+        labelCoffeeMilk.text = "Steamed Milk: \(V4_saved_selectedCoffeeMilk)"
         
         labelCoffeeFoam.font = UIFont(name: "Georgia", size: 24)!
         labelCoffeeFoam.textAlignment = .center
-        labelCoffeeFoam.text = "Foam: \(V4_saved_selectedCoffeeFoam)"
- 
+        labelCoffeeFoam.text = "Foamed Milk: \(V4_saved_selectedCoffeeFoam)"
+        
         labelCoffeeCream.font = UIFont(name: "Georgia", size: 24)!
         labelCoffeeCream.textAlignment = .center
         labelCoffeeCream.text = "Cream: \(V4_saved_selectedCoffeeCream)"
-
-
-//         let screenSize: CGRect = UIScreen.main.bounds
-////        let myView = UIView(frame: CGRect(x: 0, y: 0, width: screenSize.width - 50, height: screenSize.width - 50))
-////        self.view.addSubview(myView)
-//
-//        let myNewView=UIImageView(frame: CGRect(x: 50, y: 100, width: screenSize.width - 100, height: screenSize.height - 300))
-//
-//        myNewView.contentMode = UIView.ContentMode.scaleAspectFit
-//
-//        myNewView.backgroundColor=UIColor.lightText
-//
-//        let background = UIImage(named: "coffee_glass")
-//
-//        myNewView.image = background
-//
-//        myNewView.layer.cornerRadius=25
-//
-//        myNewView.layer.borderWidth=0
-//
-//        // Change UIView Border Color to Red
-//        myNewView.layer.borderColor = UIColor.red.cgColor
-//
-//        // Add UIView as a Subview
-//        self.view.addSubview(myNewView)
+        
+        
+        //         let screenSize: CGRect = UIScreen.main.bounds
+        ////        let myView = UIView(frame: CGRect(x: 0, y: 0, width: screenSize.width - 50, height: screenSize.width - 50))
+        ////        self.view.addSubview(myView)
+        //
+        //        let myNewView=UIImageView(frame: CGRect(x: 50, y: 100, width: screenSize.width - 100, height: screenSize.height - 300))
+        //
+        //        myNewView.contentMode = UIView.ContentMode.scaleAspectFit
+        //
+        //        myNewView.backgroundColor=UIColor.lightText
+        //
+        //        let background = UIImage(named: "coffee_glass")
+        //
+        //        myNewView.image = background
+        //
+        //        myNewView.layer.cornerRadius=25
+        //
+        //        myNewView.layer.borderWidth=0
+        //
+        //        // Change UIView Border Color to Red
+        //        myNewView.layer.borderColor = UIColor.red.cgColor
+        //
+        //        // Add UIView as a Subview
+        //        self.view.addSubview(myNewView)
         
     }
-
+    
     
 }
 
@@ -109,24 +112,24 @@ class ViewController2: UIViewController {
         return .lightContent
     }
     
-
+    
     static let TASTES = [
-
-        "Milk-free"             ,//no milk
-        "Glucose-free"          ,//no sugar
+        
+        "Milk-free"             ,//0
+        "Glucose-free"          ,//1
         //"No Caffeine"         ,
         //"Blonde Roast"        ,
         //"Medium Roast"        ,
         //"Dark Roast"          ,
-        "Foam"                  ,
-        "Cream"                 ,
-        "Extra Shot"            ,
-        "Iced Coffee"           ,
+        "Foam"                  ,//2
+        "Cream"                 ,//3
+        "Extra Shot"            ,//4
+        "Iced Coffee"           ,//5
         //"Cold Brew"           ,
         
-        "Kcal < 50"             ,
-        "Kcal < 100"            ,
-        "Kcal < 200"            ,
+        "Kcal < 50"             ,//6
+        "Kcal < 100"            ,//7
+        "Kcal < 200"            ,//8
         
     ];
     
@@ -135,7 +138,7 @@ class ViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // let saved_selectedIndexes = UserDefaults.standard.integer(forKey: "UIMultiPickerIndexes")
+        // let saved_selectedIndexes = UserDefaults.standard.integer(forKey: "UIMultiPickerIndexes")
         let defaults = UserDefaults.standard
         let saved_selectedIndexes = defaults.object(forKey:"UIMultiPickerIndexes") as? [Int] ?? [Int]()
         print(saved_selectedIndexes)
@@ -151,7 +154,7 @@ class ViewController2: UIViewController {
         tastesPicker.font  = UIFont(name: "Georgia", size: 30)!
         tastesPicker.highlight(2, animated: true) // centering "Bitter"
     }
-
+    
     @objc func selected(_ sender: UIMultiPicker) {
         UserDefaults.standard.set(sender.selectedIndexes, forKey: "UIMultiPickerIndexes")
         print(sender.selectedIndexes)
@@ -178,27 +181,33 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     class MyCoffee {
         var coffeeName          = ""
         var coffeeKcal          = ""
+        var coffeeCaffeine      = ""
         var hasMilk             = false
-        var coffeeMilk           = ""
-
+        var coffeeMilk          = ""
+        
         var hasSugar            = false
         var hasFoam             = false
+        var coffeeFoam          = ""
         var hasCream            = false
+        var coffeeCream         = ""
         var hasKcalLessThan50   = false
         var hasKcalLessThan100  = false
         var hasKcalLessThan200  = false
         var hasExtraShot        = false
         var hasIce              = false
-    
-        init(coffeeName: String, coffeeKcal: String, hasMilk: Bool, coffeeMilk: String, hasSugar: Bool, hasFoam: Bool, hasCream: Bool, hasKcalLessThan50: Bool, hasKcalLessThan100: Bool, hasKcalLessThan200: Bool, hasExtraShot: Bool, hasIce: Bool) {
         
+        init(coffeeName: String, coffeeKcal: String, coffeeCaffeine: String, hasMilk: Bool, coffeeMilk: String, hasSugar: Bool, hasFoam: Bool, coffeeFoam: String, hasCream: Bool, coffeeCream: String, hasKcalLessThan50: Bool, hasKcalLessThan100: Bool, hasKcalLessThan200: Bool, hasExtraShot: Bool, hasIce: Bool) {
+            
             self.coffeeName         = coffeeName
             self.coffeeKcal         = coffeeKcal
+            self.coffeeCaffeine     = coffeeCaffeine
             self.hasMilk            = hasMilk
             self.coffeeMilk         = coffeeMilk
             self.hasSugar           = hasSugar
             self.hasFoam            = hasFoam
+            self.coffeeFoam         = coffeeFoam
             self.hasCream           = hasCream
+            self.coffeeCream        = coffeeCream
             self.hasKcalLessThan50  = hasKcalLessThan50
             self.hasKcalLessThan100 = hasKcalLessThan100
             self.hasKcalLessThan200 = hasKcalLessThan200
@@ -207,45 +216,317 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
             
         }
     }
-
-    let espresso = MyCoffee(coffeeName: "Espresso", coffeeKcal: "7 Kcal", hasMilk: false, coffeeMilk: "N/I", hasSugar: false, hasFoam: false, hasCream: false, hasKcalLessThan50: true , hasKcalLessThan100: true , hasKcalLessThan200: true, hasExtraShot: false, hasIce: false)
     
-    let ristretto = MyCoffee(coffeeName: "Ristretto", coffeeKcal: "9 Kcal", hasMilk: false, coffeeMilk: "N/I", hasSugar: false, hasFoam: false, hasCream: false, hasKcalLessThan50: true , hasKcalLessThan100: true , hasKcalLessThan200: true, hasExtraShot: true, hasIce: false)
+    let espresso                    = MyCoffee(coffeeName        : "Espresso",
+                                               coffeeKcal        : "5 Kcal",
+                                               coffeeCaffeine    : "75 mg",
+                                               hasMilk           : false,
+                                               coffeeMilk        : "N/I",
+                                               hasSugar          : false,
+                                               hasFoam           : false,
+                                               coffeeFoam        : "N/I",
+                                               hasCream          : false,
+                                               coffeeCream       : "N/I",
+                                               hasKcalLessThan50 : true,
+                                               hasKcalLessThan100: true,
+                                               hasKcalLessThan200: true,
+                                               hasExtraShot      : false,
+                                               hasIce            : false)
     
-    let macchiato = MyCoffee(coffeeName: "Macchiato", coffeeKcal: "49 Kcal", hasMilk: true, coffeeMilk: "30 ml / 1 oz", hasSugar: false, hasFoam: true, hasCream: false, hasKcalLessThan50: true , hasKcalLessThan100: true , hasKcalLessThan200: true, hasExtraShot: false, hasIce: false)
+    let espressoDoppio              = MyCoffee(coffeeName        : "Espresso Doppio",
+                                               coffeeKcal        : "10 Kcal",
+                                               coffeeCaffeine    : "150 mg",
+                                               hasMilk           : false,
+                                               coffeeMilk        : "N/I",
+                                               hasSugar          : false,
+                                               hasFoam           : false,
+                                               coffeeFoam        : "N/I",
+                                               hasCream          : false,
+                                               coffeeCream       : "N/I",
+                                               hasKcalLessThan50 : true,
+                                               hasKcalLessThan100: true,
+                                               hasKcalLessThan200: true,
+                                               hasExtraShot      : false,
+                                               hasIce            : false)
     
-    let latte = MyCoffee(coffeeName: "Latte", coffeeKcal: "224 Kcal", hasMilk: true, coffeeMilk: "180 ml / 6 oz", hasSugar: false, hasFoam: true, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
+    let ristretto                   = MyCoffee(coffeeName        : "Ristretto",
+                                               coffeeKcal        : "6 Kcal",
+                                               coffeeCaffeine    : "90 mg",
+                                               hasMilk           : false,
+                                               coffeeMilk        : "N/I",
+                                               hasSugar          : false,
+                                               hasFoam           : false,
+                                               coffeeFoam        : "N/I",
+                                               hasCream          : false,
+                                               coffeeCream       : "N/I",
+                                               hasKcalLessThan50 : true,
+                                               hasKcalLessThan100: true,
+                                               hasKcalLessThan200: true,
+                                               hasExtraShot      : true,
+                                               hasIce            : false)
     
-    let icedLatte = MyCoffee(coffeeName: "Iced Latte", coffeeKcal: "221 Kcal", hasMilk: true, coffeeMilk: "150 ml / 5 oz", hasSugar: false, hasFoam: true, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: true)
+    let macchiato                   = MyCoffee(coffeeName        : "Macchiato",
+                                               coffeeKcal        : "12 Kcal",
+                                               coffeeCaffeine    : "150 mg",
+                                               hasMilk           : false,
+                                               coffeeMilk        : "N/I",
+                                               hasSugar          : false,
+                                               hasFoam           : true,
+                                               coffeeFoam        : "1 ml",
+                                               hasCream          : false,
+                                               coffeeCream       : "N/I",
+                                               hasKcalLessThan50 : true,
+                                               hasKcalLessThan100: true,
+                                               hasKcalLessThan200: true,
+                                               hasExtraShot      : false,
+                                               hasIce            : false)
+    //not sure cortado
+    let cortado                     = MyCoffee(coffeeName        : "Cortado",
+                                               coffeeKcal        : "72 Kcal",
+                                               coffeeCaffeine    : "150 mg",
+                                               hasMilk           : true,
+                                               coffeeMilk        : "N/I",
+                                               hasSugar          : false,
+                                               hasFoam           : true,
+                                               coffeeFoam        : "30 ml",
+                                               hasCream          : false,
+                                               coffeeCream       : "N/I",
+                                               hasKcalLessThan50 : false,
+                                               hasKcalLessThan100: true,
+                                               hasKcalLessThan200: true,
+                                               hasExtraShot      : false,
+                                               hasIce            : false)
     
-    let cappucino = MyCoffee(coffeeName: "Cappucino", coffeeKcal: "211 Kcal", hasMilk: true, coffeeMilk: "120 ml / 4 oz", hasSugar: false, hasFoam: true, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
     
-    let cortado = MyCoffee(coffeeName: "Cortado", coffeeKcal: "72 Kcal", hasMilk: true, coffeeMilk: "30 ml / 1 oz", hasSugar: false, hasFoam: true, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: true , hasKcalLessThan200: true, hasExtraShot: false, hasIce: false)
     
-    let americano = MyCoffee(coffeeName: "Americano", coffeeKcal: "7 Kcal", hasMilk: false, coffeeMilk: "N/I", hasSugar: false, hasFoam: false, hasCream: false, hasKcalLessThan50: true , hasKcalLessThan100: true , hasKcalLessThan200: true, hasExtraShot: false, hasIce: false)
+    let latte                       = MyCoffee(coffeeName        : "Latte",
+                                               coffeeKcal        : "230 Kcal",
+                                               coffeeCaffeine    : "150 mg",
+                                               hasMilk           : true,
+                                               coffeeMilk        : "300 ml",
+                                               hasSugar          : false,
+                                               hasFoam           : true,
+                                               coffeeFoam        : "2 ml",
+                                               hasCream          : false,
+                                               coffeeCream       : "N/I",
+                                               hasKcalLessThan50 : false,
+                                               hasKcalLessThan100: false,
+                                               hasKcalLessThan200: false,
+                                               hasExtraShot      : false,
+                                               hasIce            : false)
     
-    let icedAmericano = MyCoffee(coffeeName: "Iced Americano", coffeeKcal: "6 Kcal", hasMilk: false, coffeeMilk: "N/I", hasSugar: false, hasFoam: false, hasCream: false, hasKcalLessThan50: true , hasKcalLessThan100: true , hasKcalLessThan200: true, hasExtraShot: false, hasIce: true)
+    let icedLatte                   = MyCoffee(coffeeName        : "Iced Latte",
+                                               coffeeKcal        : "150 Kcal",
+                                               coffeeCaffeine    : "150 mg",
+                                               hasMilk           : true,
+                                               coffeeMilk        : "180 ml",
+                                               hasSugar          : false,
+                                               hasFoam           : true,
+                                               coffeeFoam        : "2 ml",
+                                               hasCream          : false,
+                                               coffeeCream       : "N/I",
+                                               hasKcalLessThan50 : false,
+                                               hasKcalLessThan100: false,
+                                               hasKcalLessThan200: true,
+                                               hasExtraShot      : false,
+                                               hasIce            : true)
     
-    let misto = MyCoffee(coffeeName: "Misto", coffeeKcal: "47 Kcal", hasMilk: true, coffeeMilk: "45 ml / 1.5 oz", hasSugar: false, hasFoam: false, hasCream: false, hasKcalLessThan50: true , hasKcalLessThan100: true , hasKcalLessThan200: true, hasExtraShot: false, hasIce: false)
+    let cappucino                   = MyCoffee(coffeeName        : "Cappucino",
+                                               coffeeKcal        : "140 Kcal",
+                                               coffeeCaffeine    : "150 mg",
+                                               hasMilk           : true,
+                                               coffeeMilk        : "60 ml",
+                                               hasSugar          : false,
+                                               hasFoam           : true,
+                                               coffeeFoam        : "60 ml",
+                                               hasCream          : false,
+                                               coffeeCream       : "N/I",
+                                               hasKcalLessThan50 : false,
+                                               hasKcalLessThan100: false,
+                                               hasKcalLessThan200: true,
+                                               hasExtraShot      : false,
+                                               hasIce            : false)
     
-    let flatWhite = MyCoffee(coffeeName: "Flat White", coffeeKcal: "205 Kcal", hasMilk: true, coffeeMilk: "60 ml / 2 oz", hasSugar: false, hasFoam: false, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
     
-    let mocha = MyCoffee(coffeeName: "Mocha", coffeeKcal: "287 Kcal", hasMilk: true, coffeeMilk: "90 ml / 3 oz", hasSugar: true, hasFoam: false, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
     
-    let icedMocha = MyCoffee(coffeeName: "Iced Mocha", coffeeKcal: "275 Kcal", hasMilk: true, coffeeMilk: "75 ml / 2.5 oz", hasSugar: true, hasFoam: false, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: true)
+    let americano                   = MyCoffee(coffeeName        : "Americano",
+                                               coffeeKcal        : "15 Kcal",
+                                               coffeeCaffeine    : "225 mg",
+                                               hasMilk           : false,
+                                               coffeeMilk        : "N/I",
+                                               hasSugar          : false,
+                                               hasFoam           : false,
+                                               coffeeFoam        : "N/I",
+                                               hasCream          : false,
+                                               coffeeCream       : "N/I",
+                                               hasKcalLessThan50 : true,
+                                               hasKcalLessThan100: true,
+                                               hasKcalLessThan200: true,
+                                               hasExtraShot      : false,
+                                               hasIce            : false)
     
-    let whiteChocolateMocha = MyCoffee(coffeeName: "White Chocolate Mocha", coffeeKcal: "430 Kcal", hasMilk: true, coffeeMilk: "120 ml / 4 oz", hasSugar: true, hasFoam: false, hasCream: true, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
+    let icedAmericano               = MyCoffee(coffeeName        : "Iced Americano",
+                                               coffeeKcal        : "15 Kcal",
+                                               coffeeCaffeine    : "225 mg",
+                                               hasMilk           : false,
+                                               coffeeMilk        : "N/I",
+                                               hasSugar          : false,
+                                               hasFoam           : false,
+                                               coffeeFoam        : "N/I",
+                                               hasCream          : false,
+                                               coffeeCream       : "N/I",
+                                               hasKcalLessThan50 : true,
+                                               hasKcalLessThan100: true,
+                                               hasKcalLessThan200: true,
+                                               hasExtraShot      : false,
+                                               hasIce            : true)
     
-    let icedWhiteChocolateMocha = MyCoffee(coffeeName: "Iced White Chocolate Mocha", coffeeKcal: "427 Kcal", hasMilk: true, coffeeMilk: "105 ml / 3.5 oz", hasSugar: true, hasFoam: false, hasCream: true, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: true)
-   
-    let caramelMacchiato = MyCoffee(coffeeName: "Caramel Macchiato", coffeeKcal: "338 Kcal", hasMilk: true, coffeeMilk: "90 ml / 3 oz", hasSugar: true, hasFoam: true, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: false)
+    let misto                       = MyCoffee(coffeeName        : "Misto",
+                                               coffeeKcal        : "130 Kcal",
+                                               coffeeCaffeine    : "150 mg",
+                                               hasMilk           : true,
+                                               coffeeMilk        : "180 ml",
+                                               hasSugar          : false,
+                                               hasFoam           : false,
+                                               coffeeFoam        : "N/I",
+                                               hasCream          : false,
+                                               coffeeCream       : "N/I",
+                                               hasKcalLessThan50 : true,
+                                               hasKcalLessThan100: true,
+                                               hasKcalLessThan200: true,
+                                               hasExtraShot      : false,
+                                               hasIce            : false)
     
-    let icedCaramelMacchiato = MyCoffee(coffeeName: "Iced Caramel Macchiato", coffeeKcal: "333 Kcal", hasMilk: true, coffeeMilk: "60 ml / 2 oz", hasSugar: true, hasFoam: true, hasCream: false, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: true)
+    let flatWhite                   = MyCoffee(coffeeName        : "Flat White",
+                                               coffeeKcal        : "220 Kcal",
+                                               coffeeCaffeine    : "195 mg",
+                                               hasMilk           : true,
+                                               coffeeMilk        : "300 ml",
+                                               hasSugar          : false,
+                                               hasFoam           : false,
+                                               coffeeFoam        : "N/I",
+                                               hasCream          : false,
+                                               coffeeCream       : "N/I",
+                                               hasKcalLessThan50 : false,
+                                               hasKcalLessThan100: false,
+                                               hasKcalLessThan200: false,
+                                               hasExtraShot      : false,
+                                               hasIce            : false)
     
-    let frappuccino = MyCoffee(coffeeName: "Frappuccino", coffeeKcal: "420 Kcal", hasMilk: true, coffeeMilk: "75 ml / 2.5 oz", hasSugar: true, hasFoam: false, hasCream: true, hasKcalLessThan50: false , hasKcalLessThan100: false , hasKcalLessThan200: false, hasExtraShot: false, hasIce: true)
-
+    let mocha                       = MyCoffee(coffeeName        : "Mocha",
+                                               coffeeKcal        : "400 Kcal",
+                                               coffeeCaffeine    : "175 mg",
+                                               hasMilk           : true,
+                                               coffeeMilk        : "30 ml",
+                                               hasSugar          : true,
+                                               hasFoam           : false,
+                                               coffeeFoam        : "N/I",
+                                               hasCream          : false,
+                                               coffeeCream       : "N/I",
+                                               hasKcalLessThan50 : false,
+                                               hasKcalLessThan100: false,
+                                               hasKcalLessThan200: false,
+                                               hasExtraShot      : false,
+                                               hasIce            : false)
+    
+    let icedMocha                   = MyCoffee(coffeeName        : "Iced Mocha",
+                                               coffeeKcal        : "350 Kcal",
+                                               coffeeCaffeine    : "175 mg",
+                                               hasMilk           : true,
+                                               coffeeMilk        : "25 ml",
+                                               hasSugar          : true,
+                                               hasFoam           : false,
+                                               coffeeFoam        : "N/I",
+                                               hasCream          : false,
+                                               coffeeCream       : "N/I",
+                                               hasKcalLessThan50 : false,
+                                               hasKcalLessThan100: false,
+                                               hasKcalLessThan200: false,
+                                               hasExtraShot      : false,
+                                               hasIce            : true)
+    
+    let whiteChocolateMocha         = MyCoffee(coffeeName        : "White Chocolate Mocha",
+                                               coffeeKcal        : "440 Kcal",
+                                               coffeeCaffeine    : "150 mg",
+                                               hasMilk           : true,
+                                               coffeeMilk        : "120 ml",
+                                               hasSugar          : true,
+                                               hasFoam           : false,
+                                               coffeeFoam        : "N/I",
+                                               hasCream          : true,
+                                               coffeeCream       : "60 ml",
+                                               hasKcalLessThan50 : false,
+                                               hasKcalLessThan100: false,
+                                               hasKcalLessThan200: false,
+                                               hasExtraShot      : false,
+                                               hasIce            : false)
+    
+    let icedWhiteChocolateMocha     = MyCoffee(coffeeName        : "Iced White Chocolate Mocha",
+                                               coffeeKcal        : "440 Kcal",
+                                               coffeeCaffeine    : "150 mg",
+                                               hasMilk           : true,
+                                               coffeeMilk        : "105 ml",
+                                               hasSugar          : true,
+                                               hasFoam           : false,
+                                               coffeeFoam        : "N/I",
+                                               hasCream          : true,
+                                               coffeeCream       : "60 ml",
+                                               hasKcalLessThan50 : false,
+                                               hasKcalLessThan100: false,
+                                               hasKcalLessThan200: false,
+                                               hasExtraShot      : false,
+                                               hasIce            : true)
+    
+    let caramelMacchiato            = MyCoffee(coffeeName        : "Caramel Macchiato",
+                                               coffeeKcal        : "280 Kcal",
+                                               coffeeCaffeine    : "150 mg",
+                                               hasMilk           : true,
+                                               coffeeMilk        : "90 ml",
+                                               hasSugar          : true,
+                                               hasFoam           : true,
+                                               coffeeFoam        : "15 ml",
+                                               hasCream          : false,
+                                               coffeeCream       : "N/I",
+                                               hasKcalLessThan50 : false,
+                                               hasKcalLessThan100: false,
+                                               hasKcalLessThan200: false,
+                                               hasExtraShot      : false,
+                                               hasIce            : false)
+    
+    let icedCaramelMacchiato        = MyCoffee(coffeeName        : "Iced Caramel Macchiato",
+                                               coffeeKcal        : "280 Kcal",
+                                               coffeeCaffeine    : "150 mg",
+                                               hasMilk           : true,
+                                               coffeeMilk        : "75 ml",
+                                               hasSugar          : true,
+                                               hasFoam           : true,
+                                               coffeeFoam        : "N/I",
+                                               hasCream          : false,
+                                               coffeeCream       : "N/I",
+                                               hasKcalLessThan50 : false,
+                                               hasKcalLessThan100: false,
+                                               hasKcalLessThan200: false,
+                                               hasExtraShot      : false,
+                                               hasIce            : true)
+    
+    let frappuccino                 = MyCoffee(coffeeName        : "Frappuccino",
+                                               coffeeKcal        : "240 Kcal",
+                                               coffeeCaffeine    : "95 mg",
+                                               hasMilk           : true,
+                                               coffeeMilk        : "100 mk",
+                                               hasSugar          : true,
+                                               hasFoam           : false,
+                                               coffeeFoam        : "N/I",
+                                               hasCream          : true,
+                                               coffeeCream       : "N/I",
+                                               hasKcalLessThan50 : false,
+                                               hasKcalLessThan100: false,
+                                               hasKcalLessThan200: false,
+                                               hasExtraShot      : false,
+                                               hasIce            : true)
+    
     var coffeeMenuAll: [MyCoffee] = []
-
+    
     var coffeeMenu = [""]
     
     //Pre-setup IBOutlets
@@ -282,12 +563,12 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         coffeeMenuAll.append(icedAmericano)
         coffeeMenuAll.append(icedCaramelMacchiato)
         coffeeMenuAll.append(icedWhiteChocolateMocha)
-
+        
         coffeeMenu = [""]
         for i in 0 ..< coffeeMenuAll.count {
             coffeeMenu.append(coffeeMenuAll[i].coffeeName)
         }
-    
+        
         if V3_saved_selectedIndexes.contains(0)  { //"Milk-free"
             coffeeMenuAll = coffeeMenuAll.filter( {$0.hasMilk == false })
             coffeeMenu = [""]
@@ -303,7 +584,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                 coffeeMenu.append(coffeeMenuAll[i].coffeeName)
             }
         }
-
+        
         if V3_saved_selectedIndexes.contains(2)  { //"Foam"
             coffeeMenuAll = coffeeMenuAll.filter( {$0.hasFoam == true })
             coffeeMenu = [""]
@@ -311,7 +592,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                 coffeeMenu.append(coffeeMenuAll[i].coffeeName)
             }
         }
-
+        
         if V3_saved_selectedIndexes.contains(3)  { //"Cream"
             coffeeMenuAll = coffeeMenuAll.filter( {$0.hasCream == true })
             coffeeMenu = [""]
@@ -319,7 +600,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                 coffeeMenu.append(coffeeMenuAll[i].coffeeName)
             }
         }
-
+        
         if V3_saved_selectedIndexes.contains(4)  { //"Extra Shot"
             coffeeMenuAll = coffeeMenuAll.filter( {$0.hasExtraShot == true })
             coffeeMenu = [""]
@@ -327,7 +608,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                 coffeeMenu.append(coffeeMenuAll[i].coffeeName)
             }
         }
-
+        
         if V3_saved_selectedIndexes.contains(5)  { //"Iced Coffee"
             coffeeMenuAll = coffeeMenuAll.filter( {$0.hasIce == true })
             coffeeMenu = [""]
@@ -335,7 +616,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                 coffeeMenu.append(coffeeMenuAll[i].coffeeName)
             }
         }
-
+        
         if V3_saved_selectedIndexes.contains(8)  { //"Kcal < 200"
             coffeeMenuAll = coffeeMenuAll.filter( {$0.hasKcalLessThan200 == true })
             coffeeMenu = [""]
@@ -361,7 +642,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         }
         
         if coffeeMenu.count > 0 {
-        coffeeMenu.remove(at: 0)
+            coffeeMenu.remove(at: 0)
         }
         return coffeeMenu.count
     }
@@ -371,10 +652,12 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        UserDefaults.standard.set(coffeeMenuAll[row].coffeeName, forKey: "UIPickerName")
-        UserDefaults.standard.set(coffeeMenuAll[row].coffeeKcal, forKey: "UIPickerKcal")
-        UserDefaults.standard.set(coffeeMenuAll[row].coffeeMilk, forKey: "UIPickerMilk")
-
+        UserDefaults.standard.set(coffeeMenuAll[row].coffeeName     , forKey: "UIPickerName")
+        UserDefaults.standard.set(coffeeMenuAll[row].coffeeKcal     , forKey: "UIPickerKcal")
+        UserDefaults.standard.set(coffeeMenuAll[row].coffeeCaffeine , forKey: "UIPickerCaffeine")
+        UserDefaults.standard.set(coffeeMenuAll[row].coffeeMilk     , forKey: "UIPickerMilk")
+        UserDefaults.standard.set(coffeeMenuAll[row].coffeeFoam     , forKey: "UIPickerFoam")
+        UserDefaults.standard.set(coffeeMenuAll[row].coffeeCream    , forKey: "UIPickerCream")
         
         let pickerLabel = UILabel()
         let titleData = coffeeMenu[row]
@@ -383,9 +666,9 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         pickerLabel.backgroundColor = UIColor.init(red: 250.0/255.0, green: 235.0/255.0, blue: 215.0/255.0, alpha: 1)
         pickerLabel.textAlignment = .center
         return pickerLabel
-      
+        
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         optionPicker.delegate = self
@@ -393,3 +676,5 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     }
     
 }
+
+
