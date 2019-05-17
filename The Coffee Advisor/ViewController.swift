@@ -652,7 +652,7 @@ class ViewController4: UIViewController {
         
         labelCoffeeKcal.font = UIFont(name: "Georgia", size: 24)!
         labelCoffeeKcal.textAlignment = .center
-        labelCoffeeKcal.text = "Total Calorie: \(V4_saved_selectedCoffeeKcal)"
+        labelCoffeeKcal.text = "Calories: \(V4_saved_selectedCoffeeKcal)"
         
         labelCoffeeCaffeine.font = UIFont(name: "Georgia", size: 24)!
         labelCoffeeCaffeine.textAlignment = .center
