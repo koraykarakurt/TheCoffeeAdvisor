@@ -55,6 +55,9 @@ class ViewController4: UIViewController {
         labelCoffeeName.font = UIFont(name: "Georgia", size: 24)!
         labelCoffeeName.textAlignment = .center
         labelCoffeeName.text = "Name: \(V4_saved_selectedCoffeeName)"
+        labelCoffeeName.layer.cornerRadius = 25
+        labelCoffeeName.layer.masksToBounds = true
+        labelCoffeeName.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
         labelCoffeeKcal.font = UIFont(name: "Georgia", size: 24)!
         labelCoffeeKcal.textAlignment = .center
@@ -76,6 +79,9 @@ class ViewController4: UIViewController {
         labelCoffeeCream.textAlignment = .center
         labelCoffeeCream.text = "Cream: \(V4_saved_selectedCoffeeCream)"
         
+        labelCoffeeCream.layer.cornerRadius = 25
+        labelCoffeeCream.layer.masksToBounds = true
+        labelCoffeeCream.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         
         //         let screenSize: CGRect = UIScreen.main.bounds
         ////        let myView = UIView(frame: CGRect(x: 0, y: 0, width: screenSize.width - 50, height: screenSize.width - 50))
@@ -123,8 +129,9 @@ class ViewController2: UIViewController {
         //"Dark Roast"          ,
         "Foam"                  ,//2
         "Cream"                 ,//3
-        "Extra Shot"            ,//4
-        "Iced Coffee"           ,//5
+        "Iced Coffee"           ,//4
+        "> 1 Coffee Shot"       ,//5
+        
         //"Cold Brew"           ,
         
         "Kcal < 50"             ,//6
@@ -601,7 +608,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
             }
         }
         
-        if V3_saved_selectedIndexes.contains(4)  { //"Extra Shot"
+        if V3_saved_selectedIndexes.contains(5)  { //"> 1 Coffee Shot"
             coffeeMenuAll = coffeeMenuAll.filter( {$0.hasExtraShot == true })
             coffeeMenu = [""]
             for i in 0 ..< coffeeMenuAll.count {
@@ -609,7 +616,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
             }
         }
         
-        if V3_saved_selectedIndexes.contains(5)  { //"Iced Coffee"
+        if V3_saved_selectedIndexes.contains(4)  { //"Iced Coffee"
             coffeeMenuAll = coffeeMenuAll.filter( {$0.hasIce == true })
             coffeeMenu = [""]
             for i in 0 ..< coffeeMenuAll.count {

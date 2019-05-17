@@ -349,7 +349,7 @@ OPTIONS </string>
                                 <rect key="frame" x="0.0" y="30" width="375" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gU8-47-YSh" secondAttribute="height" multiplier="15:4" id="5mF-Se-eto"/>
-                                    <constraint firstAttribute="width" constant="375" id="ToN-HM-NrR"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="ToN-HM-NrR"/>
                                     <constraint firstAttribute="height" constant="100" id="flt-Kj-7of"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="K8Q-GD-BuW"/>
@@ -410,7 +410,7 @@ ADVICES</string>
                                 <rect key="frame" x="57" y="197" width="260" height="52"/>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.92156862745098034" blue="0.84313725490196079" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="260" id="7J6-cY-KDg"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="7J6-cY-KDg"/>
                                     <constraint firstAttribute="width" secondItem="6q2-1T-eqW" secondAttribute="height" multiplier="5:1" id="HLO-hQ-aeU"/>
                                     <constraint firstAttribute="height" constant="52" id="uwj-I9-9AY"/>
                                 </constraints>
@@ -422,7 +422,7 @@ ADVICES</string>
                                 <rect key="frame" x="57" y="301" width="260" height="52"/>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.92156862745098034" blue="0.84313725490196079" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="260" id="4ll-4w-zIW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="4ll-4w-zIW"/>
                                     <constraint firstAttribute="height" constant="52" id="ITz-jz-wVk"/>
                                     <constraint firstAttribute="width" secondItem="27V-WP-Ft0" secondAttribute="height" multiplier="5:1" id="U5P-4W-SbR"/>
                                 </constraints>
@@ -433,7 +433,7 @@ ADVICES</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="VFZ-Cz-lOH">
                                 <rect key="frame" x="0.0" y="30" width="375" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="8rZ-pR-PcO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="8rZ-pR-PcO"/>
                                     <constraint firstAttribute="width" secondItem="VFZ-Cz-lOH" secondAttribute="height" multiplier="15:4" id="CYs-au-BXm"/>
                                     <constraint firstAttribute="height" constant="100" id="SLt-9U-wJN"/>
                                 </constraints>
@@ -486,7 +486,7 @@ DETAILS</string>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="43I-sY-5tX" secondAttribute="height" multiplier="5:1" id="5Se-D9-f3m"/>
                                     <constraint firstAttribute="height" constant="52" id="kdd-qJ-CRx"/>
-                                    <constraint firstAttribute="width" constant="260" id="lor-Du-Yfp"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="lor-Du-Yfp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -497,7 +497,7 @@ DETAILS</string>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.92156862745098034" blue="0.84313725490196079" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="EhC-wF-PrG"/>
-                                    <constraint firstAttribute="width" constant="260" id="HDd-0W-jcC"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="HDd-0W-jcC"/>
                                     <constraint firstAttribute="width" secondItem="WpD-u1-VEl" secondAttribute="height" multiplier="5:1" id="hrk-dq-6Ap"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -510,7 +510,7 @@ DETAILS</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="Kk5-6V-gza"/>
                                     <constraint firstAttribute="width" secondItem="gXc-MR-YcF" secondAttribute="height" multiplier="5:1" id="NGC-cg-dy9"/>
-                                    <constraint firstAttribute="width" constant="260" id="yPK-AZ-OWM"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="yPK-AZ-OWM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -521,7 +521,7 @@ DETAILS</string>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.92156862750000001" blue="0.84313725490000002" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="6P0-aG-J9d"/>
-                                    <constraint firstAttribute="width" constant="260" id="jgR-fN-15I"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="jgR-fN-15I"/>
                                     <constraint firstAttribute="width" secondItem="PCv-WI-Ng5" secondAttribute="height" multiplier="5:1" id="vQL-dG-cdL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -573,7 +573,7 @@ DETAILS</string>
         <image name="coffee_beans_1920x1080.jpg" width="1920" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MpD-kY-nsh"/>
+        <segue reference="VB5-xJ-MgB"/>
         <segue reference="lcK-Gp-g7x"/>
     </inferredMetricsTieBreakers>
 </document>
