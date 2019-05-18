@@ -52,7 +52,7 @@ class ViewController2: UIViewController {
         
         let defaults = UserDefaults.standard
         let saved_selectedIndexes = defaults.object(forKey:"UIMultiPickerIndexes") as? [Int] ?? [Int]()
-        print(saved_selectedIndexes)
+        //print(saved_selectedIndexes)
         
         tastesPicker.options = ViewController2.TASTES
         tastesPicker.selectedIndexes = saved_selectedIndexes
@@ -66,7 +66,7 @@ class ViewController2: UIViewController {
     
     @objc func selected(_ sender: UIMultiPicker) {
         UserDefaults.standard.set(sender.selectedIndexes, forKey: "UIMultiPickerIndexes")
-        print(sender.selectedIndexes)
+        //print(sender.selectedIndexes)
     }
 }
 
@@ -237,7 +237,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasKcalLessThan200: true,
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
-                                               hasIce            : false)
+                                               hasIce            : true)
     
     let cappucino                   = MyCoffee(coffeeName        : "Cappucino",
                                                coffeeKcal        : "140 Kcal",
@@ -288,7 +288,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasKcalLessThan200: true,
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
-                                               hasIce            : false)
+                                               hasIce            : true)
     
     let misto                       = MyCoffee(coffeeName        : "Misto",
                                                coffeeKcal        : "130 Kcal",
@@ -356,7 +356,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasKcalLessThan200: false,
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : true,
-                                               hasIce            : false)
+                                               hasIce            : true)
     
     let whiteChocolateMocha         = MyCoffee(coffeeName        : "White Chocolate Mocha",
                                                coffeeKcal        : "440 Kcal",
@@ -390,7 +390,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasKcalLessThan200: false,
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
-                                               hasIce            : false)
+                                               hasIce            : true)
     
     let caramelMacchiato            = MyCoffee(coffeeName        : "Caramel Macchiato",
                                                coffeeKcal        : "280 Kcal",
@@ -424,7 +424,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasKcalLessThan200: false,
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
-                                               hasIce            : false)
+                                               hasIce            : true)
     
     let frappuccino                 = MyCoffee(coffeeName        : "Frappuccino",
                                                coffeeKcal        : "240 Kcal",
@@ -441,7 +441,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasKcalLessThan200: false,
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
-                                               hasIce            : false)
+                                               hasIce            : true)
     
     var coffeeMenuAll: [MyCoffee] = []
     var coffeeMenu = [""]
@@ -566,25 +566,59 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         if coffeeMenu.count > 0 {
             coffeeMenu.remove(at: 0)
         }
+        if coffeeMenuAll.count>0
+        {
+            UserDefaults.standard.set(coffeeMenuAll.count, forKey: "UIPickerElements")
+        }
+        else
+        {
+            UserDefaults.standard.set(0, forKey: "UIPickerElements")
+        }
         return coffeeMenu.count
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        UserDefaults.standard.set(coffeeMenuAll[row].coffeeName     , forKey: "UIPickerName")
-        UserDefaults.standard.set(coffeeMenuAll[row].coffeeKcal     , forKey: "UIPickerKcal")
-        UserDefaults.standard.set(coffeeMenuAll[row].coffeeCaffeine , forKey: "UIPickerCaffeine")
-        UserDefaults.standard.set(coffeeMenuAll[row].coffeeMilk     , forKey: "UIPickerMilk")
-        UserDefaults.standard.set(coffeeMenuAll[row].coffeeFoam     , forKey: "UIPickerFoam")
-        UserDefaults.standard.set(coffeeMenuAll[row].coffeeCream    , forKey: "UIPickerCream")
+        //print(row)
+        if row >= 0 && coffeeMenuAll.count>0
+        {
+            UserDefaults.standard.set(coffeeMenuAll[row].coffeeName     , forKey: "UIPickerName")
+            UserDefaults.standard.set(coffeeMenuAll[row].coffeeKcal     , forKey: "UIPickerKcal")
+            UserDefaults.standard.set(coffeeMenuAll[row].coffeeCaffeine , forKey: "UIPickerCaffeine")
+            UserDefaults.standard.set(coffeeMenuAll[row].coffeeMilk     , forKey: "UIPickerMilk")
+            UserDefaults.standard.set(coffeeMenuAll[row].coffeeFoam     , forKey: "UIPickerFoam")
+            UserDefaults.standard.set(coffeeMenuAll[row].coffeeCream    , forKey: "UIPickerCream")
+        }
+        else
+        {
+            UserDefaults.standard.set("N/D", forKey: "UIPickerName")
+            UserDefaults.standard.set("N/D", forKey: "UIPickerKcal")
+            UserDefaults.standard.set("N/D", forKey: "UIPickerCaffeine")
+            UserDefaults.standard.set("N/D", forKey: "UIPickerMilk")
+            UserDefaults.standard.set("N/D", forKey: "UIPickerFoam")
+            UserDefaults.standard.set("N/D", forKey: "UIPickerCream")
+        }
     }
 
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        UserDefaults.standard.set(coffeeMenuAll[row].coffeeName     , forKey: "UIPickerName")
-        UserDefaults.standard.set(coffeeMenuAll[row].coffeeKcal     , forKey: "UIPickerKcal")
-        UserDefaults.standard.set(coffeeMenuAll[row].coffeeCaffeine , forKey: "UIPickerCaffeine")
-        UserDefaults.standard.set(coffeeMenuAll[row].coffeeMilk     , forKey: "UIPickerMilk")
-        UserDefaults.standard.set(coffeeMenuAll[row].coffeeFoam     , forKey: "UIPickerFoam")
-        UserDefaults.standard.set(coffeeMenuAll[row].coffeeCream    , forKey: "UIPickerCream")
+        //print(row)
+        if row >= 0 && coffeeMenuAll.count>0
+        {
+            UserDefaults.standard.set(coffeeMenuAll[row].coffeeName     , forKey: "UIPickerName")
+            UserDefaults.standard.set(coffeeMenuAll[row].coffeeKcal     , forKey: "UIPickerKcal")
+            UserDefaults.standard.set(coffeeMenuAll[row].coffeeCaffeine , forKey: "UIPickerCaffeine")
+            UserDefaults.standard.set(coffeeMenuAll[row].coffeeMilk     , forKey: "UIPickerMilk")
+            UserDefaults.standard.set(coffeeMenuAll[row].coffeeFoam     , forKey: "UIPickerFoam")
+            UserDefaults.standard.set(coffeeMenuAll[row].coffeeCream    , forKey: "UIPickerCream")
+        }
+        else
+        {
+            UserDefaults.standard.set("N/D", forKey: "UIPickerName")
+            UserDefaults.standard.set("N/D", forKey: "UIPickerKcal")
+            UserDefaults.standard.set("N/D", forKey: "UIPickerCaffeine")
+            UserDefaults.standard.set("N/D", forKey: "UIPickerMilk")
+            UserDefaults.standard.set("N/D", forKey: "UIPickerFoam")
+            UserDefaults.standard.set("N/D", forKey: "UIPickerCream")
+        }
         let pickerLabel = UILabel()
         let titleData = coffeeMenu[row]
         let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedString.Key.font:UIFont(name: "Georgia", size: 28.0)!,NSAttributedString.Key.foregroundColor:UIColor.black])
@@ -615,15 +649,29 @@ class ViewController4: UIViewController {
     @IBOutlet weak var labelCoffeeMilk       : UILabel!
     @IBOutlet weak var labelCoffeeFoam       : UILabel!
     @IBOutlet weak var labelCoffeeCream      : UILabel!
-    var V4_saved_selectedCoffeeName          = UserDefaults.standard.object(forKey:"UIPickerName")     as? String ?? String()
-    var V4_saved_selectedCoffeeSize          = UserDefaults.standard.object(forKey:"UIPickerSizes")    as? String ?? String()
-    var V4_saved_selectedCoffeeKcal          = UserDefaults.standard.object(forKey:"UIPickerKcal")     as? String ?? String()
-    var V4_saved_selectedCoffeeCaffeine      = UserDefaults.standard.object(forKey:"UIPickerCaffeine") as? String ?? String()
-    var V4_saved_selectedCoffeeMilk          = UserDefaults.standard.object(forKey:"UIPickerMilk")     as? String ?? String()
-    var V4_saved_selectedCoffeeFoam          = UserDefaults.standard.object(forKey:"UIPickerFoam")     as? String ?? String()
-    var V4_saved_selectedCoffeeCream         = UserDefaults.standard.object(forKey:"UIPickerCream")    as? String ?? String()
+    
+    var V4_saved_selectedCoffeeName          = "N/D"
+    var V4_saved_selectedCoffeeSize          = "N/D"
+    var V4_saved_selectedCoffeeKcal          = "N/D"
+    var V4_saved_selectedCoffeeCaffeine      = "N/D"
+    var V4_saved_selectedCoffeeMilk          = "N/D"
+    var V4_saved_selectedCoffeeFoam          = "N/D"
+    var V4_saved_selectedCoffeeCream         = "N/D"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print( UserDefaults.standard.object(forKey:"UIPickerElements") as? Int ?? Int())
+        if UserDefaults.standard.object(forKey:"UIPickerElements") as? Int ?? Int() > 0
+        {
+        V4_saved_selectedCoffeeName          = UserDefaults.standard.object(forKey:"UIPickerName")     as? String ?? String()
+        V4_saved_selectedCoffeeSize          = UserDefaults.standard.object(forKey:"UIPickerSizes")    as? String ?? String()
+        V4_saved_selectedCoffeeKcal          = UserDefaults.standard.object(forKey:"UIPickerKcal")     as? String ?? String()
+        V4_saved_selectedCoffeeCaffeine      = UserDefaults.standard.object(forKey:"UIPickerCaffeine") as? String ?? String()
+        V4_saved_selectedCoffeeMilk          = UserDefaults.standard.object(forKey:"UIPickerMilk")     as? String ?? String()
+        V4_saved_selectedCoffeeFoam          = UserDefaults.standard.object(forKey:"UIPickerFoam")     as? String ?? String()
+        V4_saved_selectedCoffeeCream         = UserDefaults.standard.object(forKey:"UIPickerCream")    as? String ?? String()
+        }
+        
         labelCoffeeName.font                 = UIFont(name: "Georgia-Bold", size: 24)!
         labelCoffeeName.textAlignment        = .center
         labelCoffeeName.text                 = "\(V4_saved_selectedCoffeeName)"
@@ -634,27 +682,32 @@ class ViewController4: UIViewController {
         labelCoffeeSize.textAlignment        = .center
         if V4_saved_selectedCoffeeName=="Espresso"
         {
-            labelCoffeeSize.text             = "Size: 30 ml / 1 oz"
+            labelCoffeeSize.text             = "Size: 30 ml (1 oz)"
         }
         else if V4_saved_selectedCoffeeName=="Ristretto"
             
         {
-            labelCoffeeSize.text             = "Size: 22.5 ml / .75 oz"
+            labelCoffeeSize.text             = "Size: 22.5 ml (.75 oz)"
         }
 
         else if  V4_saved_selectedCoffeeName=="Macchiato" || V4_saved_selectedCoffeeName=="Espresso Doppio"
 
         {
-            labelCoffeeSize.text             = "Size: 60 ml / 2 oz"
+            labelCoffeeSize.text             = "Size: 60 ml (2 oz)"
         }
         else if  V4_saved_selectedCoffeeName=="Cortado"
             
         {
-            labelCoffeeSize.text             = "Size: 90 ml / 3 oz"
+            labelCoffeeSize.text             = "Size: 90 ml (3 oz)"
+        }
+        else if  V4_saved_selectedCoffeeName=="N/D"
+            
+        {
+            labelCoffeeSize.text             = "Size: N/D"
         }
         else
         {
-            labelCoffeeSize.text             = "Size: Grande / 480 ml"
+            labelCoffeeSize.text             = "Size: 480 ml (Grande)"
         }
         labelCoffeeKcal.font                 = UIFont(name: "Georgia", size: 24)!
         labelCoffeeKcal.textAlignment        = .center
