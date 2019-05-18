@@ -581,6 +581,12 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     }
 
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        UserDefaults.standard.set(coffeeMenuAll[row].coffeeName     , forKey: "UIPickerName")
+        UserDefaults.standard.set(coffeeMenuAll[row].coffeeKcal     , forKey: "UIPickerKcal")
+        UserDefaults.standard.set(coffeeMenuAll[row].coffeeCaffeine , forKey: "UIPickerCaffeine")
+        UserDefaults.standard.set(coffeeMenuAll[row].coffeeMilk     , forKey: "UIPickerMilk")
+        UserDefaults.standard.set(coffeeMenuAll[row].coffeeFoam     , forKey: "UIPickerFoam")
+        UserDefaults.standard.set(coffeeMenuAll[row].coffeeCream    , forKey: "UIPickerCream")
         let pickerLabel = UILabel()
         let titleData = coffeeMenu[row]
         let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedString.Key.font:UIFont(name: "Georgia", size: 28.0)!,NSAttributedString.Key.foregroundColor:UIColor.black])
@@ -616,7 +622,7 @@ class ViewController4: UIViewController {
     }
     
     var V4_saved_selectedCoffeeName     = UserDefaults.standard.object(forKey:"UIPickerName")     as? String ?? String()
-    var V4_saved_selectedCoffeeSize     = UserDefaults.standard.object(forKey:"UIPickerSizes")     as? String ?? String()
+    var V4_saved_selectedCoffeeSize     = UserDefaults.standard.object(forKey:"UIPickerSizes")    as? String ?? String()
     var V4_saved_selectedCoffeeKcal     = UserDefaults.standard.object(forKey:"UIPickerKcal")     as? String ?? String()
     var V4_saved_selectedCoffeeCaffeine = UserDefaults.standard.object(forKey:"UIPickerCaffeine") as? String ?? String()
     var V4_saved_selectedCoffeeMilk     = UserDefaults.standard.object(forKey:"UIPickerMilk")     as? String ?? String()
