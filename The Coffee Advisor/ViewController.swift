@@ -38,14 +38,11 @@ class ViewController2: UIViewController {
         "Foam"                      ,//2
         "Cream"                     ,//3
         "Iced Coffee"               ,//4
-        "> 1 Coffee Shot"           ,//5
-        "> 2 Coffee Shot"           ,//6
-        "Kcal < 50"                 ,//7
-        "Kcal < 100"                ,//8
-        "Kcal < 200"                ,//9
-        "Tall (360 ml)"             ,//10
-        "Grande (480 ml)"           ,//11
-        "Venti (600 ml)"             //12
+        "Espresso Shots > 1"        ,//5
+        "Espresso Shots > 2"        ,//6
+        "Calories < 50 Kcal"        ,//7
+        "Calories < 100 Kcal"       ,//8
+        "Calories < 200 Kcal"        //9
     ];
     
     @IBOutlet weak var tastesPicker: UIMultiPicker!
@@ -461,6 +458,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         coffeeMenuAll.append(espresso)
         coffeeMenuAll.append(ristretto)
         coffeeMenuAll.append(americano)
+        coffeeMenuAll.append(espressoDoppio)
         
         coffeeMenuAll.append(latte)
         coffeeMenuAll.append(misto)
@@ -517,7 +515,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
             }
         }
         
-        if V3_saved_selectedIndexes.contains(5)  { //"> 1 Coffee Shot"
+        if V3_saved_selectedIndexes.contains(5)  { //"Espresso Shot > 1"
             coffeeMenuAll = coffeeMenuAll.filter( {$0.hasMoreThan1shot == true })
             coffeeMenu = [""]
             for i in 0 ..< coffeeMenuAll.count {
@@ -525,7 +523,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
             }
         }
         
-        if V3_saved_selectedIndexes.contains(6)  { //"> 2 Coffee Shot"
+        if V3_saved_selectedIndexes.contains(6)  { //"Espresso Shot > 2"
             coffeeMenuAll = coffeeMenuAll.filter( {$0.hasMoreThan2shot == true })
             coffeeMenu = [""]
             for i in 0 ..< coffeeMenuAll.count {
@@ -594,7 +592,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         pickerLabel.backgroundColor = UIColor.init(red: 250.0/255.0, green: 235.0/255.0, blue: 215.0/255.0, alpha: 1)
         pickerLabel.textAlignment = .center
         return pickerLabel
-        
     }
     
     override func viewDidLoad() {
@@ -608,74 +605,73 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
 
 
 class ViewController4: UIViewController {
-    
-    @IBOutlet weak var labelCoffeeName      : UILabel!
-    @IBOutlet weak var labelCoffeeKcal      : UILabel!
-    @IBOutlet weak var labelCoffeeSize      : UILabel!
-    @IBOutlet weak var labelCoffeeCaffeine  : UILabel!
-    @IBOutlet weak var labelCoffeeMilk      : UILabel!
-    @IBOutlet weak var labelCoffeeFoam      : UILabel!
-    @IBOutlet weak var labelCoffeeCream     : UILabel!
-    
     override var preferredStatusBarStyle    : UIStatusBarStyle {
         return .lightContent
     }
-    
-    var V4_saved_selectedCoffeeName     = UserDefaults.standard.object(forKey:"UIPickerName")     as? String ?? String()
-    var V4_saved_selectedCoffeeSize     = UserDefaults.standard.object(forKey:"UIPickerSizes")    as? String ?? String()
-    var V4_saved_selectedCoffeeKcal     = UserDefaults.standard.object(forKey:"UIPickerKcal")     as? String ?? String()
-    var V4_saved_selectedCoffeeCaffeine = UserDefaults.standard.object(forKey:"UIPickerCaffeine") as? String ?? String()
-    var V4_saved_selectedCoffeeMilk     = UserDefaults.standard.object(forKey:"UIPickerMilk")     as? String ?? String()
-    var V4_saved_selectedCoffeeFoam     = UserDefaults.standard.object(forKey:"UIPickerFoam")     as? String ?? String()
-    var V4_saved_selectedCoffeeCream    = UserDefaults.standard.object(forKey:"UIPickerCream")    as? String ?? String()
-    
+    @IBOutlet weak var labelCoffeeName       : UILabel!
+    @IBOutlet weak var labelCoffeeKcal       : UILabel!
+    @IBOutlet weak var labelCoffeeSize       : UILabel!
+    @IBOutlet weak var labelCoffeeCaffeine   : UILabel!
+    @IBOutlet weak var labelCoffeeMilk       : UILabel!
+    @IBOutlet weak var labelCoffeeFoam       : UILabel!
+    @IBOutlet weak var labelCoffeeCream      : UILabel!
+    var V4_saved_selectedCoffeeName          = UserDefaults.standard.object(forKey:"UIPickerName")     as? String ?? String()
+    var V4_saved_selectedCoffeeSize          = UserDefaults.standard.object(forKey:"UIPickerSizes")    as? String ?? String()
+    var V4_saved_selectedCoffeeKcal          = UserDefaults.standard.object(forKey:"UIPickerKcal")     as? String ?? String()
+    var V4_saved_selectedCoffeeCaffeine      = UserDefaults.standard.object(forKey:"UIPickerCaffeine") as? String ?? String()
+    var V4_saved_selectedCoffeeMilk          = UserDefaults.standard.object(forKey:"UIPickerMilk")     as? String ?? String()
+    var V4_saved_selectedCoffeeFoam          = UserDefaults.standard.object(forKey:"UIPickerFoam")     as? String ?? String()
+    var V4_saved_selectedCoffeeCream         = UserDefaults.standard.object(forKey:"UIPickerCream")    as? String ?? String()
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
-        labelCoffeeName.font = UIFont(name: "Georgia-Bold", size: 24)!
-        labelCoffeeName.textAlignment = .center
-        labelCoffeeName.text = "\(V4_saved_selectedCoffeeName)"
-        labelCoffeeName.layer.cornerRadius = 24
-        labelCoffeeName.layer.masksToBounds = true
-        labelCoffeeName.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        
-        labelCoffeeSize.font = UIFont(name: "Georgia", size: 24)!
-        labelCoffeeSize.textAlignment = .center
-        if V4_saved_selectedCoffeeSize=="S" {
-            labelCoffeeSize.text = "Size: Tall (360 ml)"
-        } else if V4_saved_selectedCoffeeSize=="M" {
-            labelCoffeeSize.text = "Size: Grande (480 ml)"
-        } else if V4_saved_selectedCoffeeSize=="L" {
-            labelCoffeeSize.text = "Size: Venti (600 ml)"
-        } else {
-            labelCoffeeSize.text = "Size: Grande (480 ml)"
+        labelCoffeeName.font                 = UIFont(name: "Georgia-Bold", size: 24)!
+        labelCoffeeName.textAlignment        = .center
+        labelCoffeeName.text                 = "\(V4_saved_selectedCoffeeName)"
+        labelCoffeeName.layer.cornerRadius   = 10
+        labelCoffeeName.layer.masksToBounds  = true
+        labelCoffeeName.layer.maskedCorners  = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        labelCoffeeSize.font                 = UIFont(name: "Georgia", size: 24)!
+        labelCoffeeSize.textAlignment        = .center
+        if V4_saved_selectedCoffeeName=="Espresso"
+        {
+            labelCoffeeSize.text             = "Size: 30 ml / 1 oz"
         }
-        
-        labelCoffeeKcal.font = UIFont(name: "Georgia", size: 24)!
-        labelCoffeeKcal.textAlignment = .center
-        labelCoffeeKcal.text = "Size: \(V4_saved_selectedCoffeeKcal)"
-        
-        labelCoffeeKcal.font = UIFont(name: "Georgia", size: 24)!
-        labelCoffeeKcal.textAlignment = .center
-        labelCoffeeKcal.text = "Calories: \(V4_saved_selectedCoffeeKcal)"
-        
-        labelCoffeeCaffeine.font = UIFont(name: "Georgia", size: 24)!
-        labelCoffeeCaffeine.textAlignment = .center
-        labelCoffeeCaffeine.text = "Caffeine: \(V4_saved_selectedCoffeeCaffeine)"
-        
-        labelCoffeeMilk.font = UIFont(name: "Georgia", size: 24)!
-        labelCoffeeMilk.textAlignment = .center
-        labelCoffeeMilk.text = "Steamed Milk: \(V4_saved_selectedCoffeeMilk)"
-        
-        labelCoffeeFoam.font = UIFont(name: "Georgia", size: 24)!
-        labelCoffeeFoam.textAlignment = .center
-        labelCoffeeFoam.text = "Foamed Milk: \(V4_saved_selectedCoffeeFoam)"
-        
-        labelCoffeeCream.font = UIFont(name: "Georgia", size: 24)!
-        labelCoffeeCream.textAlignment = .center
-        labelCoffeeCream.text = "Cream: \(V4_saved_selectedCoffeeCream)"
-        labelCoffeeCream.layer.cornerRadius = 25
+        else if V4_saved_selectedCoffeeName=="Ristretto"
+            
+        {
+            labelCoffeeSize.text             = "Size: 22.5 ml / .75 oz"
+        }
+
+        else if  V4_saved_selectedCoffeeName=="Macchiato" || V4_saved_selectedCoffeeName=="Espresso Doppio"
+
+        {
+            labelCoffeeSize.text             = "Size: 60 ml / 2 oz"
+        }
+        else if  V4_saved_selectedCoffeeName=="Cortado"
+            
+        {
+            labelCoffeeSize.text             = "Size: 90 ml / 3 oz"
+        }
+        else
+        {
+            labelCoffeeSize.text             = "Size: Grande / 480 ml"
+        }
+        labelCoffeeKcal.font                 = UIFont(name: "Georgia", size: 24)!
+        labelCoffeeKcal.textAlignment        = .center
+        labelCoffeeKcal.text                 = "Calories: \(V4_saved_selectedCoffeeKcal)"
+        labelCoffeeCaffeine.font             = UIFont(name: "Georgia", size: 24)!
+        labelCoffeeCaffeine.textAlignment    = .center
+        labelCoffeeCaffeine.text             = "Caffeine: \(V4_saved_selectedCoffeeCaffeine)"
+        labelCoffeeMilk.font                 = UIFont(name: "Georgia", size: 24)!
+        labelCoffeeMilk.textAlignment        = .center
+        labelCoffeeMilk.text                 = "Steamed Milk: \(V4_saved_selectedCoffeeMilk)"
+        labelCoffeeFoam.font                 = UIFont(name: "Georgia", size: 24)!
+        labelCoffeeFoam.textAlignment        = .center
+        labelCoffeeFoam.text                 = "Foamed Milk: \(V4_saved_selectedCoffeeFoam)"
+        labelCoffeeCream.font                = UIFont(name: "Georgia", size: 24)!
+        labelCoffeeCream.textAlignment       = .center
+        labelCoffeeCream.text                = "Cream: \(V4_saved_selectedCoffeeCream)"
+        labelCoffeeCream.layer.cornerRadius  = 10
         labelCoffeeCream.layer.masksToBounds = true
         labelCoffeeCream.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         
