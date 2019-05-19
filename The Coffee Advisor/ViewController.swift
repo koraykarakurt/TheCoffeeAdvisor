@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Coffee Advisor
 //
-//  Created by Meric Koray Karakurt on 17.05.2019
+//  Created by Meric Koray Karakurt on 19.05.2019
 //  Copyright © 2019 Meric Koray Karakurt. All rights reserved.
 //
 
@@ -178,7 +178,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                coffeeMilk        : "N/I",
                                                hasSugar          : false,
                                                hasFoam           : true,
-                                               coffeeFoam        : "1 ml",
+                                               coffeeFoam        : "5 ml",
                                                hasCream          : false,
                                                coffeeCream       : "N/I",
                                                hasKcalLessThan50 : true,
@@ -189,13 +189,13 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasIce            : false)
     //not sure about cortado
     let cortado                     = MyCoffee(coffeeName        : "Cortado",
-                                               coffeeKcal        : "72 Kcal",
-                                               coffeeCaffeine    : "150 mg",
+                                               coffeeKcal        : "30 Kcal",
+                                               coffeeCaffeine    : "150 mg",// 60 ml = 10 Kcal
                                                hasMilk           : true,
                                                coffeeMilk        : "N/I",
                                                hasSugar          : false,
                                                hasFoam           : true,
-                                               coffeeFoam        : "30 ml",
+                                               coffeeFoam        : "30 ml",// 15 Kcal
                                                hasCream          : false,
                                                coffeeCream       : "N/I",
                                                hasKcalLessThan50 : false,
@@ -206,13 +206,13 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasIce            : false)
     
     let latte                       = MyCoffee(coffeeName        : "Latte",
-                                               coffeeKcal        : "230 Kcal",
-                                               coffeeCaffeine    : "150 mg",
+                                               coffeeKcal        : "220 Kcal",
+                                               coffeeCaffeine    : "150 mg",//60 ml = 10 Kcal
                                                hasMilk           : true,
-                                               coffeeMilk        : "300 ml",
+                                               coffeeMilk        : "360 ml",//180 Kcal
                                                hasSugar          : false,
                                                hasFoam           : true,
-                                               coffeeFoam        : "2 ml",
+                                               coffeeFoam        : "30 ml",//7.5 Kcal
                                                hasCream          : false,
                                                coffeeCream       : "N/I",
                                                hasKcalLessThan50 : false,
@@ -224,12 +224,12 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     
     let icedLatte                   = MyCoffee(coffeeName        : "Iced Latte",
                                                coffeeKcal        : "150 Kcal",
-                                               coffeeCaffeine    : "150 mg",
+                                               coffeeCaffeine    : "150 mg",//10 Kcal (60 ml)
                                                hasMilk           : true,
-                                               coffeeMilk        : "180 ml",
+                                               coffeeMilk        : "240 ml",//120 Kcal
                                                hasSugar          : false,
                                                hasFoam           : true,
-                                               coffeeFoam        : "2 ml",
+                                               coffeeFoam        : "30 ml",//7.5 Kcal
                                                hasCream          : false,
                                                coffeeCream       : "N/I",
                                                hasKcalLessThan50 : false,
@@ -240,13 +240,13 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasIce            : true)
     
     let cappucino                   = MyCoffee(coffeeName        : "Cappucino",
-                                               coffeeKcal        : "140 Kcal",
-                                               coffeeCaffeine    : "150 mg",
+                                               coffeeKcal        : "145 Kcal",
+                                               coffeeCaffeine    : "150 mg",//= 60 ml (2 shot) = 10 Kcal
                                                hasMilk           : true,
-                                               coffeeMilk        : "60 ml",
+                                               coffeeMilk        : "180 ml",//90 Kcal
                                                hasSugar          : false,
                                                hasFoam           : true,
-                                               coffeeFoam        : "60 ml",
+                                               coffeeFoam        : "180 ml",//45 Kcal
                                                hasCream          : false,
                                                coffeeCream       : "N/I",
                                                hasKcalLessThan50 : false,
@@ -292,9 +292,9 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     
     let misto                       = MyCoffee(coffeeName        : "Misto",
                                                coffeeKcal        : "130 Kcal",
-                                               coffeeCaffeine    : "150 mg",
+                                               coffeeCaffeine    : "150 mg",//60 ml = 10 Kcal
                                                hasMilk           : true,
-                                               coffeeMilk        : "180 ml",
+                                               coffeeMilk        : "220 ml",//110 Kcal
                                                hasSugar          : false,
                                                hasFoam           : false,
                                                coffeeFoam        : "N/I",
@@ -309,9 +309,9 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     
     let flatWhite                   = MyCoffee(coffeeName        : "Flat White",
                                                coffeeKcal        : "220 Kcal",
-                                               coffeeCaffeine    : "195 mg",
+                                               coffeeCaffeine    : "190 mg",//75 ml = 15 Kcal
                                                hasMilk           : true,
-                                               coffeeMilk        : "300 ml",
+                                               coffeeMilk        : "360 ml",//175 Kcal
                                                hasSugar          : false,
                                                hasFoam           : false,
                                                coffeeFoam        : "N/I",
@@ -328,7 +328,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                coffeeKcal        : "400 Kcal",
                                                coffeeCaffeine    : "175 mg",
                                                hasMilk           : true,
-                                               coffeeMilk        : "30 ml",
+                                               coffeeMilk        : "50 ml",
                                                hasSugar          : true,
                                                hasFoam           : false,
                                                coffeeFoam        : "N/I",
@@ -345,7 +345,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                coffeeKcal        : "350 Kcal",
                                                coffeeCaffeine    : "175 mg",
                                                hasMilk           : true,
-                                               coffeeMilk        : "25 ml",
+                                               coffeeMilk        : "30 ml",
                                                hasSugar          : true,
                                                hasFoam           : false,
                                                coffeeFoam        : "N/I",
@@ -376,7 +376,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasIce            : false)
     
     let icedWhiteChocolateMocha     = MyCoffee(coffeeName        : "Iced White Chocolate Mocha",
-                                               coffeeKcal        : "440 Kcal",
+                                               coffeeKcal        : "420 Kcal",
                                                coffeeCaffeine    : "150 mg",
                                                hasMilk           : true,
                                                coffeeMilk        : "105 ml",
@@ -399,7 +399,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                coffeeMilk        : "90 ml",
                                                hasSugar          : true,
                                                hasFoam           : true,
-                                               coffeeFoam        : "15 ml",
+                                               coffeeFoam        : "20 ml",
                                                hasCream          : false,
                                                coffeeCream       : "N/I",
                                                hasKcalLessThan50 : false,
@@ -410,13 +410,13 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasIce            : false)
     
     let icedCaramelMacchiato        = MyCoffee(coffeeName        : "Iced Caramel Macchiato",
-                                               coffeeKcal        : "280 Kcal",
+                                               coffeeKcal        : "270 Kcal",
                                                coffeeCaffeine    : "150 mg",
                                                hasMilk           : true,
                                                coffeeMilk        : "75 ml",
                                                hasSugar          : true,
                                                hasFoam           : true,
-                                               coffeeFoam        : "N/I",
+                                               coffeeFoam        : "15 ml",
                                                hasCream          : false,
                                                coffeeCream       : "N/I",
                                                hasKcalLessThan50 : false,
