@@ -124,12 +124,12 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                coffeeKcal        : "5 Kcal",
                                                coffeeCaffeine    : "75 mg",
                                                hasMilk           : false,
-                                               coffeeMilk        : "N/I",
+                                               coffeeMilk        : "-",
                                                hasSugar          : false,
                                                hasFoam           : false,
-                                               coffeeFoam        : "N/I",
+                                               coffeeFoam        : "-",
                                                hasCream          : false,
-                                               coffeeCream       : "N/I",
+                                               coffeeCream       : "-",
                                                hasKcalLessThan50 : true,
                                                hasKcalLessThan100: true,
                                                hasKcalLessThan200: true,
@@ -141,12 +141,12 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                coffeeKcal        : "10 Kcal",
                                                coffeeCaffeine    : "150 mg",
                                                hasMilk           : false,
-                                               coffeeMilk        : "N/I",
+                                               coffeeMilk        : "-",
                                                hasSugar          : false,
                                                hasFoam           : false,
-                                               coffeeFoam        : "N/I",
+                                               coffeeFoam        : "-",
                                                hasCream          : false,
-                                               coffeeCream       : "N/I",
+                                               coffeeCream       : "-",
                                                hasKcalLessThan50 : true,
                                                hasKcalLessThan100: true,
                                                hasKcalLessThan200: true,
@@ -158,12 +158,12 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                coffeeKcal        : "6 Kcal",
                                                coffeeCaffeine    : "90 mg",
                                                hasMilk           : false,
-                                               coffeeMilk        : "N/I",
+                                               coffeeMilk        : "-",
                                                hasSugar          : false,
                                                hasFoam           : false,
-                                               coffeeFoam        : "N/I",
+                                               coffeeFoam        : "-",
                                                hasCream          : false,
-                                               coffeeCream       : "N/I",
+                                               coffeeCream       : "-",
                                                hasKcalLessThan50 : true,
                                                hasKcalLessThan100: true,
                                                hasKcalLessThan200: true,
@@ -175,12 +175,12 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                coffeeKcal        : "12 Kcal",
                                                coffeeCaffeine    : "150 mg",
                                                hasMilk           : false,
-                                               coffeeMilk        : "N/I",
+                                               coffeeMilk        : "-",
                                                hasSugar          : false,
                                                hasFoam           : true,
                                                coffeeFoam        : "5 ml",
                                                hasCream          : false,
-                                               coffeeCream       : "N/I",
+                                               coffeeCream       : "-",
                                                hasKcalLessThan50 : true,
                                                hasKcalLessThan100: true,
                                                hasKcalLessThan200: true,
@@ -192,12 +192,12 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                coffeeKcal        : "30 Kcal",
                                                coffeeCaffeine    : "150 mg",// 60 ml = 10 Kcal
                                                hasMilk           : true,
-                                               coffeeMilk        : "N/I",
+                                               coffeeMilk        : "-",
                                                hasSugar          : false,
                                                hasFoam           : true,
                                                coffeeFoam        : "30 ml",// 15 Kcal
                                                hasCream          : false,
-                                               coffeeCream       : "N/I",
+                                               coffeeCream       : "-",
                                                hasKcalLessThan50 : false,
                                                hasKcalLessThan100: true,
                                                hasKcalLessThan200: true,
@@ -214,7 +214,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasFoam           : true,
                                                coffeeFoam        : "30 ml",//7.5 Kcal
                                                hasCream          : false,
-                                               coffeeCream       : "N/I",
+                                               coffeeCream       : "-",
                                                hasKcalLessThan50 : false,
                                                hasKcalLessThan100: false,
                                                hasKcalLessThan200: false,
@@ -231,7 +231,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasFoam           : true,
                                                coffeeFoam        : "30 ml",//7.5 Kcal
                                                hasCream          : false,
-                                               coffeeCream       : "N/I",
+                                               coffeeCream       : "-",
                                                hasKcalLessThan50 : false,
                                                hasKcalLessThan100: false,
                                                hasKcalLessThan200: true,
@@ -248,7 +248,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasFoam           : true,
                                                coffeeFoam        : "180 ml",//45 Kcal
                                                hasCream          : false,
-                                               coffeeCream       : "N/I",
+                                               coffeeCream       : "-",
                                                hasKcalLessThan50 : false,
                                                hasKcalLessThan100: false,
                                                hasKcalLessThan200: true,
@@ -260,12 +260,12 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                coffeeKcal        : "15 Kcal",
                                                coffeeCaffeine    : "225 mg",
                                                hasMilk           : false,
-                                               coffeeMilk        : "N/I",
+                                               coffeeMilk        : "-",
                                                hasSugar          : false,
                                                hasFoam           : false,
-                                               coffeeFoam        : "N/I",
+                                               coffeeFoam        : "-",
                                                hasCream          : false,
-                                               coffeeCream       : "N/I",
+                                               coffeeCream       : "-",
                                                hasKcalLessThan50 : true,
                                                hasKcalLessThan100: true,
                                                hasKcalLessThan200: true,
@@ -277,12 +277,12 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                coffeeKcal        : "15 Kcal",
                                                coffeeCaffeine    : "225 mg",
                                                hasMilk           : false,
-                                               coffeeMilk        : "N/I",
+                                               coffeeMilk        : "-",
                                                hasSugar          : false,
                                                hasFoam           : false,
-                                               coffeeFoam        : "N/I",
+                                               coffeeFoam        : "-",
                                                hasCream          : false,
-                                               coffeeCream       : "N/I",
+                                               coffeeCream       : "-",
                                                hasKcalLessThan50 : true,
                                                hasKcalLessThan100: true,
                                                hasKcalLessThan200: true,
@@ -297,9 +297,9 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                coffeeMilk        : "220 ml",//110 Kcal
                                                hasSugar          : false,
                                                hasFoam           : false,
-                                               coffeeFoam        : "N/I",
+                                               coffeeFoam        : "-",
                                                hasCream          : false,
-                                               coffeeCream       : "N/I",
+                                               coffeeCream       : "-",
                                                hasKcalLessThan50 : true,
                                                hasKcalLessThan100: true,
                                                hasKcalLessThan200: true,
@@ -314,9 +314,9 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                coffeeMilk        : "360 ml",//175 Kcal
                                                hasSugar          : false,
                                                hasFoam           : false,
-                                               coffeeFoam        : "N/I",
+                                               coffeeFoam        : "-",
                                                hasCream          : false,
-                                               coffeeCream       : "N/I",
+                                               coffeeCream       : "-",
                                                hasKcalLessThan50 : false,
                                                hasKcalLessThan100: false,
                                                hasKcalLessThan200: false,
@@ -331,9 +331,9 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                coffeeMilk        : "50 ml",
                                                hasSugar          : true,
                                                hasFoam           : false,
-                                               coffeeFoam        : "N/I",
+                                               coffeeFoam        : "-",
                                                hasCream          : false,
-                                               coffeeCream       : "N/I",
+                                               coffeeCream       : "-",
                                                hasKcalLessThan50 : false,
                                                hasKcalLessThan100: false,
                                                hasKcalLessThan200: false,
@@ -348,9 +348,9 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                coffeeMilk        : "30 ml",
                                                hasSugar          : true,
                                                hasFoam           : false,
-                                               coffeeFoam        : "N/I",
+                                               coffeeFoam        : "-",
                                                hasCream          : false,
-                                               coffeeCream       : "N/I",
+                                               coffeeCream       : "-",
                                                hasKcalLessThan50 : false,
                                                hasKcalLessThan100: false,
                                                hasKcalLessThan200: false,
@@ -365,7 +365,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                coffeeMilk        : "120 ml",
                                                hasSugar          : true,
                                                hasFoam           : false,
-                                               coffeeFoam        : "N/I",
+                                               coffeeFoam        : "-",
                                                hasCream          : true,
                                                coffeeCream       : "60 ml",
                                                hasKcalLessThan50 : false,
@@ -382,7 +382,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                coffeeMilk        : "105 ml",
                                                hasSugar          : true,
                                                hasFoam           : false,
-                                               coffeeFoam        : "N/I",
+                                               coffeeFoam        : "-",
                                                hasCream          : true,
                                                coffeeCream       : "60 ml",
                                                hasKcalLessThan50 : false,
@@ -401,7 +401,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasFoam           : true,
                                                coffeeFoam        : "20 ml",
                                                hasCream          : false,
-                                               coffeeCream       : "N/I",
+                                               coffeeCream       : "-",
                                                hasKcalLessThan50 : false,
                                                hasKcalLessThan100: false,
                                                hasKcalLessThan200: false,
@@ -418,7 +418,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasFoam           : true,
                                                coffeeFoam        : "15 ml",
                                                hasCream          : false,
-                                               coffeeCream       : "N/I",
+                                               coffeeCream       : "-",
                                                hasKcalLessThan50 : false,
                                                hasKcalLessThan100: false,
                                                hasKcalLessThan200: false,
@@ -433,7 +433,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                coffeeMilk        : "100 mk",
                                                hasSugar          : true,
                                                hasFoam           : false,
-                                               coffeeFoam        : "N/I",
+                                               coffeeFoam        : "-",
                                                hasCream          : true,
                                                coffeeCream       : "30 ml",
                                                hasKcalLessThan50 : false,
@@ -590,12 +590,12 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         }
         else
         {
-            UserDefaults.standard.set("N/D", forKey: "UIPickerName")
-            UserDefaults.standard.set("N/D", forKey: "UIPickerKcal")
-            UserDefaults.standard.set("N/D", forKey: "UIPickerCaffeine")
-            UserDefaults.standard.set("N/D", forKey: "UIPickerMilk")
-            UserDefaults.standard.set("N/D", forKey: "UIPickerFoam")
-            UserDefaults.standard.set("N/D", forKey: "UIPickerCream")
+            UserDefaults.standard.set("-", forKey: "UIPickerName")
+            UserDefaults.standard.set("-", forKey: "UIPickerKcal")
+            UserDefaults.standard.set("-", forKey: "UIPickerCaffeine")
+            UserDefaults.standard.set("-", forKey: "UIPickerMilk")
+            UserDefaults.standard.set("-", forKey: "UIPickerFoam")
+            UserDefaults.standard.set("-", forKey: "UIPickerCream")
         }
     }
 
@@ -612,12 +612,12 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         }
         else
         {
-            UserDefaults.standard.set("N/D", forKey: "UIPickerName")
-            UserDefaults.standard.set("N/D", forKey: "UIPickerKcal")
-            UserDefaults.standard.set("N/D", forKey: "UIPickerCaffeine")
-            UserDefaults.standard.set("N/D", forKey: "UIPickerMilk")
-            UserDefaults.standard.set("N/D", forKey: "UIPickerFoam")
-            UserDefaults.standard.set("N/D", forKey: "UIPickerCream")
+            UserDefaults.standard.set("-", forKey: "UIPickerName")
+            UserDefaults.standard.set("-", forKey: "UIPickerKcal")
+            UserDefaults.standard.set("-", forKey: "UIPickerCaffeine")
+            UserDefaults.standard.set("-", forKey: "UIPickerMilk")
+            UserDefaults.standard.set("-", forKey: "UIPickerFoam")
+            UserDefaults.standard.set("-", forKey: "UIPickerCream")
         }
         let pickerLabel = UILabel()
         let titleData = coffeeMenu[row]
@@ -650,13 +650,13 @@ class ViewController4: UIViewController {
     @IBOutlet weak var labelCoffeeFoam       : UILabel!
     @IBOutlet weak var labelCoffeeCream      : UILabel!
     
-    var V4_saved_selectedCoffeeName          = "N/D"
-    var V4_saved_selectedCoffeeSize          = "N/D"
-    var V4_saved_selectedCoffeeKcal          = "N/D"
-    var V4_saved_selectedCoffeeCaffeine      = "N/D"
-    var V4_saved_selectedCoffeeMilk          = "N/D"
-    var V4_saved_selectedCoffeeFoam          = "N/D"
-    var V4_saved_selectedCoffeeCream         = "N/D"
+    var V4_saved_selectedCoffeeName          = "-"
+    var V4_saved_selectedCoffeeSize          = "-"
+    var V4_saved_selectedCoffeeKcal          = "-"
+    var V4_saved_selectedCoffeeCaffeine      = "-"
+    var V4_saved_selectedCoffeeMilk          = "-"
+    var V4_saved_selectedCoffeeFoam          = "-"
+    var V4_saved_selectedCoffeeCream         = "-"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -700,10 +700,10 @@ class ViewController4: UIViewController {
         {
             labelCoffeeSize.text             = "Size: 90 ml (3 oz)"
         }
-        else if  V4_saved_selectedCoffeeName=="N/D"
+        else if  V4_saved_selectedCoffeeName=="-"
             
         {
-            labelCoffeeSize.text             = "Size: N/D"
+            labelCoffeeSize.text             = "Size: -"
         }
         else
         {
