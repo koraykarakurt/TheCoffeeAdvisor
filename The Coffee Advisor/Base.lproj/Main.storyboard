@@ -601,7 +601,6 @@ DETAILS</string>
         <image name="coffee_beans_1920x1080.jpg" width="1920" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mFX-G0-T8V"/>
         <segue reference="VB5-xJ-MgB"/>
         <segue reference="lcK-Gp-g7x"/>
     </inferredMetricsTieBreakers>

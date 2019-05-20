@@ -369,6 +369,7 @@
 			baseConfigurationReference = 8857E832F038A34BED979856 /* Pods-The Coffee Advisor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2C687A3B34;
 				INFOPLIST_FILE = "The Coffee Advisor/Info.plist";
@@ -378,6 +379,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.koraymeric.Coffee-Advisor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -388,6 +390,7 @@
 			baseConfigurationReference = 7333CCB69C16AB1DB3F545B4 /* Pods-The Coffee Advisor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2C687A3B34;
 				INFOPLIST_FILE = "The Coffee Advisor/Info.plist";
@@ -397,6 +400,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.koraymeric.Coffee-Advisor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
