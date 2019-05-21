@@ -150,7 +150,7 @@ OPTIONS</string>
 COFFEE ADVISOR</string>
                                         <attributes>
                                             <color key="NSColor" red="0.98039215686274506" green="0.92156862745098034" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="30" name="Georgia-Italic"/>
+                                            <font key="NSFont" size="32" name="Georgia-Italic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -599,6 +599,6 @@ DETAILS</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="MpD-kY-nsh"/>
-        <segue reference="zrj-su-0Pt"/>
+        <segue reference="lcK-Gp-g7x"/>
     </inferredMetricsTieBreakers>
 </document>
