@@ -150,7 +150,7 @@ OPTIONS</string>
 COFFEE ADVISOR</string>
                                         <attributes>
                                             <color key="NSColor" red="0.98039215686274506" green="0.92156862745098034" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="32" name="Georgia-Italic"/>
+                                            <font key="NSFont" size="30" name="Georgia-Italic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -172,8 +172,7 @@ COFFEE ADVISOR</string>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment>
-                                            <string key="content">SHOW UP
-MY COFFEE 
+                                            <string key="content">MY COFFEE
 ADVICES</string>
                                             <attributes>
                                                 <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -207,9 +206,7 @@ ADVICES</string>
                                 <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment>
-                                            <string key="content">EDIT MY 
-OPTIONS </string>
+                                        <fragment content="OPTIONS ">
                                             <attributes>
                                                 <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="24" name="Georgia"/>
@@ -601,7 +598,7 @@ DETAILS</string>
         <image name="coffee_beans_1920x1080.jpg" width="1920" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VB5-xJ-MgB"/>
-        <segue reference="lcK-Gp-g7x"/>
+        <segue reference="MpD-kY-nsh"/>
+        <segue reference="zrj-su-0Pt"/>
     </inferredMetricsTieBreakers>
 </document>
