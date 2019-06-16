@@ -690,7 +690,7 @@ class ViewController4: UIViewController {
         
         self.BVC4.layer.cornerRadius =  screenWidth * 0.5 * 0.4
         
-        print( UserDefaults.standard.object(forKey:"UIPickerElements") as? Int ?? Int())
+        //print( UserDefaults.standard.object(forKey:"UIPickerElements") as? Int ?? Int())
         if UserDefaults.standard.object(forKey:"UIPickerElements") as? Int ?? Int() > 0
         {
         V4_saved_selectedCoffeeName          = UserDefaults.standard.object(forKey:"UIPickerName")     as? String ?? String()
