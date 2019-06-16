@@ -9,17 +9,24 @@
 import UIKit
 import UIMultiPicker
 
-
-
 class ViewController: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
+    @IBOutlet weak var MCA: UIButton!
+    @IBOutlet weak var MCO: UIButton!
+    
+    let screenWidth  = UIScreen.main.bounds.width
+    let screenHeight = UIScreen.main.bounds.height
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.MCA.layer.cornerRadius = screenWidth * 0.5 * 0.8
+        self.MCO.layer.cornerRadius = screenWidth * 0.5 * 0.4
     }
+
     
 }
 
@@ -47,12 +54,20 @@ class ViewController2: UIViewController {
     
     @IBOutlet weak var tastesPicker: UIMultiPicker!
     
-        override func viewDidLoad() {
+    @IBOutlet weak var BVC2: UIButton!
+    
+    let screenWidth  = UIScreen.main.bounds.width
+    let screenHeight = UIScreen.main.bounds.height
+
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         let defaults = UserDefaults.standard
         let saved_selectedIndexes = defaults.object(forKey:"UIMultiPickerIndexes") as? [Int] ?? [Int]()
         //print(saved_selectedIndexes)
+        
+        self.tastesPicker.layer.cornerRadius =  screenWidth * 0.5 * 0.8
+        self.BVC2.layer.cornerRadius = screenWidth * 0.5 * 0.4
         
         tastesPicker.options = ViewController2.TASTES
         tastesPicker.selectedIndexes = saved_selectedIndexes
@@ -63,6 +78,8 @@ class ViewController2: UIViewController {
         tastesPicker.font  = UIFont(name: "Georgia", size: 30)!
         tastesPicker.highlight(2, animated: true)
     }
+    
+    
     
     @objc func selected(_ sender: UIMultiPicker) {
         UserDefaults.standard.set(sender.selectedIndexes, forKey: "UIMultiPickerIndexes")
@@ -77,6 +94,11 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
+    @IBOutlet weak var BVC3: UIButton!
+    
+
+    @IBOutlet weak var DVC3: UIButton!
     
     var V3_saved_selectedIndexes = UserDefaults.standard.object(forKey:"UIMultiPickerIndexes") as? [Int] ?? [Int]()
     
@@ -430,7 +452,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                coffeeKcal        : "240 Kcal",
                                                coffeeCaffeine    : "95 mg",
                                                hasMilk           : true,
-                                               coffeeMilk        : "100 mk",
+                                               coffeeMilk        : "100 ml",
                                                hasSugar          : true,
                                                hasFoam           : false,
                                                coffeeFoam        : "-",
@@ -628,10 +650,16 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         return pickerLabel
     }
     
+    let screenWidth  = UIScreen.main.bounds.width
+    let screenHeight = UIScreen.main.bounds.height
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         optionPicker.delegate = self
         optionPicker.dataSource = self
+        self.DVC3.layer.cornerRadius =  screenWidth * 0.5 * 0.4
+        self.BVC3.layer.cornerRadius = screenWidth * 0.5 * 0.4
+
     }
     
 }
@@ -639,6 +667,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
 
 
 class ViewController4: UIViewController {
+    @IBOutlet weak var BVC4: UIButton!
     override var preferredStatusBarStyle    : UIStatusBarStyle {
         return .lightContent
     }
@@ -650,6 +679,7 @@ class ViewController4: UIViewController {
     @IBOutlet weak var labelCoffeeFoam       : UILabel!
     @IBOutlet weak var labelCoffeeCream      : UILabel!
     
+    
     var V4_saved_selectedCoffeeName          = "-"
     var V4_saved_selectedCoffeeSize          = "-"
     var V4_saved_selectedCoffeeKcal          = "-"
@@ -658,8 +688,16 @@ class ViewController4: UIViewController {
     var V4_saved_selectedCoffeeFoam          = "-"
     var V4_saved_selectedCoffeeCream         = "-"
     
+    let screenWidth  = UIScreen.main.bounds.width
+    let screenHeight = UIScreen.main.bounds.height
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.BVC4.layer.cornerRadius =  screenWidth * 0.5 * 0.4
+        
         print( UserDefaults.standard.object(forKey:"UIPickerElements") as? Int ?? Int())
         if UserDefaults.standard.object(forKey:"UIPickerElements") as? Int ?? Int() > 0
         {
@@ -672,7 +710,7 @@ class ViewController4: UIViewController {
         V4_saved_selectedCoffeeCream         = UserDefaults.standard.object(forKey:"UIPickerCream")    as? String ?? String()
         }
         
-        labelCoffeeName.font                 = UIFont(name: "Georgia-Bold", size: 24)!
+        labelCoffeeName.font                 = UIFont(name: "Georgia-Bold", size: 22)!
         labelCoffeeName.textAlignment        = .center
         labelCoffeeName.text                 = "\(V4_saved_selectedCoffeeName)"
         labelCoffeeName.layer.cornerRadius   = 10
@@ -709,25 +747,24 @@ class ViewController4: UIViewController {
         {
             labelCoffeeSize.text             = "Size: 480 ml (Grande)"
         }
-        labelCoffeeKcal.font                 = UIFont(name: "Georgia", size: 24)!
+        labelCoffeeKcal.font                 = UIFont(name: "Georgia", size: 22)!
         labelCoffeeKcal.textAlignment        = .center
         labelCoffeeKcal.text                 = "Calories: \(V4_saved_selectedCoffeeKcal)"
-        labelCoffeeCaffeine.font             = UIFont(name: "Georgia", size: 24)!
+        labelCoffeeCaffeine.font             = UIFont(name: "Georgia", size: 22)!
         labelCoffeeCaffeine.textAlignment    = .center
         labelCoffeeCaffeine.text             = "Caffeine: \(V4_saved_selectedCoffeeCaffeine)"
-        labelCoffeeMilk.font                 = UIFont(name: "Georgia", size: 24)!
+        labelCoffeeMilk.font                 = UIFont(name: "Georgia", size: 22)!
         labelCoffeeMilk.textAlignment        = .center
         labelCoffeeMilk.text                 = "Steamed Milk: \(V4_saved_selectedCoffeeMilk)"
-        labelCoffeeFoam.font                 = UIFont(name: "Georgia", size: 24)!
+        labelCoffeeFoam.font                 = UIFont(name: "Georgia", size: 22)!
         labelCoffeeFoam.textAlignment        = .center
         labelCoffeeFoam.text                 = "Foamed Milk: \(V4_saved_selectedCoffeeFoam)"
-        labelCoffeeCream.font                = UIFont(name: "Georgia", size: 24)!
+        labelCoffeeCream.font                = UIFont(name: "Georgia", size: 22)!
         labelCoffeeCream.textAlignment       = .center
         labelCoffeeCream.text                = "Cream: \(V4_saved_selectedCoffeeCream)"
         labelCoffeeCream.layer.cornerRadius  = 10
         labelCoffeeCream.layer.masksToBounds = true
         labelCoffeeCream.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-        
-    }
+            }
     
 }
