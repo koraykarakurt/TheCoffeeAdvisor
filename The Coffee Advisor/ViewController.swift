@@ -26,20 +26,14 @@ class ViewController: UIViewController {
         self.MCA.layer.cornerRadius = screenWidth * 0.5 * 0.8
         self.MCO.layer.cornerRadius = screenWidth * 0.5 * 0.4
     }
-
-    
 }
-
-
 
 class ViewController2: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
     static let TASTES = [
-        
         "Milk-free"                 ,//0
         "Glucose-free"              ,//1
         "Foam"                      ,//2
@@ -53,7 +47,6 @@ class ViewController2: UIViewController {
     ];
     
     @IBOutlet weak var tastesPicker: UIMultiPicker!
-    
     @IBOutlet weak var BVC2: UIButton!
     
     let screenWidth  = UIScreen.main.bounds.width
@@ -64,7 +57,6 @@ class ViewController2: UIViewController {
         
         let defaults = UserDefaults.standard
         let saved_selectedIndexes = defaults.object(forKey:"UIMultiPickerIndexes") as? [Int] ?? [Int]()
-        //print(saved_selectedIndexes)
         
         self.tastesPicker.layer.cornerRadius =  screenWidth * 0.5 * 0.8
         self.BVC2.layer.cornerRadius = screenWidth * 0.5 * 0.4
@@ -710,10 +702,10 @@ class ViewController4: UIViewController {
         V4_saved_selectedCoffeeCream         = UserDefaults.standard.object(forKey:"UIPickerCream")    as? String ?? String()
         }
         
-        labelCoffeeName.font                 = UIFont(name: "Georgia-Bold", size: 22)!
+        labelCoffeeName.font                 = UIFont(name: "Georgia-Bold", size: 24)!
         labelCoffeeName.textAlignment        = .center
         labelCoffeeName.text                 = "\(V4_saved_selectedCoffeeName)"
-        labelCoffeeName.layer.cornerRadius   = 10
+        labelCoffeeName.layer.cornerRadius   = 12
         labelCoffeeName.layer.masksToBounds  = true
         labelCoffeeName.layer.maskedCorners  = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         labelCoffeeSize.font                 = UIFont(name: "Georgia", size: 24)!
@@ -747,24 +739,23 @@ class ViewController4: UIViewController {
         {
             labelCoffeeSize.text             = "Size: 480 ml (Grande)"
         }
-        labelCoffeeKcal.font                 = UIFont(name: "Georgia", size: 22)!
+        labelCoffeeKcal.font                 = UIFont(name: "Georgia", size: 24)!
         labelCoffeeKcal.textAlignment        = .center
         labelCoffeeKcal.text                 = "Calories: \(V4_saved_selectedCoffeeKcal)"
-        labelCoffeeCaffeine.font             = UIFont(name: "Georgia", size: 22)!
+        labelCoffeeCaffeine.font             = UIFont(name: "Georgia", size: 24)!
         labelCoffeeCaffeine.textAlignment    = .center
         labelCoffeeCaffeine.text             = "Caffeine: \(V4_saved_selectedCoffeeCaffeine)"
-        labelCoffeeMilk.font                 = UIFont(name: "Georgia", size: 22)!
+        labelCoffeeMilk.font                 = UIFont(name: "Georgia", size: 24)!
         labelCoffeeMilk.textAlignment        = .center
         labelCoffeeMilk.text                 = "Steamed Milk: \(V4_saved_selectedCoffeeMilk)"
-        labelCoffeeFoam.font                 = UIFont(name: "Georgia", size: 22)!
+        labelCoffeeFoam.font                 = UIFont(name: "Georgia", size: 24)!
         labelCoffeeFoam.textAlignment        = .center
         labelCoffeeFoam.text                 = "Foamed Milk: \(V4_saved_selectedCoffeeFoam)"
-        labelCoffeeCream.font                = UIFont(name: "Georgia", size: 22)!
+        labelCoffeeCream.font                = UIFont(name: "Georgia", size: 24)!
         labelCoffeeCream.textAlignment       = .center
         labelCoffeeCream.text                = "Cream: \(V4_saved_selectedCoffeeCream)"
-        labelCoffeeCream.layer.cornerRadius  = 10
+        labelCoffeeCream.layer.cornerRadius  = 12
         labelCoffeeCream.layer.masksToBounds = true
         labelCoffeeCream.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
             }
-    
 }
