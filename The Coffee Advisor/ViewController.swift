@@ -705,7 +705,7 @@ class ViewController4: UIViewController {
         labelCoffeeName.font                 = UIFont(name: "Georgia-Bold", size: 24)!
         labelCoffeeName.textAlignment        = .center
         labelCoffeeName.text                 = "\(V4_saved_selectedCoffeeName)"
-        labelCoffeeName.layer.cornerRadius   = 12
+        labelCoffeeName.layer.cornerRadius   = 10
         labelCoffeeName.layer.masksToBounds  = true
         labelCoffeeName.layer.maskedCorners  = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         labelCoffeeSize.font                 = UIFont(name: "Georgia", size: 24)!
@@ -754,7 +754,7 @@ class ViewController4: UIViewController {
         labelCoffeeCream.font                = UIFont(name: "Georgia", size: 24)!
         labelCoffeeCream.textAlignment       = .center
         labelCoffeeCream.text                = "Cream: \(V4_saved_selectedCoffeeCream)"
-        labelCoffeeCream.layer.cornerRadius  = 12
+        labelCoffeeCream.layer.cornerRadius  = 10
         labelCoffeeCream.layer.masksToBounds = true
         labelCoffeeCream.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
             }
