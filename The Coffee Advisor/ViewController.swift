@@ -637,7 +637,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         let titleData = coffeeMenu[row]
         let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedString.Key.font:UIFont(name: "Georgia", size: 28.0)!,NSAttributedString.Key.foregroundColor:UIColor.black])
         pickerLabel.attributedText = myTitle
-        pickerLabel.backgroundColor = UIColor.init(red: 250.0/255.0, green: 235.0/255.0, blue: 215.0/255.0, alpha: 1)
+        pickerLabel.backgroundColor = UIColor.init(red: 250.0/255.0, green: 235.0/255.0, blue: 215.0/255.0, alpha: 1.0)
         pickerLabel.textAlignment = .center
         return pickerLabel
     }
@@ -702,13 +702,13 @@ class ViewController4: UIViewController {
         V4_saved_selectedCoffeeCream         = UserDefaults.standard.object(forKey:"UIPickerCream")    as? String ?? String()
         }
         
-        labelCoffeeName.font                 = UIFont(name: "Georgia-Bold", size: 24)!
+        labelCoffeeName.font                 = UIFont(name: "Georgia-Bold", size: 25)!
         labelCoffeeName.textAlignment        = .center
         labelCoffeeName.text                 = "\(V4_saved_selectedCoffeeName)"
         labelCoffeeName.layer.cornerRadius   = 10
         labelCoffeeName.layer.masksToBounds  = true
         labelCoffeeName.layer.maskedCorners  = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        labelCoffeeSize.font                 = UIFont(name: "Georgia", size: 24)!
+        labelCoffeeSize.font                 = UIFont(name: "Georgia", size: 26)!
         labelCoffeeSize.textAlignment        = .center
         if V4_saved_selectedCoffeeName=="Espresso"
         {
@@ -739,19 +739,19 @@ class ViewController4: UIViewController {
         {
             labelCoffeeSize.text             = "Size: 480 ml (Grande)"
         }
-        labelCoffeeKcal.font                 = UIFont(name: "Georgia", size: 24)!
+        labelCoffeeKcal.font                 = UIFont(name: "Georgia", size: 26)!
         labelCoffeeKcal.textAlignment        = .center
         labelCoffeeKcal.text                 = "Calories: \(V4_saved_selectedCoffeeKcal)"
-        labelCoffeeCaffeine.font             = UIFont(name: "Georgia", size: 24)!
+        labelCoffeeCaffeine.font             = UIFont(name: "Georgia", size: 26)!
         labelCoffeeCaffeine.textAlignment    = .center
         labelCoffeeCaffeine.text             = "Caffeine: \(V4_saved_selectedCoffeeCaffeine)"
-        labelCoffeeMilk.font                 = UIFont(name: "Georgia", size: 24)!
+        labelCoffeeMilk.font                 = UIFont(name: "Georgia", size: 26)!
         labelCoffeeMilk.textAlignment        = .center
         labelCoffeeMilk.text                 = "Steamed Milk: \(V4_saved_selectedCoffeeMilk)"
-        labelCoffeeFoam.font                 = UIFont(name: "Georgia", size: 24)!
+        labelCoffeeFoam.font                 = UIFont(name: "Georgia", size: 26)!
         labelCoffeeFoam.textAlignment        = .center
         labelCoffeeFoam.text                 = "Foamed Milk: \(V4_saved_selectedCoffeeFoam)"
-        labelCoffeeCream.font                = UIFont(name: "Georgia", size: 24)!
+        labelCoffeeCream.font                = UIFont(name: "Georgia", size: 26)!
         labelCoffeeCream.textAlignment       = .center
         labelCoffeeCream.text                = "Cream: \(V4_saved_selectedCoffeeCream)"
         labelCoffeeCream.layer.cornerRadius  = 10
