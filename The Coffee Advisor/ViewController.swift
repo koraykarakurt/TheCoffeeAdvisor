@@ -672,7 +672,7 @@ class ViewController4: UIViewController {
     @IBOutlet weak var labelCoffeeCream      : UILabel!
     
     
-    var V4_saved_selectedCoffeeName          = "-"
+    var V4_saved_selectedCoffeeName          = "No Match"
     var V4_saved_selectedCoffeeSize          = "-"
     var V4_saved_selectedCoffeeKcal          = "-"
     var V4_saved_selectedCoffeeCaffeine      = "-"
@@ -730,7 +730,7 @@ class ViewController4: UIViewController {
         {
             labelCoffeeSize.text             = "Size: 90 ml (3 oz)"
         }
-        else if  V4_saved_selectedCoffeeName=="-"
+        else if  V4_saved_selectedCoffeeName=="No Match"
             
         {
             labelCoffeeSize.text             = "Size: -"

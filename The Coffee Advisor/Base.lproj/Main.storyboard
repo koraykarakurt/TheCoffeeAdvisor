@@ -67,7 +67,7 @@ OPTIONS</string>
                                 <color key="tintColor" red="0.98039215686274506" green="0.92156862745098034" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="BACK">
+                                        <fragment content="APPLY">
                                             <attributes>
                                                 <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="24" name="Georgia"/>
@@ -560,6 +560,6 @@ DETAILS</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VB5-xJ-MgB"/>
-        <segue reference="lcK-Gp-g7x"/>
+        <segue reference="zrj-su-0Pt"/>
     </inferredMetricsTieBreakers>
 </document>
