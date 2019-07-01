@@ -239,7 +239,7 @@ ADVICES</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee_beans_1920x1080.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lOR-FJ-dJ6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee_beans_1920x1080.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lOR-FJ-dJ6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="4sK-7E-77D"/>
@@ -559,7 +559,7 @@ DETAILS</string>
         <image name="coffee_beans_1920x1080.jpg" width="1920" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VB5-xJ-MgB"/>
-        <segue reference="zrj-su-0Pt"/>
+        <segue reference="MpD-kY-nsh"/>
+        <segue reference="lcK-Gp-g7x"/>
     </inferredMetricsTieBreakers>
 </document>

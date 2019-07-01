@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.MCA.layer.cornerRadius = screenWidth * 0.5 * 0.8
         self.MCO.layer.cornerRadius = screenWidth * 0.5 * 0.4
+        print(screenHeight/screenWidth)
     }
 }
 
@@ -67,7 +68,7 @@ class ViewController2: UIViewController {
         
         tastesPicker.color = .darkGray
         tastesPicker.tintColor = .black
-        tastesPicker.font  = UIFont(name: "Georgia", size: 30)!
+        tastesPicker.font  = UIFont(name: "Georgia", size: 28)!
         tastesPicker.highlight(2, animated: true)
     }
     

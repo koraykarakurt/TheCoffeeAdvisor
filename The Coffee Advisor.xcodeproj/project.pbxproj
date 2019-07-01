@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		182929B722856F7A00E65FC1 /* beanscoffee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 182929B622856F7900E65FC1 /* beanscoffee.jpg */; };
-		186C0473228C12F20056B3E6 /* coffee_glass.png in Resources */ = {isa = PBXBuildFile; fileRef = 186C0472228C12F20056B3E6 /* coffee_glass.png */; };
 		18B08FC2222B13700028F450 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B08FC1222B13700028F450 /* AppDelegate.swift */; };
 		18B08FC4222B13700028F450 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B08FC3222B13700028F450 /* ViewController.swift */; };
 		18B08FC7222B13700028F450 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B08FC5222B13700028F450 /* Main.storyboard */; };
@@ -19,8 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		182929B622856F7900E65FC1 /* beanscoffee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beanscoffee.jpg; sourceTree = "<group>"; };
-		186C0472228C12F20056B3E6 /* coffee_glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coffee_glass.png; sourceTree = "<group>"; };
 		18B08FBE222B13700028F450 /* The Coffee Advisor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Coffee Advisor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B08FC1222B13700028F450 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18B08FC3222B13700028F450 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,8 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				18EFC848227EEBD000DA378E /* coffee_beans_1920x1080.jpg */,
-				182929B622856F7900E65FC1 /* beanscoffee.jpg */,
-				186C0472228C12F20056B3E6 /* coffee_glass.png */,
 				18B08FC1222B13700028F450 /* AppDelegate.swift */,
 				18B08FC3222B13700028F450 /* ViewController.swift */,
 				18B08FC5222B13700028F450 /* Main.storyboard */,
@@ -158,11 +152,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				182929B722856F7A00E65FC1 /* beanscoffee.jpg in Resources */,
 				18B08FCC222B13710028F450 /* LaunchScreen.storyboard in Resources */,
 				18EFC849227EEBD000DA378E /* coffee_beans_1920x1080.jpg in Resources */,
 				18B08FC9222B13710028F450 /* Assets.xcassets in Resources */,
-				186C0473228C12F20056B3E6 /* coffee_glass.png in Resources */,
 				18B08FC7222B13700028F450 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
