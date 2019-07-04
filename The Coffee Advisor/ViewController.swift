@@ -661,6 +661,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         //print(row)
+        UserDefaults.standard.set(V3_size_parameter, forKey: "UIPickerSizeParameter")
         if row >= 0 && coffeeMenuAll.count>0
         {
             UserDefaults.standard.set(coffeeMenuAll[row].coffeeName     , forKey: "UIPickerName")
@@ -683,6 +684,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
 
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         //print(row)
+        UserDefaults.standard.set(V3_size_parameter, forKey: "UIPickerSizeParameter")
         if row >= 0 && coffeeMenuAll.count>0
         {
             UserDefaults.standard.set(coffeeMenuAll[row].coffeeName     , forKey: "UIPickerName")
@@ -786,8 +788,7 @@ class ViewController4: UIViewController {
         labelCoffeeSize.font                 = UIFont(name: "Georgia", size: 26)!
         labelCoffeeSize.textAlignment        = .center
         
-        //////// small sizes should be discarded.
-        if V4_saved_selectedCoffeeName=="Espresso"
+         if V4_saved_selectedCoffeeName=="Espresso"
         {
             labelCoffeeSize.text             = "Size: 30 ml (1 oz)"
         }
@@ -827,44 +828,57 @@ class ViewController4: UIViewController {
                 labelCoffeeSize.text             = "Size: 480 ml (Grande)"
             }
         }
+        
         labelCoffeeKcal.font                 = UIFont(name: "Georgia", size: 26)!
         labelCoffeeKcal.textAlignment        = .center
-        labelCoffeeKcal.text                 = "Calories: \(String(Int(Double(V4_saved_selectedCoffeeKcal)!*V4_saved_selectedSizeParameter))) Kcal"
         labelCoffeeCaffeine.font             = UIFont(name: "Georgia", size: 26)!
         labelCoffeeCaffeine.textAlignment    = .center
-        labelCoffeeCaffeine.text             = "Caffeine: \(String(Int(Double(V4_saved_selectedCoffeeCaffeine)!*V4_saved_selectedSizeParameter))) mg"
         labelCoffeeMilk.font                 = UIFont(name: "Georgia", size: 26)!
         labelCoffeeMilk.textAlignment        = .center
-        if V4_saved_selectedCoffeeMilk=="-"
-        {
-        labelCoffeeMilk.text                 = "Steamed Milk: \(V4_saved_selectedCoffeeMilk)"
-        }
-        else
-        {
-        labelCoffeeMilk.text                 = "Steamed Milk: \(String(Int(Double(V4_saved_selectedCoffeeMilk)!*V4_saved_selectedSizeParameter))) ml"
-        }
         labelCoffeeFoam.font                 = UIFont(name: "Georgia", size: 26)!
         labelCoffeeFoam.textAlignment        = .center
-        if V4_saved_selectedCoffeeFoam=="-"
-        {
-            labelCoffeeFoam.text                 = "Foamed Milk: \(V4_saved_selectedCoffeeFoam)"
-        }
-        else
-        {
-            labelCoffeeFoam.text                 = "Foamed Milk: \(String(Int(Double(V4_saved_selectedCoffeeFoam)!*V4_saved_selectedSizeParameter))) ml"
-        }
         labelCoffeeCream.font                = UIFont(name: "Georgia", size: 26)!
         labelCoffeeCream.textAlignment       = .center
-        if V4_saved_selectedCoffeeCream=="-"
-        {
-            labelCoffeeCream.text                = "Cream: \(V4_saved_selectedCoffeeCream)"
-        }
-        else
-        {
-            labelCoffeeCream.text                = "Cream: \(String(Int(Double(V4_saved_selectedCoffeeCream)!*V4_saved_selectedSizeParameter))) ml"
-        }
         labelCoffeeCream.layer.cornerRadius  = 10
         labelCoffeeCream.layer.masksToBounds = true
         labelCoffeeCream.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        
+        if  V4_saved_selectedCoffeeName != "No Match"
+        {
+            labelCoffeeKcal.text                 = "Calories: \(String(Int(Double(V4_saved_selectedCoffeeKcal)!*V4_saved_selectedSizeParameter))) Kcal"
+            labelCoffeeCaffeine.text             = "Caffeine: \(String(Int(Double(V4_saved_selectedCoffeeCaffeine)!*V4_saved_selectedSizeParameter))) mg"
+            if V4_saved_selectedCoffeeMilk=="-"
+            {
+            labelCoffeeMilk.text                 = "Steamed Milk: \(V4_saved_selectedCoffeeMilk)"
             }
+            else
+            {
+            labelCoffeeMilk.text                 = "Steamed Milk: \(String(Int(Double(V4_saved_selectedCoffeeMilk)!*V4_saved_selectedSizeParameter))) ml"
+            }
+            if V4_saved_selectedCoffeeFoam=="-"
+            {
+                labelCoffeeFoam.text                 = "Foamed Milk: \(V4_saved_selectedCoffeeFoam)"
+            }
+            else
+            {
+                labelCoffeeFoam.text                 = "Foamed Milk: \(String(Int(Double(V4_saved_selectedCoffeeFoam)!*V4_saved_selectedSizeParameter))) ml"
+            }
+            if V4_saved_selectedCoffeeCream=="-"
+            {
+                labelCoffeeCream.text                = "Cream: \(V4_saved_selectedCoffeeCream)"
+            }
+            else
+            {
+                labelCoffeeCream.text                = "Cream: \(String(Int(Double(V4_saved_selectedCoffeeCream)!*V4_saved_selectedSizeParameter))) ml"
+            }
+        }
+        else
+        {
+            labelCoffeeKcal.text                 = "Calories: \(V4_saved_selectedCoffeeKcal)"
+            labelCoffeeCaffeine.text             = "Caffeine: \(V4_saved_selectedCoffeeCaffeine)"
+            labelCoffeeMilk.text                 = "Steamed Milk: \(V4_saved_selectedCoffeeMilk)"
+            labelCoffeeFoam.text                 = "Foamed Milk: \(V4_saved_selectedCoffeeFoam)"
+            labelCoffeeCream.text                = "Cream: \(V4_saved_selectedCoffeeCream)"
+        }
+    }
 }
