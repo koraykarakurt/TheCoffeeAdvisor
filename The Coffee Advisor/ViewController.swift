@@ -76,15 +76,11 @@ class ViewController2: UIViewController {
         tastesPicker.font  = UIFont(name: "Georgia", size: 28)!
         tastesPicker.highlight(2, animated: true)
     }
-    
-    
-    
     @objc func selected(_ sender: UIMultiPicker) {
         UserDefaults.standard.set(sender.selectedIndexes, forKey: "UIMultiPickerIndexes")
         //print(sender.selectedIndexes)
     }
 }
-
 
 
 class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource {
@@ -94,8 +90,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     }
     
     @IBOutlet weak var BVC3: UIButton!
-    
-
     @IBOutlet weak var DVC3: UIButton!
     
     var V3_saved_selectedIndexes = UserDefaults.standard.object(forKey:"UIMultiPickerIndexes") as? [Int] ?? [Int]()
