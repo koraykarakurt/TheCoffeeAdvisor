@@ -13,7 +13,7 @@
         <!--View Controller2-->
         <scene sceneID="56g-bN-mGz">
             <objects>
-                <viewController id="F3M-V3-VdP" customClass="ViewController2" customModule="The_Coffee_Advisor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="F3M-V3-VdP" customClass="ViewController2" customModule="The_Coffee_Advisor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lfJ-Sn-QaG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,6 +77,7 @@ OPTIONS</string>
                                     </attributedString>
                                 </state>
                                 <connections>
+                                    <action selector="BVC2:" destination="F3M-V3-VdP" eventType="touchUpInside" id="Exw-7t-kYC"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="zrj-su-0Pt"/>
                                 </connections>
                             </button>
@@ -234,7 +235,7 @@ ADVICES</string>
         <!--View Controller3-->
         <scene sceneID="b8u-sT-hbE">
             <objects>
-                <viewController id="eVf-6d-sgY" customClass="ViewController3" customModule="The_Coffee_Advisor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="partialCurl" id="eVf-6d-sgY" customClass="ViewController3" customModule="The_Coffee_Advisor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Qf-4b-AAT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -321,7 +322,7 @@ ADVICES</string>
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="lcK-Gp-g7x"/>
+                                    <action selector="BVC3:" destination="eVf-6d-sgY" eventType="touchUpInside" id="dY9-3q-8c2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -360,7 +361,7 @@ ADVICES</string>
         <!--View Controller4-->
         <scene sceneID="0e6-W2-C2T">
             <objects>
-                <viewController id="Xsp-ZK-l3p" customClass="ViewController4" customModule="The_Coffee_Advisor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="partialCurl" id="Xsp-ZK-l3p" customClass="ViewController4" customModule="The_Coffee_Advisor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XPD-1H-TZr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -474,7 +475,7 @@ DETAILS</string>
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="eVf-6d-sgY" kind="show" id="VB5-xJ-MgB"/>
+                                    <action selector="BVC4:" destination="Xsp-ZK-l3p" eventType="touchUpInside" id="hbn-fa-W7H"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXc-MR-YcF">
@@ -558,8 +559,4 @@ DETAILS</string>
     <resources>
         <image name="coffee_beans_1920x1080_rotated.jpg" width="1080" height="1920"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="VB5-xJ-MgB"/>
-        <segue reference="lcK-Gp-g7x"/>
-    </inferredMetricsTieBreakers>
 </document>

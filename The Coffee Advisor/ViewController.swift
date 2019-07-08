@@ -55,6 +55,8 @@ class ViewController2: UIViewController {
     @IBOutlet weak var tastesPicker: UIMultiPicker!
     @IBOutlet weak var BVC2: UIButton!
     
+    @IBAction func BVC2(_ sender: UIButton) {dismiss(animated: true, completion: nil)}
+    
     let screenWidth  = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
 
@@ -90,6 +92,8 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     }
     
     @IBOutlet weak var BVC3: UIButton!
+    
+    @IBAction func BVC3(_ sender: UIButton) {dismiss(animated: true, completion: nil)}
     @IBOutlet weak var DVC3: UIButton!
     
     var V3_saved_selectedIndexes = UserDefaults.standard.object(forKey:"UIMultiPickerIndexes") as? [Int] ?? [Int]()
@@ -724,6 +728,10 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
 
 class ViewController4: UIViewController {
     @IBOutlet weak var BVC4: UIButton!
+    
+    
+    @IBAction func BVC4(_ sender: UIButton) {dismiss(animated: true, completion: nil)}
+    
     override var preferredStatusBarStyle    : UIStatusBarStyle {
         return .lightContent
     }
