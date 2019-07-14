@@ -112,7 +112,7 @@ OPTIONS</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oJJ-Sw-uDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1584.8" y="225.33733133433284"/>
+            <point key="canvasLocation" x="1474" y="224"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -195,7 +195,8 @@ ADVICES</string>
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="F3M-V3-VdP" kind="show" id="NOq-04-YZU"/>
+                                    <action selector="MCO:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yBa-3f-qcC"/>
+                                    <segue destination="F3M-V3-VdP" kind="show" animates="NO" id="NOq-04-YZU"/>
                                 </connections>
                             </button>
                         </subviews>

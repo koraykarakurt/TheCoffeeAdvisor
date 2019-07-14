@@ -28,7 +28,14 @@ class ViewController: UIViewController {
         //print(screenHeight)
         //print(screenWidth)
         //print(screenHeight/screenWidth)
+       
+        
+        
     }
+    @IBAction func MCO(_ sender: UIButton) {
+        dismissDetailLeft()
+    }
+    
 }
 
 class ViewController2: UIViewController {
@@ -55,7 +62,9 @@ class ViewController2: UIViewController {
     @IBOutlet weak var tastesPicker: UIMultiPicker!
     @IBOutlet weak var BVC2: UIButton!
     
-    @IBAction func BVC2(_ sender: UIButton) {dismiss(animated: true, completion: nil)}
+    @IBAction func BVC2(_ sender: UIButton) {
+        dismissDetailRight()
+    }
     
     let screenWidth  = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height

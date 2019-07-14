@@ -10,6 +10,7 @@
 		1873964F22CBCBA500B326A9 /* beans_xs.png in Resources */ = {isa = PBXBuildFile; fileRef = 1873964E22CBCBA500B326A9 /* beans_xs.png */; };
 		1873965122CBCE4C00B326A9 /* beans_xs_rotated.png in Resources */ = {isa = PBXBuildFile; fileRef = 1873965022CBCE4C00B326A9 /* beans_xs_rotated.png */; };
 		1873965322CBCF7B00B326A9 /* coffee_beans_1920x1080_rotated.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1873965222CBCF7B00B326A9 /* coffee_beans_1920x1080_rotated.jpg */; };
+		188ADC7722DBDCF9003A31BA /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188ADC7622DBDCF9003A31BA /* UIViewControllerExt.swift */; };
 		18B08FC2222B13700028F450 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B08FC1222B13700028F450 /* AppDelegate.swift */; };
 		18B08FC4222B13700028F450 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B08FC3222B13700028F450 /* ViewController.swift */; };
 		18B08FC7222B13700028F450 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B08FC5222B13700028F450 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		1873964E22CBCBA500B326A9 /* beans_xs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beans_xs.png; sourceTree = "<group>"; };
 		1873965022CBCE4C00B326A9 /* beans_xs_rotated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beans_xs_rotated.png; sourceTree = "<group>"; };
 		1873965222CBCF7B00B326A9 /* coffee_beans_1920x1080_rotated.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coffee_beans_1920x1080_rotated.jpg; sourceTree = "<group>"; };
+		188ADC7622DBDCF9003A31BA /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		18B08FBE222B13700028F450 /* The Coffee Advisor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Coffee Advisor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B08FC1222B13700028F450 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18B08FC3222B13700028F450 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 		18B08FC0222B13700028F450 /* The Coffee Advisor */ = {
 			isa = PBXGroup;
 			children = (
+				188ADC7622DBDCF9003A31BA /* UIViewControllerExt.swift */,
 				18EFC848227EEBD000DA378E /* coffee_beans_1920x1080.jpg */,
 				1873964E22CBCBA500B326A9 /* beans_xs.png */,
 				1873965022CBCE4C00B326A9 /* beans_xs_rotated.png */,
@@ -227,6 +230,7 @@
 			files = (
 				18B08FC4222B13700028F450 /* ViewController.swift in Sources */,
 				18B08FC2222B13700028F450 /* AppDelegate.swift in Sources */,
+				188ADC7722DBDCF9003A31BA /* UIViewControllerExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
