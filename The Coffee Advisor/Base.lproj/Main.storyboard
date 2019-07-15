@@ -195,8 +195,7 @@ ADVICES</string>
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="MCO:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yBa-3f-qcC"/>
-                                    <segue destination="F3M-V3-VdP" kind="show" animates="NO" id="NOq-04-YZU"/>
+                                    <segue destination="F3M-V3-VdP" kind="presentation" modalTransitionStyle="flipHorizontal" id="NOq-04-YZU"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -28,15 +28,10 @@ class ViewController: UIViewController {
         //print(screenHeight)
         //print(screenWidth)
         //print(screenHeight/screenWidth)
-       
-        
-        
     }
-    @IBAction func MCO(_ sender: UIButton) {
-        dismissDetailLeft()
-    }
-    
+//dismissDetailLeft()
 }
+
 
 class ViewController2: UIViewController {
     
@@ -63,7 +58,7 @@ class ViewController2: UIViewController {
     @IBOutlet weak var BVC2: UIButton!
     
     @IBAction func BVC2(_ sender: UIButton) {
-        dismissDetailRight()
+        dismiss (animated: true, completion: nil) 
     }
     
     let screenWidth  = UIScreen.main.bounds.width
