@@ -270,7 +270,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan2shot  : false,
                                                hasIce            : false)
     
-    
     var cortado                     = MyCoffee(coffeeName        : "Cortado",
                                                coffeeKcal        : "30",
                                                coffeeCaffeine    : "150",// 60 ml = 10 Kcal
@@ -307,6 +306,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan2shot  : false,
                                                hasIce            : false)
     
+    // tall 1/2 caffeine
     var latte                       = MyCoffee(coffeeName        : "Latte",
                                                coffeeKcal        : "218",
                                                coffeeCaffeine    : "150",//60 ml = 10 Kcal
@@ -325,6 +325,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan2shot  : false,
                                                hasIce            : false)
   
+    // tall 1/2 caffeine
     var icedLatte                   = MyCoffee(coffeeName        : "Iced Latte",
                                                coffeeKcal        : "148",
                                                coffeeCaffeine    : "150",//10 Kcal (60 ml)
@@ -343,6 +344,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan2shot  : false,
                                                hasIce            : true)
    
+    // tall 1/2 caffeine
     var cappucino                   = MyCoffee(coffeeName        : "Cappucino",
                                                coffeeKcal        : "155",
                                                coffeeCaffeine    : "150",//= 60 ml (2 shot) = 10 Kcal
@@ -379,6 +381,8 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan2shot  : true,
                                                hasIce            : false)
     
+    // tall  150 ml caffeine
+    // venti 300 ml caffeine
     var icedAmericano               = MyCoffee(coffeeName        : "Iced Americano",
                                                coffeeKcal        : "15",
                                                coffeeCaffeine    : "225",
@@ -396,7 +400,9 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
                                                hasIce            : true)
-
+    
+    // tall 110 ml caffeine
+    // tall 195 ml caffeine
     var misto                       = MyCoffee(coffeeName        : "Misto",
                                                coffeeKcal        : "132",
                                                coffeeCaffeine    : "150",//60 ml = 10 Kcal
@@ -415,6 +421,8 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan2shot  : false,
                                                hasIce            : false)
     
+    
+    // tall 1/2 caffeine
     var flatWhite                   = MyCoffee(coffeeName        : "Flat White",
                                                coffeeKcal        : "212",
                                                coffeeCaffeine    : "190",// div 15 = 12.5 Kcal
@@ -451,7 +459,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                               hasMoreThan2shot  : false,
                                               hasIce            : false)
     
-    
+    // tall 1/2 caffeine
     var mocha                       = MyCoffee(coffeeName        : "Mocha",
                                                coffeeKcal        : "400",
                                                coffeeCaffeine    : "175",
@@ -487,7 +495,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
                                                hasIce            : true)
-    
+    // tall 1/2 caffeine
     var icedMocha                   = MyCoffee(coffeeName        : "Iced Mocha",
                                                coffeeKcal        : "350",
                                                coffeeCaffeine    : "175",
@@ -505,10 +513,10 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : true,
                                                hasIce            : true)
-    
+    // tall 1/2 caffeine
     var whiteChocolateMocha         = MyCoffee(coffeeName        : "White Chocolate Mocha",
                                                coffeeKcal        : "440",
-                                               coffeeCaffeine    : "150",
+                                               coffeeCaffeine    : "175",
                                                hasMilk           : true,
                                                hasSmallSize      : false,
                                                coffeeMilk        : "120",
@@ -523,10 +531,10 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
                                                hasIce            : false)
-    
+    // tall 1/2 caffeine
     var icedWhiteChocolateMocha     = MyCoffee(coffeeName        : "Iced White Chocolate Mocha",
                                                coffeeKcal        : "420",
-                                               coffeeCaffeine    : "150",
+                                               coffeeCaffeine    : "175",
                                                hasMilk           : true,
                                                hasSmallSize      : false,
                                                coffeeMilk        : "105",
@@ -542,6 +550,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan2shot  : false,
                                                hasIce            : true)
     
+    // tall 1/2 caffeine
     var caramelMacchiato            = MyCoffee(coffeeName        : "Caramel Macchiato",
                                                coffeeKcal        : "280",
                                                coffeeCaffeine    : "150",
@@ -560,6 +569,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan2shot  : false,
                                                hasIce            : false)
     
+    // tall 1/2 caffeine
     var icedCaramelMacchiato        = MyCoffee(coffeeName        : "Iced Caramel Macchiato",
                                                coffeeKcal        : "270",
                                                coffeeCaffeine    : "150",
@@ -578,6 +588,8 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan2shot  : false,
                                                hasIce            : true)
     
+    // tall  70 ml caffeine
+    // venti 120 ml caffeine
     var frappuccino                 = MyCoffee(coffeeName        : "Frappuccino",
                                                coffeeKcal        : "240",
                                                coffeeCaffeine    : "95",
