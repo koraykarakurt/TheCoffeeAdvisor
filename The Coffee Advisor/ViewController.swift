@@ -18,6 +18,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var MCA: UIButton!
     @IBOutlet weak var MCO: UIButton!
     
+    @IBAction func MCA(_ sender: UIButton)
+    {
+        dismissDetailRight()
+    }
+    
     let screenWidth  = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
     
@@ -97,7 +102,10 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     
     @IBOutlet weak var BVC3: UIButton!
     
-    @IBAction func BVC3(_ sender: UIButton) {dismiss(animated: true, completion: nil)}
+    @IBAction func BVC3(_ sender: UIButton)
+    {
+        dismissDetailLeft()
+    }
     @IBOutlet weak var DVC3: UIButton!
     
     var V3_saved_selectedIndexes = UserDefaults.standard.object(forKey:"UIMultiPickerIndexes") as? [Int] ?? [Int]()

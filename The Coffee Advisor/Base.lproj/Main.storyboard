@@ -170,7 +170,8 @@ ADVICES</string>
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="eVf-6d-sgY" kind="show" id="MpD-kY-nsh"/>
+                                    <action selector="MCA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zSa-ga-oz3"/>
+                                    <segue destination="eVf-6d-sgY" kind="show" animates="NO" id="dN7-yY-5gB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSJ-el-6vu">
@@ -230,7 +231,7 @@ ADVICES</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2228" y="226.23688155922042"/>
+            <point key="canvasLocation" x="2145" y="224"/>
         </scene>
         <!--View Controller3-->
         <scene sceneID="b8u-sT-hbE">
