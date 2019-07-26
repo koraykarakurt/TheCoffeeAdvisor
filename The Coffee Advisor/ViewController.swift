@@ -493,7 +493,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                               hasMilk           : false,
                                               hasSmallSize      : true,
                                               coffeeMilk        : "-",
-                                              hasSugar          : false,
+                                              hasSugar          : true,
                                               hasFoam           : false,
                                               coffeeFoam        : "-",
                                               hasCream          : true,
@@ -796,12 +796,12 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
             }
             for i in 0 ..< coffeeMenuAll.count
             {
-                if Int(coffeeMenuAll[i].coffeeCaffeineS)! < 75
+                if Int(coffeeMenuAll[i].coffeeCaffeineS)! <= 75
                 {
                     coffeeMenuAll[i].hasMoreThan2shot = false
                     coffeeMenuAll[i].hasMoreThan1shot = false
                 }
-                else if Int(coffeeMenuAll[i].coffeeCaffeineS)! < 150
+                else if Int(coffeeMenuAll[i].coffeeCaffeineS)! <= 150
                 {
                     coffeeMenuAll[i].hasMoreThan2shot = false
                     coffeeMenuAll[i].hasMoreThan1shot = true
@@ -1072,7 +1072,7 @@ class ViewController4: UIViewController {
         V4_saved_selectedCoffeeName          = UserDefaults.standard.object(forKey:"UIPickerName")      as? String ?? String()
         V4_saved_selectedCoffeeSize          = UserDefaults.standard.object(forKey:"UIPickerSizes")     as? String ?? String()
         V4_saved_selectedCoffeeKcal          = UserDefaults.standard.object(forKey:"UIPickerKcal")      as? String ?? String()
-        V4_saved_selectedCoffeeCaffeine      = UserDefaults.standard.object(forKey:"UIPickerCaffeineM") as? String ?? String()
+        V4_saved_selectedCoffeeCaffeine      = UserDefaults.standard.object(forKey:"UIPickerCaffeine")  as? String ?? String()
         V4_saved_selectedCoffeeMilk          = UserDefaults.standard.object(forKey:"UIPickerMilk")      as? String ?? String()
         V4_saved_selectedCoffeeFoam          = UserDefaults.standard.object(forKey:"UIPickerFoam")      as? String ?? String()
         V4_saved_selectedCoffeeCream         = UserDefaults.standard.object(forKey:"UIPickerCream")     as? String ?? String()
