@@ -85,7 +85,7 @@ class ViewController2: UIViewController {
         tastesPicker.color = .darkGray
         tastesPicker.tintColor = .black
         tastesPicker.font  = UIFont(name: "Georgia", size: 28)!
-        tastesPicker.highlight(2, animated: true)
+        tastesPicker.highlight(saved_selectedIndexes.last ?? 2, animated: true)
     }
     @objc func selected(_ sender: UIMultiPicker) {
         UserDefaults.standard.set(sender.selectedIndexes, forKey: "UIMultiPickerIndexes")

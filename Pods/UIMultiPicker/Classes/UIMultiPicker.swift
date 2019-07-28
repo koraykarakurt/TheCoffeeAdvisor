@@ -161,7 +161,7 @@ class TableViewProxy: NSObject, UITableViewDataSource
             multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter { $0 != row }
         } else {
             multiPicker.selectedIndexes += [row]
-            print(row)
+            //print(row)
             
             if row==5 // if espresso > 1 selected then disable spresso > 2
             {

@@ -78,7 +78,6 @@ OPTIONS</string>
                                 </state>
                                 <connections>
                                     <action selector="BVC2:" destination="F3M-V3-VdP" eventType="touchUpInside" id="Exw-7t-kYC"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="zrj-su-0Pt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -112,7 +111,7 @@ OPTIONS</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oJJ-Sw-uDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1474" y="224"/>
+            <point key="canvasLocation" x="1276" y="225"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
