@@ -10,22 +10,16 @@ import UIKit
 import UIMultiPicker
 
 class ViewController: UIViewController {
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
     @IBOutlet weak var MCA: UIButton!
     @IBOutlet weak var MCO: UIButton!
-    
-    @IBAction func MCA(_ sender: UIButton)
-    {
+    @IBAction func MCA(_ sender: UIButton) {
         dismissDetailRight()
     }
-    
     let screenWidth  = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.MCA.layer.cornerRadius = screenWidth * 0.5 * 0.8
@@ -34,12 +28,9 @@ class ViewController: UIViewController {
         //print(screenWidth)
         //print(screenHeight/screenWidth)
     }
-//dismissDetailLeft()
 }
 
-
 class ViewController2: UIViewController {
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -58,34 +49,28 @@ class ViewController2: UIViewController {
         "480 ml (Grande)"           ,//11
         "720 ml (Venti)"             //12
     ];
-    
     @IBOutlet weak var tastesPicker: UIMultiPicker!
     @IBOutlet weak var BVC2: UIButton!
-    
     @IBAction func BVC2(_ sender: UIButton) {
         dismiss (animated: true, completion: nil) 
     }
-    
     let screenWidth  = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let defaults = UserDefaults.standard
         let saved_selectedIndexes = defaults.object(forKey:"UIMultiPickerIndexes") as? [Int] ?? [Int]()
-        
+        let saved_lastSelectedMultiPickerRow = defaults.object(forKey:"lastSelectedMultiPickerRow") as? Int ?? Int ()
+        //print(saved_lastSelectedMultiPickerRow)
         self.tastesPicker.layer.cornerRadius =  screenWidth * 0.5 * 0.8
         self.BVC2.layer.cornerRadius = screenWidth * 0.5 * 0.4
-        
         tastesPicker.options = ViewController2.TASTES
         tastesPicker.selectedIndexes = saved_selectedIndexes
         tastesPicker.addTarget(self, action: #selector(ViewController2.selected(_:)), for: .valueChanged)
-        
         tastesPicker.color = .darkGray
         tastesPicker.tintColor = .black
         tastesPicker.font  = UIFont(name: "Georgia", size: 28)!
-        tastesPicker.highlight(saved_selectedIndexes.last ?? 2, animated: true)
+        tastesPicker.highlight(saved_lastSelectedMultiPickerRow, animated: true)
     }
     @objc func selected(_ sender: UIMultiPicker) {
         UserDefaults.standard.set(sender.selectedIndexes, forKey: "UIMultiPickerIndexes")
@@ -93,23 +78,16 @@ class ViewController2: UIViewController {
     }
 }
 
-
 class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource {
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
     @IBOutlet weak var BVC3: UIButton!
-    
-    @IBAction func BVC3(_ sender: UIButton)
-    {
+    @IBAction func BVC3(_ sender: UIButton) {
         dismissDetailLeft()
     }
     @IBOutlet weak var DVC3: UIButton!
-    
     var V3_saved_selectedIndexes = UserDefaults.standard.object(forKey:"UIMultiPickerIndexes") as? [Int] ?? [Int]()
-    
     class MyCoffee {
         var coffeeName          = ""
         var coffeeKcal          = ""
@@ -130,9 +108,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         var hasMoreThan1shot    = false
         var hasMoreThan2shot    = false
         var hasIce              = false
-        
         init(coffeeName: String, coffeeKcal: String, coffeeCaffeineS: String, coffeeCaffeineM: String, coffeeCaffeineL: String, hasMilk: Bool, hasSmallSize: Bool, coffeeMilk: String, hasSugar: Bool, hasFoam: Bool, coffeeFoam: String, hasCream: Bool, coffeeCream: String, hasKcalLessThan50: Bool, hasKcalLessThan100: Bool, hasKcalLessThan200: Bool, hasMoreThan1shot: Bool, hasMoreThan2shot: Bool, hasIce: Bool) {
-            
             self.coffeeName         = coffeeName
             self.coffeeKcal         = coffeeKcal
             self.coffeeCaffeineS    = coffeeCaffeineS
@@ -152,10 +128,8 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
             self.hasMoreThan1shot   = hasMoreThan1shot
             self.hasMoreThan2shot   = hasMoreThan2shot
             self.hasIce             = hasIce
-            
         }
     }
-    
     var espresso                    = MyCoffee(coffeeName        : "Espresso",
                                                coffeeKcal        : "5",
                                                coffeeCaffeineS   : "-",
@@ -175,7 +149,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : false,
                                                hasMoreThan2shot  : false,
                                                hasIce            : false)
-    
     var turkishCoffee                    = MyCoffee(coffeeName   : "Turkish Coffee",
                                                coffeeKcal        : "4",
                                                coffeeCaffeineS   : "-",
@@ -195,7 +168,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : false,
                                                hasMoreThan2shot  : false,
                                                hasIce            : false)
-    
     var espressoDoppio              = MyCoffee(coffeeName        : "Espresso Doppio",
                                                coffeeKcal        : "10",
                                                coffeeCaffeineS   : "-",
@@ -215,7 +187,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
                                                hasIce            : false)
-    
     var ristretto                   = MyCoffee(coffeeName        : "Ristretto",
                                                coffeeKcal        : "7",
                                                coffeeCaffeineS   : "-",
@@ -235,7 +206,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
                                                hasIce            : false)
-    
     var lungo                       = MyCoffee(coffeeName        : "Lungo",
                                                coffeeKcal        : "10",
                                                coffeeCaffeineS   : "-",
@@ -255,7 +225,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
                                                hasIce            : false)
-    
     var blackEye                       = MyCoffee(coffeeName     : "Black Eye",
                                                coffeeKcal        : "14",
                                                coffeeCaffeineS   : "-",
@@ -275,7 +244,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : true,
                                                hasIce            : false)
-    
     var macchiato                   = MyCoffee(coffeeName        : "Macchiato",
                                                coffeeKcal        : "12",
                                                coffeeCaffeineS   : "-",
@@ -295,7 +263,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
                                                hasIce            : false)
-    
     var cortado                     = MyCoffee(coffeeName        : "Cortado",
                                                coffeeKcal        : "30",
                                                coffeeCaffeineS   : "-",
@@ -315,7 +282,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
                                                hasIce            : false)
-   
     var cafeCreme                       = MyCoffee(coffeeName    : "Café Crème",
                                                coffeeKcal        : "114",
                                                coffeeCaffeineS   : "-",
@@ -335,7 +301,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
                                                hasIce            : false)
-    
     // tall 1/2 caffeine
     var latte                       = MyCoffee(coffeeName        : "Latte",
                                                coffeeKcal        : "218",
@@ -356,7 +321,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
                                                hasIce            : false)
-  
     // tall 1/2 caffeine
     var icedLatte                   = MyCoffee(coffeeName        : "Iced Latte",
                                                coffeeKcal        : "148",
@@ -377,7 +341,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
                                                hasIce            : true)
-   
     // tall 1/2 caffeine
     var cappucino                   = MyCoffee(coffeeName        : "Cappucino",
                                                coffeeKcal        : "155",
@@ -398,7 +361,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
                                                hasIce            : false)
-    
     var americano                   = MyCoffee(coffeeName        : "Americano",
                                                coffeeKcal        : "15",
                                                coffeeCaffeineS   : "150",
@@ -418,7 +380,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : true,
                                                hasIce            : false)
-    
     // tall  150 ml caffeine
     // venti 300 ml caffeine
     var icedAmericano               = MyCoffee(coffeeName        : "Iced Americano",
@@ -440,7 +401,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
                                                hasIce            : true)
-    
     // tall 110 ml caffeine
     // tall 195 ml caffeine
     var misto                       = MyCoffee(coffeeName        : "Misto",
@@ -462,8 +422,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
                                                hasIce            : false)
-    
-    
     // tall 1/2 caffeine
     var flatWhite                   = MyCoffee(coffeeName        : "Flat White",
                                                coffeeKcal        : "212",
@@ -484,7 +442,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : true,
                                                hasIce            : false)
-    // ????
     var conPanna                   = MyCoffee(coffeeName        : "Con Panna",
                                               coffeeKcal        : "323",
                                               coffeeCaffeineS   : "-",
@@ -504,7 +461,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                               hasMoreThan1shot  : true,
                                               hasMoreThan2shot  : false,
                                               hasIce            : false)
-    
     // tall 1/2 caffeine
     var mocha                       = MyCoffee(coffeeName        : "Mocha",
                                                coffeeKcal        : "400",
@@ -525,7 +481,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : true,
                                                hasIce            : false)
-    
     var affogato                       = MyCoffee(coffeeName     : "Affogato",
                                                coffeeKcal        : "196",
                                                coffeeCaffeineS   : "-",
@@ -605,7 +560,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
                                                hasIce            : true)
-    
     // tall 1/2 caffeine
     var caramelMacchiato            = MyCoffee(coffeeName        : "Caramel Macchiato",
                                                coffeeKcal        : "280",
@@ -626,7 +580,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
                                                hasIce            : false)
-    
     // tall 1/2 caffeine
     var icedCaramelMacchiato        = MyCoffee(coffeeName        : "Iced Caramel Macchiato",
                                                coffeeKcal        : "270",
@@ -647,7 +600,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
                                                hasIce            : true)
-    
     // tall  70 ml caffeine
     // venti 120 ml caffeine
     var frappuccino                 = MyCoffee(coffeeName        : "Frappuccino",
@@ -669,22 +621,16 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasMoreThan1shot  : true,
                                                hasMoreThan2shot  : false,
                                                hasIce            : true)
-    
     var coffeeMenuAll: [MyCoffee] = []
     var coffeeMenu = [""]
-    
     var V3_size_parameter = 1.0
-    
     @IBOutlet weak var optionPicker: UIPickerView!
-    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
     {
         coffeeMenuAll.removeAll(keepingCapacity: false)
-        
         coffeeMenuAll.append(lungo) // new
         coffeeMenuAll.append(espresso)
         coffeeMenuAll.append(ristretto)
@@ -693,7 +639,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         coffeeMenuAll.append(turkishCoffee)
         coffeeMenuAll.append(espressoDoppio)
         // 7 no sugar & milk
-
         coffeeMenuAll.append(latte)
         coffeeMenuAll.append(misto)
         coffeeMenuAll.append(cortado)
@@ -702,13 +647,11 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         coffeeMenuAll.append(flatWhite)
         coffeeMenuAll.append(cafeCreme) // new
         // 7 no sugar
-        
         coffeeMenuAll.append(mocha)
         coffeeMenuAll.append(conPanna) // new
         coffeeMenuAll.append(caramelMacchiato)
         coffeeMenuAll.append(whiteChocolateMocha)
         // 4 yes sugar
-        
         coffeeMenuAll.append(affogato) // new
         coffeeMenuAll.append(icedLatte)
         coffeeMenuAll.append(icedMocha)
@@ -717,97 +660,78 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         coffeeMenuAll.append(icedCaramelMacchiato)
         coffeeMenuAll.append(icedWhiteChocolateMocha)
         // 7 iced
-        
         coffeeMenu = [""]
         for i in 0 ..< coffeeMenuAll.count {
             coffeeMenu.append(coffeeMenuAll[i].coffeeName)
         }
-        if V3_saved_selectedIndexes.contains(12)
-        { //size = venti
+        if V3_saved_selectedIndexes.contains(12) { //size = venti
             V3_size_parameter = 24/16.0
             coffeeMenuAll = coffeeMenuAll.filter( {$0.hasSmallSize == false })
-            for i in 0 ..< coffeeMenuAll.count
-            {
-                if Int(V3_size_parameter*(Double(coffeeMenuAll[i].coffeeKcal))!) > 200
-                {
+            for i in 0 ..< coffeeMenuAll.count {
+                if Int(V3_size_parameter*(Double(coffeeMenuAll[i].coffeeKcal))!) > 200 {
                 coffeeMenuAll[i].hasKcalLessThan200 = false
                 }
-                if Int(V3_size_parameter*(Double(coffeeMenuAll[i].coffeeKcal))!) > 100
-                {
+                if Int(V3_size_parameter*(Double(coffeeMenuAll[i].coffeeKcal))!) > 100 {
                     coffeeMenuAll[i].hasKcalLessThan100 = false
                 }
-                if Int(V3_size_parameter*(Double(coffeeMenuAll[i].coffeeKcal))!) > 50
-                {
+                if Int(V3_size_parameter*(Double(coffeeMenuAll[i].coffeeKcal))!) > 50 {
                     coffeeMenuAll[i].hasKcalLessThan50 = false
                 }
             }
-            for i in 0 ..< coffeeMenuAll.count
-            {
-                if Int(coffeeMenuAll[i].coffeeCaffeineL)! > 150
-                {
+            for i in 0 ..< coffeeMenuAll.count {
+                if Int(coffeeMenuAll[i].coffeeCaffeineL)! > 150 {
                     coffeeMenuAll[i].hasMoreThan2shot = true
                     coffeeMenuAll[i].hasMoreThan1shot = true
                 }
-                else if Int(coffeeMenuAll[i].coffeeCaffeineL)! > 75
-                {
+                else if Int(coffeeMenuAll[i].coffeeCaffeineL)! > 75 {
                     coffeeMenuAll[i].hasMoreThan2shot = false
                     coffeeMenuAll[i].hasMoreThan1shot = true
                 }
-                else
-                {
+                else {
                     coffeeMenuAll[i].hasMoreThan2shot = false
                     coffeeMenuAll[i].hasMoreThan1shot = false
                 }
             }
             coffeeMenu = [""]
-            for i in 0 ..< coffeeMenuAll.count
-            {
+            for i in 0 ..< coffeeMenuAll.count {
                 coffeeMenu.append(coffeeMenuAll[i].coffeeName)
             }
         }
-        if V3_saved_selectedIndexes.contains(11)
-        { //size = grande
+        if V3_saved_selectedIndexes.contains(11) {
+            //size = grande
             V3_size_parameter = 16/16.0
-            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasSmallSize == false })
+            coffeeMenuAll = coffeeMenuAll.filter({$0.hasSmallSize == false})
             coffeeMenu = [""]
             for i in 0 ..< coffeeMenuAll.count
             {
                 coffeeMenu.append(coffeeMenuAll[i].coffeeName)
             }
         }
-        if V3_saved_selectedIndexes.contains(10)
-        { //size = tall
+        if V3_saved_selectedIndexes.contains(10) {
+            //size = tall
             V3_size_parameter = 12/16.0
-            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasSmallSize == false })
-            for i in 0 ..< coffeeMenuAll.count
-            {
-                if Int(V3_size_parameter*(Double(coffeeMenuAll[i].coffeeKcal))!) < 200
-                {
+            coffeeMenuAll = coffeeMenuAll.filter({$0.hasSmallSize == false})
+            for i in 0 ..< coffeeMenuAll.count {
+                if Int(V3_size_parameter*(Double(coffeeMenuAll[i].coffeeKcal))!) < 200 {
                     coffeeMenuAll[i].hasKcalLessThan200 = true
                 }
-                if Int(V3_size_parameter*(Double(coffeeMenuAll[i].coffeeKcal))!) < 100
-                {
+                if Int(V3_size_parameter*(Double(coffeeMenuAll[i].coffeeKcal))!) < 100 {
                     coffeeMenuAll[i].hasKcalLessThan100 = true
                 }
-                if Int(V3_size_parameter*(Double(coffeeMenuAll[i].coffeeKcal))!) < 50
-                {
+                if Int(V3_size_parameter*(Double(coffeeMenuAll[i].coffeeKcal))!) < 50 {
                     coffeeMenuAll[i].hasKcalLessThan50 = true
                 }
             }
-            for i in 0 ..< coffeeMenuAll.count
-            {
-                if Int(coffeeMenuAll[i].coffeeCaffeineS)! <= 75
-                {
+            for i in 0 ..< coffeeMenuAll.count {
+                if Int(coffeeMenuAll[i].coffeeCaffeineS)! <= 75 {
                     coffeeMenuAll[i].hasMoreThan2shot = false
                     coffeeMenuAll[i].hasMoreThan1shot = false
                 }
-                else if Int(coffeeMenuAll[i].coffeeCaffeineS)! <= 150
-                {
+                else if Int(coffeeMenuAll[i].coffeeCaffeineS)! <= 150 {
                     coffeeMenuAll[i].hasMoreThan2shot = false
                     coffeeMenuAll[i].hasMoreThan1shot = true
                 }
-                else
-                {
+                else {
                     coffeeMenuAll[i].hasMoreThan2shot = true
                     coffeeMenuAll[i].hasMoreThan1shot = true
                 }
@@ -818,130 +742,115 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
             }
         }
         UserDefaults.standard.set(V3_size_parameter, forKey: "UIPickerSizeParameter")
-        if V3_saved_selectedIndexes.contains(0)  { //"Milk-free"
-            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasMilk == false })
+        if V3_saved_selectedIndexes.contains(0) {
+            //"Milk-free"
+            coffeeMenuAll = coffeeMenuAll.filter({$0.hasMilk == false})
             coffeeMenu = [""]
             for i in 0 ..< coffeeMenuAll.count {
                 coffeeMenu.append(coffeeMenuAll[i].coffeeName)
             }
         }
-        
-        if V3_saved_selectedIndexes.contains(1)  { //"Glucose-free"
+        if V3_saved_selectedIndexes.contains(1) {
+            //"Glucose-free"
             coffeeMenuAll = coffeeMenuAll.filter( {$0.hasSugar == false })
             coffeeMenu = [""]
             for i in 0 ..< coffeeMenuAll.count {
                 coffeeMenu.append(coffeeMenuAll[i].coffeeName)
             }
         }
-        
-        if V3_saved_selectedIndexes.contains(2)  { //"Foam"
-            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasFoam == true })
+        if V3_saved_selectedIndexes.contains(2) {
+            //"Foam"
+            coffeeMenuAll = coffeeMenuAll.filter({$0.hasFoam == true})
+            coffeeMenu = [""]
+            for i in 0 ..< coffeeMenuAll.count {
+                coffeeMenu.append(coffeeMenuAll[i].coffeeName)
+            }
+        }
+        if V3_saved_selectedIndexes.contains(3) {
+            //"Cream"
+            coffeeMenuAll = coffeeMenuAll.filter({$0.hasCream == true})
+            coffeeMenu = [""]
+            for i in 0 ..< coffeeMenuAll.count {
+                coffeeMenu.append(coffeeMenuAll[i].coffeeName)
+            }
+        }
+        if V3_saved_selectedIndexes.contains(5) {
+            //"Espresso Shot > 1"
+            coffeeMenuAll = coffeeMenuAll.filter({$0.hasMoreThan1shot == true})
+            coffeeMenu = [""]
+            for i in 0 ..< coffeeMenuAll.count {
+                coffeeMenu.append(coffeeMenuAll[i].coffeeName)
+            }
+        }
+        if V3_saved_selectedIndexes.contains(6) {
+            //"Espresso Shot > 2"
+            coffeeMenuAll = coffeeMenuAll.filter({$0.hasMoreThan2shot == true})
             coffeeMenu = [""]
             for i in 0 ..< coffeeMenuAll.count {
                 coffeeMenu.append(coffeeMenuAll[i].coffeeName)
             }
         }
         
-        if V3_saved_selectedIndexes.contains(3)  { //"Cream"
-            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasCream == true })
+        if V3_saved_selectedIndexes.contains(4) {
+            //"Iced Coffee"
+            coffeeMenuAll = coffeeMenuAll.filter({$0.hasIce == true})
             coffeeMenu = [""]
             for i in 0 ..< coffeeMenuAll.count {
                 coffeeMenu.append(coffeeMenuAll[i].coffeeName)
             }
         }
-        
-        if V3_saved_selectedIndexes.contains(5)  { //"Espresso Shot > 1"
-            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasMoreThan1shot == true })
+        if V3_saved_selectedIndexes.contains(9) {
+            //"Kcal < 200"
+            coffeeMenuAll = coffeeMenuAll.filter({$0.hasKcalLessThan200 == true})
             coffeeMenu = [""]
             for i in 0 ..< coffeeMenuAll.count {
                 coffeeMenu.append(coffeeMenuAll[i].coffeeName)
             }
         }
-        
-        if V3_saved_selectedIndexes.contains(6)  { //"Espresso Shot > 2"
-            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasMoreThan2shot == true })
+        if V3_saved_selectedIndexes.contains(8) {
+            //"Kcal < 100"
+            coffeeMenuAll = coffeeMenuAll.filter({$0.hasKcalLessThan100 == true})
             coffeeMenu = [""]
             for i in 0 ..< coffeeMenuAll.count {
                 coffeeMenu.append(coffeeMenuAll[i].coffeeName)
             }
         }
-        
-        if V3_saved_selectedIndexes.contains(4)  { //"Iced Coffee"
-            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasIce == true })
+        if V3_saved_selectedIndexes.contains(7) {
+            //"Kcal < 50"
+            coffeeMenuAll = coffeeMenuAll.filter({$0.hasKcalLessThan50 == true })
             coffeeMenu = [""]
             for i in 0 ..< coffeeMenuAll.count {
                 coffeeMenu.append(coffeeMenuAll[i].coffeeName)
             }
         }
-        
-        if V3_saved_selectedIndexes.contains(9)  { //"Kcal < 200"
-            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasKcalLessThan200 == true })
-            coffeeMenu = [""]
-            for i in 0 ..< coffeeMenuAll.count {
-                coffeeMenu.append(coffeeMenuAll[i].coffeeName)
-            }
-        }
-        
-        if V3_saved_selectedIndexes.contains(8)  { //"Kcal < 100"
-            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasKcalLessThan100 == true })
-            coffeeMenu = [""]
-            for i in 0 ..< coffeeMenuAll.count {
-                coffeeMenu.append(coffeeMenuAll[i].coffeeName)
-            }
-        }
-        
-        if V3_saved_selectedIndexes.contains(7)  { //"Kcal < 50"
-            coffeeMenuAll = coffeeMenuAll.filter( {$0.hasKcalLessThan50 == true })
-            coffeeMenu = [""]
-            for i in 0 ..< coffeeMenuAll.count {
-                coffeeMenu.append(coffeeMenuAll[i].coffeeName)
-            }
-        }
-        
-        
-        
-        
-
-
-        
         if coffeeMenu.count > 0 {
             coffeeMenu.remove(at: 0)
         }
-        if coffeeMenuAll.count>0
-        {
+        if coffeeMenuAll.count>0 {
             UserDefaults.standard.set(coffeeMenuAll.count, forKey: "UIPickerElements")
         }
-        else
-        {
+        else {
             UserDefaults.standard.set(0, forKey: "UIPickerElements")
         }
         return coffeeMenu.count
     }
-    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         //print(row)
         UserDefaults.standard.set(V3_size_parameter, forKey: "UIPickerSizeParameter")
-        if row >= 0 && coffeeMenuAll.count>0
-        {
+        if row >= 0 && coffeeMenuAll.count>0 {
             UserDefaults.standard.set(coffeeMenuAll[row].coffeeName     , forKey: "UIPickerName")
             UserDefaults.standard.set(coffeeMenuAll[row].coffeeKcal     , forKey: "UIPickerKcal")
-            
-            if coffeeMenuAll[row].hasSmallSize == true
-            {
+            if coffeeMenuAll[row].hasSmallSize == true {
                 UserDefaults.standard.set(coffeeMenuAll[row].coffeeCaffeineM , forKey: "UIPickerCaffeine")
             }
-            else
-            {
-                if V3_size_parameter > 1.0
-                {
+            else {
+                if V3_size_parameter > 1.0 {
                     UserDefaults.standard.set(coffeeMenuAll[row].coffeeCaffeineL , forKey: "UIPickerCaffeine")
                 }
-                else if  V3_size_parameter < 1.0
-                {
+                else if  V3_size_parameter < 1.0 {
                     UserDefaults.standard.set(coffeeMenuAll[row].coffeeCaffeineS , forKey: "UIPickerCaffeine")
                 }
-                else
-                {
+                else {
                     UserDefaults.standard.set(coffeeMenuAll[row].coffeeCaffeineM , forKey: "UIPickerCaffeine")
                 }
             }
@@ -949,8 +858,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
             UserDefaults.standard.set(coffeeMenuAll[row].coffeeFoam     , forKey: "UIPickerFoam")
             UserDefaults.standard.set(coffeeMenuAll[row].coffeeCream    , forKey: "UIPickerCream")
         }
-        else
-        {
+        else {
             UserDefaults.standard.set("-", forKey: "UIPickerName")
             UserDefaults.standard.set("-", forKey: "UIPickerKcal")
             UserDefaults.standard.set("-", forKey: "UIPickerCaffeine")
@@ -959,40 +867,31 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
             UserDefaults.standard.set("-", forKey: "UIPickerCream")
         }
     }
-
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         //print(row)
         UserDefaults.standard.set(V3_size_parameter, forKey: "UIPickerSizeParameter")
-        if row >= 0 && coffeeMenuAll.count>0
-        {
+        if row >= 0 && coffeeMenuAll.count>0 {
             UserDefaults.standard.set(coffeeMenuAll[row].coffeeName     , forKey: "UIPickerName")
             UserDefaults.standard.set(coffeeMenuAll[row].coffeeKcal     , forKey: "UIPickerKcal")
-            
-            if coffeeMenuAll[row].hasSmallSize == true
-            {
+            if coffeeMenuAll[row].hasSmallSize == true {
                 UserDefaults.standard.set(coffeeMenuAll[row].coffeeCaffeineM , forKey: "UIPickerCaffeine")
             }
-            else
-            {
-                if V3_size_parameter > 1.0
-                {
+            else {
+                if V3_size_parameter > 1.0 {
                     UserDefaults.standard.set(coffeeMenuAll[row].coffeeCaffeineL , forKey: "UIPickerCaffeine")
                 }
-                else if  V3_size_parameter < 1.0
-                {
+                else if  V3_size_parameter < 1.0 {
                     UserDefaults.standard.set(coffeeMenuAll[row].coffeeCaffeineS , forKey: "UIPickerCaffeine")
                 }
-                else
-                {
+                else {
                     UserDefaults.standard.set(coffeeMenuAll[row].coffeeCaffeineM , forKey: "UIPickerCaffeine")
                 }
             }
-            UserDefaults.standard.set(coffeeMenuAll[row].coffeeMilk     , forKey: "UIPickerMilk")
-            UserDefaults.standard.set(coffeeMenuAll[row].coffeeFoam     , forKey: "UIPickerFoam")
-            UserDefaults.standard.set(coffeeMenuAll[row].coffeeCream    , forKey: "UIPickerCream")
+            UserDefaults.standard.set(coffeeMenuAll[row].coffeeMilk , forKey: "UIPickerMilk")
+            UserDefaults.standard.set(coffeeMenuAll[row].coffeeFoam , forKey: "UIPickerFoam")
+            UserDefaults.standard.set(coffeeMenuAll[row].coffeeCream, forKey: "UIPickerCream")
         }
-        else
-        {
+        else {
             UserDefaults.standard.set("-", forKey: "UIPickerName")
             UserDefaults.standard.set("-", forKey: "UIPickerKcal")
             UserDefaults.standard.set("-", forKey: "UIPickerCaffeine")
@@ -1008,30 +907,23 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
         pickerLabel.textAlignment = .center
         return pickerLabel
     }
-    
     let screenWidth  = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         optionPicker.delegate = self
         optionPicker.dataSource = self
         self.DVC3.layer.cornerRadius =  screenWidth * 0.5 * 0.4
         self.BVC3.layer.cornerRadius = screenWidth * 0.5 * 0.4
-
     }
-    
 }
-
-
 
 class ViewController4: UIViewController {
     @IBOutlet weak var BVC4: UIButton!
-    
-    
-    @IBAction func BVC4(_ sender: UIButton) {dismiss(animated: true, completion: nil)}
-    
-    override var preferredStatusBarStyle    : UIStatusBarStyle {
+    @IBAction func BVC4(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
     }
     @IBOutlet weak var labelCoffeeName       : UILabel!
@@ -1041,8 +933,6 @@ class ViewController4: UIViewController {
     @IBOutlet weak var labelCoffeeMilk       : UILabel!
     @IBOutlet weak var labelCoffeeFoam       : UILabel!
     @IBOutlet weak var labelCoffeeCream      : UILabel!
-    
-    
     var V4_saved_selectedCoffeeName          = "No Match"
     var V4_saved_selectedCoffeeSize          = "-"
     var V4_saved_selectedCoffeeKcal          = "-"
@@ -1051,35 +941,23 @@ class ViewController4: UIViewController {
     var V4_saved_selectedCoffeeFoam          = "-"
     var V4_saved_selectedCoffeeCream         = "-"
     var V4_saved_selectedSizeParameter       = 1.0
-    
-    
     let screenWidth  = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.BVC4.layer.cornerRadius =  screenWidth * 0.5 * 0.4
-        
         V4_saved_selectedSizeParameter = Double(UserDefaults.standard.object(forKey:"UIPickerSizeParameter")    as? Float ?? Float())
-        
-        
         //print( UserDefaults.standard.object(forKey:"UIPickerElements") as? Int ?? Int())
-        if UserDefaults.standard.object(forKey:"UIPickerElements") as? Int ?? Int() > 0
-        {
-        V4_saved_selectedCoffeeName          = UserDefaults.standard.object(forKey:"UIPickerName")      as? String ?? String()
-        V4_saved_selectedCoffeeSize          = UserDefaults.standard.object(forKey:"UIPickerSizes")     as? String ?? String()
-        V4_saved_selectedCoffeeKcal          = UserDefaults.standard.object(forKey:"UIPickerKcal")      as? String ?? String()
-        V4_saved_selectedCoffeeCaffeine      = UserDefaults.standard.object(forKey:"UIPickerCaffeine")  as? String ?? String()
-        V4_saved_selectedCoffeeMilk          = UserDefaults.standard.object(forKey:"UIPickerMilk")      as? String ?? String()
-        V4_saved_selectedCoffeeFoam          = UserDefaults.standard.object(forKey:"UIPickerFoam")      as? String ?? String()
-        V4_saved_selectedCoffeeCream         = UserDefaults.standard.object(forKey:"UIPickerCream")     as? String ?? String()
+        if UserDefaults.standard.object(forKey:"UIPickerElements") as? Int ?? Int() > 0 {
+            V4_saved_selectedCoffeeName          = UserDefaults.standard.object(forKey:"UIPickerName")      as? String ?? String()
+            V4_saved_selectedCoffeeSize          = UserDefaults.standard.object(forKey:"UIPickerSizes")     as? String ?? String()
+            V4_saved_selectedCoffeeKcal          = UserDefaults.standard.object(forKey:"UIPickerKcal")      as? String ?? String()
+            V4_saved_selectedCoffeeCaffeine      = UserDefaults.standard.object(forKey:"UIPickerCaffeine")  as? String ?? String()
+            V4_saved_selectedCoffeeMilk          = UserDefaults.standard.object(forKey:"UIPickerMilk")      as? String ?? String()
+            V4_saved_selectedCoffeeFoam          = UserDefaults.standard.object(forKey:"UIPickerFoam")      as? String ?? String()
+            V4_saved_selectedCoffeeCream         = UserDefaults.standard.object(forKey:"UIPickerCream")     as? String ?? String()
         }
-        
         //print(V4_saved_selectedSizeParameter)
-        
         labelCoffeeName.font                 = UIFont(name: "Georgia-Bold", size: 25)!
         labelCoffeeName.textAlignment        = .center
         labelCoffeeName.text                 = "\(V4_saved_selectedCoffeeName)"
@@ -1088,62 +966,41 @@ class ViewController4: UIViewController {
         labelCoffeeName.layer.maskedCorners  = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         labelCoffeeSize.font                 = UIFont(name: "Georgia", size: 26)!
         labelCoffeeSize.textAlignment        = .center
-        
-         if V4_saved_selectedCoffeeName=="Espresso"
-        {
+         if V4_saved_selectedCoffeeName=="Espresso" {
             labelCoffeeSize.text             = "Size: 30 ml (1 oz)"
         }
-        else if V4_saved_selectedCoffeeName=="Ristretto"
-            
-        {
+        else if V4_saved_selectedCoffeeName=="Ristretto" {
             labelCoffeeSize.text             = "Size: 22.5 ml (.75 oz)"
         }
-        else if  V4_saved_selectedCoffeeName=="Macchiato" || V4_saved_selectedCoffeeName=="Espresso Doppio"
-
-        {
+        else if  V4_saved_selectedCoffeeName=="Macchiato" || V4_saved_selectedCoffeeName=="Espresso Doppio" {
             labelCoffeeSize.text             = "Size: 60 ml (2 oz)"
         }
-        else if  V4_saved_selectedCoffeeName=="Turkish Coffee"
-            
-         {
+        else if  V4_saved_selectedCoffeeName=="Turkish Coffee" {
             labelCoffeeSize.text             = "Size: 75 ml (2.5 oz)"
-         }
-        else if  V4_saved_selectedCoffeeName=="Cortado" || V4_saved_selectedCoffeeName=="Lungo" || V4_saved_selectedCoffeeName=="Café Crème"
-            
-        {
+        }
+        else if  V4_saved_selectedCoffeeName=="Cortado" || V4_saved_selectedCoffeeName=="Lungo" || V4_saved_selectedCoffeeName=="Café Crème" {
             labelCoffeeSize.text             = "Size: 90 ml (3 oz)"
         }
-        else if V4_saved_selectedCoffeeName=="Affogato" || V4_saved_selectedCoffeeName=="Con Panna"
-            
-         {
+        else if V4_saved_selectedCoffeeName=="Affogato" || V4_saved_selectedCoffeeName=="Con Panna" {
             labelCoffeeSize.text             = "Size: 150 ml (5 oz)"
-         }
-        else if V4_saved_selectedCoffeeName=="Black Eye"
-            
-        {
+        }
+        else if V4_saved_selectedCoffeeName=="Black Eye" {
             labelCoffeeSize.text             = "Size: 180 ml (6 oz)"
         }
-        else if  V4_saved_selectedCoffeeName=="No Match"
-            
-        {
+        else if  V4_saved_selectedCoffeeName=="No Match" {
             labelCoffeeSize.text             = "Size: -"
         }
-        else
-        {
-            if V4_saved_selectedSizeParameter==1.5
-            {
+        else {
+            if V4_saved_selectedSizeParameter==1.5 {
                 labelCoffeeSize.text             = "Size: 720 ml (Venti)"
             }
-            else if  V4_saved_selectedSizeParameter==0.75
-            {
+            else if  V4_saved_selectedSizeParameter==0.75 {
                 labelCoffeeSize.text             = "Size: 360 ml (Tall)"
             }
-            else
-            {
+            else {
                 labelCoffeeSize.text             = "Size: 480 ml (Grande)"
             }
         }
-        
         labelCoffeeKcal.font                 = UIFont(name: "Georgia", size: 26)!
         labelCoffeeKcal.textAlignment        = .center
         labelCoffeeCaffeine.font             = UIFont(name: "Georgia", size: 26)!
@@ -1157,42 +1014,30 @@ class ViewController4: UIViewController {
         labelCoffeeCream.layer.cornerRadius  = 10
         labelCoffeeCream.layer.masksToBounds = true
         labelCoffeeCream.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-        
-        if  V4_saved_selectedCoffeeName != "No Match"
-        {
+        if  V4_saved_selectedCoffeeName != "No Match" {
             labelCoffeeKcal.text                 = "Calories: \(String(Int(Double(V4_saved_selectedCoffeeKcal)!*V4_saved_selectedSizeParameter))) Kcal"
-            
             labelCoffeeCaffeine.text             = "Caffeine: \(V4_saved_selectedCoffeeCaffeine) mg"
-            
             //labelCoffeeCaffeine.text             = "Caffeine: \(String(Int(Double(V4_saved_selectedCoffeeCaffeine)!*V4_saved_selectedSizeParameter))) mg"
-            
-            if V4_saved_selectedCoffeeMilk=="-"
-            {
+            if V4_saved_selectedCoffeeMilk=="-" {
             labelCoffeeMilk.text                 = "Steamed Milk: \(V4_saved_selectedCoffeeMilk)"
             }
-            else
-            {
+            else {
             labelCoffeeMilk.text                 = "Steamed Milk: \(String(Int(Double(V4_saved_selectedCoffeeMilk)!*V4_saved_selectedSizeParameter))) ml"
             }
-            if V4_saved_selectedCoffeeFoam=="-"
-            {
+            if V4_saved_selectedCoffeeFoam=="-" {
                 labelCoffeeFoam.text                 = "Foamed Milk: \(V4_saved_selectedCoffeeFoam)"
             }
-            else
-            {
+            else {
                 labelCoffeeFoam.text                 = "Foamed Milk: \(String(Int(Double(V4_saved_selectedCoffeeFoam)!*V4_saved_selectedSizeParameter))) ml"
             }
-            if V4_saved_selectedCoffeeCream=="-"
-            {
+            if V4_saved_selectedCoffeeCream=="-" {
                 labelCoffeeCream.text                = "Cream: \(V4_saved_selectedCoffeeCream)"
             }
-            else
-            {
+            else {
                 labelCoffeeCream.text                = "Cream: \(String(Int(Double(V4_saved_selectedCoffeeCream)!*V4_saved_selectedSizeParameter))) ml"
             }
         }
-        else
-        {
+        else {
             labelCoffeeKcal.text                 = "Calories: \(V4_saved_selectedCoffeeKcal)"
             labelCoffeeCaffeine.text             = "Caffeine: \(V4_saved_selectedCoffeeCaffeine)"
             labelCoffeeMilk.text                 = "Steamed Milk: \(V4_saved_selectedCoffeeMilk)"

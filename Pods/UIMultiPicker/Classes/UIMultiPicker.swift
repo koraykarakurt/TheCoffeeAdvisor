@@ -117,7 +117,16 @@ class UIMultiPickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSou
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        UserDefaults.standard.set(row, forKey: "lastSelectedMultiPickerRow")
         return parent.options[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        UserDefaults.standard.set(row, forKey: "lastSelectedMultiPickerRow")
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int) {
+        UserDefaults.standard.set(row, forKey: "lastSelectedMultiPickerRow")
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
