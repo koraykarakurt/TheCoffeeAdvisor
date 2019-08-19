@@ -172,45 +172,45 @@ class TableViewProxy: NSObject, UITableViewDataSource
             multiPicker.selectedIndexes += [row]
             //print(row)
             
-            if row==5 // if espresso > 1 selected then disable spresso > 2
+            if row==6 // if espresso > 1 selected then disable spresso > 2
+            {
+                multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 7}
+            }
+            else if row==7 // if espresso > 2 selected then disable spresso > 1
             {
                 multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 6}
             }
-            else if row==6 // if espresso > 2 selected then disable spresso > 1
-            {
-                multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 5}
-            }
             
-            if row==7 // if Kcal < 50 selected then disable Kcal < 100, Kcal < 200
+            if row==8 // if Kcal < 50 selected then disable Kcal < 100, Kcal < 200
+            {
+                multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 9}
+                multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 10}
+            }
+            else if row==9 // if Kcal < 100 selected then disable Kcal < 50, Kcal < 200
+            {
+                multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 8}
+                multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 10}
+            }
+            else if row==10 // if Kcal < 200 selected then disable Kcal < 50, Kcal < 100
             {
                 multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 8}
                 multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 9}
             }
-            else if row==8 // if Kcal < 100 selected then disable Kcal < 50, Kcal < 200
-            {
-                multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 7}
-                multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 9}
-            }
-            else if row==9 // if Kcal < 200 selected then disable Kcal < 50, Kcal < 100
-            {
-                multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 7}
-                multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 8}
-            }
             
-            if row==10 // if size tall selected then disable size grande, venti
+            if row==11 // if size tall selected then disable size grande, venti
+            {
+                multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 12}
+                multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 13}
+            }
+            else if row==12 // if size grande selected then disable size tall, venti
+            {
+                multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 11}
+                multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 13}
+            }
+            else if row==13 // if size venti selected then disable size tall, grande
             {
                 multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 11}
                 multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 12}
-            }
-            else if row==11 // if size grande selected then disable size tall, venti
-            {
-                multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 10}
-                multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 12}
-            }
-            else if row==12 // if size venti selected then disable size tall, grande
-            {
-                multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 10}
-                multiPicker.selectedIndexes = multiPicker.selectedIndexes.filter {$0 != 11}
             }
             
             

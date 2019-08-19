@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The Coffee Advisor/ViewController.swift"
-            timestampString = "586033700.641021"
+            timestampString = "587932686.802603"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "8"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The Coffee Advisor/ViewController.swift"
-            timestampString = "586033700.641469"
+            timestampString = "587932686.803272"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2"
@@ -42,13 +42,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The Coffee Advisor/ViewController.swift"
-            timestampString = "586033700.641816"
+            timestampString = "587932686.803589"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
-            landmarkName = "MyCoffee"
-            landmarkType = "3">
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "init(coffeeName:coffeeKcal:coffeeCaffeineS:coffeeCaffeineM:coffeeCaffeineL:hasMilk:hasSmallSize:coffeeMilk:hasSugar:hasFoam:coffeeFoam:hasCream:coffeeCream:hasKcalLessThan50:hasKcalLessThan100:hasKcalLessThan200:hasMoreThan1shot:hasMoreThan2shot:hasIce:hasAlcohol:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The Coffee Advisor/ViewController.swift"
-            timestampString = "586033700.642267"
+            timestampString = "587932686.803896"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "9"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/UIMultiPicker/Classes/UIMultiPicker.swift"
-            timestampString = "586033700.642725"
+            timestampString = "587932686.804183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "135"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/UIMultiPicker/Classes/UIMultiPicker.swift"
-            timestampString = "586033700.642785"
+            timestampString = "587932686.804235"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "134"
@@ -106,13 +106,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The Coffee Advisor/ViewController.swift"
-            timestampString = "586033700.6431659"
+            timestampString = "587932686.804281"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "ViewController3"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
