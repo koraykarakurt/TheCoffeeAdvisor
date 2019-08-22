@@ -555,7 +555,7 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasIce            : true,
                                                hasAlcohol        : true)
     var irishCoffee                  = MyCoffee(coffeeName       : "Irish Coffee",
-                                               coffeeKcal        : "146",
+                                               coffeeKcal        : "191",
                                                coffeeCaffeineS   : "-",
                                                coffeeCaffeineM   : "75",
                                                coffeeCaffeineL   : "-",
@@ -566,9 +566,9 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
                                                hasFoam           : false,
                                                coffeeFoam        : "-",
                                                hasCream          : true,
-                                               coffeeCream       : "30",
+                                               coffeeCream       : "30",//fresh cream 100 kcal
                                                hasKcalLessThan50 : false,
-                                               hasKcalLessThan100: true,
+                                               hasKcalLessThan100: false,
                                                hasKcalLessThan200: true,
                                                hasMoreThan1shot  : false,
                                                hasMoreThan2shot  : false,
