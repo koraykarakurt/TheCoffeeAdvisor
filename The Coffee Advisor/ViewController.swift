@@ -53,7 +53,7 @@ class ViewController2: UIViewController {
     @IBOutlet weak var tastesPicker: UIMultiPicker!
     @IBOutlet weak var BVC2: UIButton!
     @IBAction func BVC2(_ sender: UIButton) {
-        dismiss (animated: true, completion: nil) 
+        dismiss (animated: true, completion: nil)
     }
     let screenWidth  = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
@@ -1044,10 +1044,22 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     }
 }
 
+
+
 class ViewController4: UIViewController {
+    
+    private func removePartialCurlTap() {
+        if let gestures = self.view.gestureRecognizers {
+        for gesture in gestures {
+          self.view.removeGestureRecognizer(gesture)
+        }
+      }
+    }
+    
     @IBOutlet weak var BVC4: UIButton!
     @IBAction func BVC4(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        //dismiss(animated: true, completion: nil)
+        dismissDetailLeft()
     }
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
@@ -1069,6 +1081,12 @@ class ViewController4: UIViewController {
     var V4_saved_selectedSizeParameter       = 1.0
     let screenWidth  = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
+    
+    override func viewDidAppear(_ animated: Bool) {
+      super.viewDidAppear(animated)
+      removePartialCurlTap()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.BVC4.layer.cornerRadius =  screenWidth * 0.5 * 0.4
@@ -1175,3 +1193,4 @@ class ViewController4: UIViewController {
         }
     }
 }
+
