@@ -22,6 +22,10 @@ class ViewController: UIViewController {
     let screenHeight = UIScreen.main.bounds.height
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *) {
+            // Always adopt a light interface style.
+            overrideUserInterfaceStyle = .light
+        }
         self.MCA.layer.cornerRadius = screenWidth * 0.5 * 0.8
         self.MCO.layer.cornerRadius = screenWidth * 0.5 * 0.4
         //print(screenHeight)
@@ -59,6 +63,10 @@ class ViewController2: UIViewController {
     let screenHeight = UIScreen.main.bounds.height
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *) {
+            // Always adopt a light interface style.
+            overrideUserInterfaceStyle = .light
+        }
         let defaults = UserDefaults.standard
         let saved_selectedIndexes = defaults.object(forKey:"UIMultiPickerIndexes") as? [Int] ?? [Int]()
         let saved_lastSelectedMultiPickerRow = defaults.object(forKey:"lastSelectedMultiPickerRow") as? Int ?? Int ()
@@ -1037,6 +1045,10 @@ class ViewController3: UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
     let screenHeight = UIScreen.main.bounds.height
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *) {
+            // Always adopt a light interface style.
+            
+        }
         optionPicker.delegate = self
         optionPicker.dataSource = self
         self.DVC3.layer.cornerRadius =  screenWidth * 0.5 * 0.4
@@ -1089,6 +1101,10 @@ class ViewController4: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *) {
+            // Always adopt a light interface style.
+            overrideUserInterfaceStyle = .light
+        }
         self.BVC4.layer.cornerRadius =  screenWidth * 0.5 * 0.4
         V4_saved_selectedSizeParameter = Double(UserDefaults.standard.object(forKey:"UIPickerSizeParameter")    as? Float ?? Float())
         //print( UserDefaults.standard.object(forKey:"UIPickerElements") as? Int ?? Int())
